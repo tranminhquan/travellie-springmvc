@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package controllers;
 
 /**
  *
@@ -13,9 +14,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
  
-public class App {
- 
+@Controller
+public class HomestayController {
+    @RequestMapping(value="/homestays", method = RequestMethod.GET)
+    public String HomestayAction(ModelMap modelmap) {
+        modelmap.put("h1", "Homestay test");
+        return "listHomestay-view";
+    }
+    
     public static void main(String[] args) throws SQLException {
         Connection connection;
         try {
@@ -28,7 +39,6 @@ public class App {
                // TODO Auto-generated catch block
                e.printStackTrace();
         }
-//        Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
     }
  
     public static void checkConnectionStatus(Connection connection) throws SQLException {
@@ -40,9 +50,3 @@ public class App {
     }
  
 }
- 
-// Kết quả:
- 
-// Kết nối Hệ quản trị Cơ sở dữ liệu thành công
-// Hiện tại Đang có kết nối đến Hệ quản trị CSDL
-// Hiện tại Không có kết nối đến Hệ Quản trị Cơ sở dữ liệu
