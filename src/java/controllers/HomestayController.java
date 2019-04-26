@@ -23,21 +23,35 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomestayController {
     @RequestMapping(value="/homestays", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
+        String[] windows = new String[]{"Windows XP", "Windows 7", "Windows 8", "Windows mobile"};
+        modelmap.put("windows", windows);
         modelmap.put("h1", "Homestay test");
-        return "listHomestay-view";
+
+        return "listHomestay";
     }
     
     public static void main(String[] args) throws SQLException {
-        Connection connection;
+//        Connection connection;
         try {
-                connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-                System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
-                checkConnectionStatus(connection);
-                connection.close();
-                checkConnectionStatus(connection);
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
+            checkConnectionStatus(connection);
+
+            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY where Rating like ?");
+            statement.setString(1, "5");	
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) 
+            {
+                System.out.println(rs.getString("HomestayName"));
+            }
+            connection.close();
+            checkConnectionStatus(connection);
         } catch (ClassNotFoundException e) {
-               // TODO Auto-generated catch block
-               e.printStackTrace();
+                e.printStackTrace();
+        } catch (SQLException e) {
+                e.printStackTrace();
         }
     }
  
