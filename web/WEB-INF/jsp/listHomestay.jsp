@@ -34,15 +34,17 @@
 <body>
     <h1>${h1}</h1>
     <div>
-        <c:forEach var="window" items="${windows}" varStatus="loopCounter" >
+        <c:forEach var="window" items="${test}" varStatus="loopCounter" >
             <c:out value="count: ${loopCounter.count}"/>
             <c:out value="${window}"/> <br>
         </c:forEach>
+        <h1>${ListHomestay}</h1>
+
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index">Travelie</a>
+            <a class="navbar-brand" href="index.html">Travelie</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                     aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -50,10 +52,10 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="listHomestay">Homestays</a></li>
+                    <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item cta"><a class="nav-link" href="search"><span>Find homestay</span></a></li>

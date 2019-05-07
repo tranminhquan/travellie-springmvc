@@ -9,6 +9,7 @@ package controllers;
  *
  * @author Admin
  */
+import api.HomestayService;
 import database.SQLServerConnUtils_JTDS;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,65 +24,78 @@ import org.springframework.web.bind.annotation.RequestMethod;
  
 @Controller
 public class HomestayController {
+    HomestayService _homestayService;
+    public HomestayController()
+    {
+            _homestayService = new HomestayService();
+    }
     @RequestMapping(value="/homestays", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
         String[] windows = new String[]{"Windows XP", "Windows 7", "Windows 8", "Windows mobile"};
-        modelmap.put("windows", windows);
+        ArrayList<Homestay> list_homestay = _homestayService.Load();
+        ArrayList<String> arrListString = new ArrayList<>(3);
+        arrListString.add("test3");
+        arrListString.add("test1");
+        arrListString.add("test2");
+        modelmap.put("test", windows);
         modelmap.put("h1", "Homestay test");
-
+        modelmap.put("ListHomestay", list_homestay.size());
+        
         return "listHomestay";
     }
     
     public static void main(String[] args) throws SQLException {
-//        Connection connection;
-        try {
-            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
-            checkConnectionStatus(connection);
-
-            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY");
-//            statement.setString(1, "5");	
-
-            ResultSet rs = statement.executeQuery();
-            ArrayList<Homestay> list_hs = new ArrayList<>();
-            
-            while (rs.next()) {     
-                list_hs.add(new Homestay(rs.getString("HomestayID"), 
-                        rs.getString("HomestayName"), 
-                        rs.getString("HomestayAddress"), 
-                        rs.getString("FullAddress"), 
-                        rs.getString("Distance"), 
-                        rs.getInt("NumberPeople"), 
-                        rs.getInt("NumberDays"), 
-                        rs.getInt("TimeStart"), 
-                        rs.getInt("TimeEnd"), 
-                        rs.getInt("Rating"), 
-                        rs.getString("OwnerImage"), 
-                        rs.getString("OwnerName"), 
-                        rs.getDate("OwnerDoB"), 
-                        rs.getInt("OwnerGender"), 
-                        rs.getString("OwnerPhone"), 
-                        rs.getString("OwnerCareer"), 
-                        rs.getString("Video"), 
-                        rs.getString("RoomTypeID"), 
-                        rs.getString("LocationTypeID"), 
-                        rs.getString("VacationTypeID"), 
-                        rs.getString("CuisineID"), 
-                        rs.getString("LifeStyleID")));
-                        
-                
-            }
-            
-            for (int i = 0; i<list_hs.size();i++){
-                System.out.println(list_hs.get(i).getHomestayImageID());
-            }
-            connection.close();
-            checkConnectionStatus(connection);
-        } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-        } catch (SQLException e) {
-                e.printStackTrace();
+        ArrayList<Homestay> list_homestay;
+        list_homestay = new HomestayService().Load();
+        for (int i = 0; i<list_homestay.size();i++){
+            System.out.println(list_homestay.get(i).getFullAddress());
         }
+//        try {
+//            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+//            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
+//            checkConnectionStatus(connection);
+//
+//            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY");
+////            statement.setString(1, "5");	
+//
+//            ResultSet rs = statement.executeQuery();
+//            ArrayList<Homestay> list_hs = new ArrayList<>();
+//            
+//            while (rs.next()) {     
+//                list_hs.add(new Homestay(rs.getString("HomestayID"), 
+//                        rs.getString("HomestayName"), 
+//                        rs.getString("HomestayAddress"), 
+//                        rs.getString("FullAddress"), 
+//                        rs.getString("Distance"), 
+//                        rs.getInt("NumberPeople"), 
+//                        rs.getInt("NumberDays"), 
+//                        rs.getInt("TimeStart"), 
+//                        rs.getInt("TimeEnd"), 
+//                        rs.getInt("Rating"), 
+//                        rs.getString("OwnerImage"), 
+//                        rs.getString("OwnerName"), 
+//                        rs.getDate("OwnerDoB"), 
+//                        rs.getInt("OwnerGender"), 
+//                        rs.getString("OwnerPhone"), 
+//                        rs.getString("OwnerCareer"), 
+//                        rs.getString("Video"), 
+//                        rs.getString("RoomTypeID"), 
+//                        rs.getString("LocationTypeID"), 
+//                        rs.getString("VacationTypeID"), 
+//                        rs.getString("CuisineID"), 
+//                        rs.getString("LifeStyleID"))); 
+//            }
+//            
+//            for (int i = 0; i<list_hs.size();i++){
+//                System.out.println(list_hs.get(i).getHomestayImageID());
+//            }
+//            connection.close();
+//            checkConnectionStatus(connection);
+//        } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//        } catch (SQLException e) {
+//                e.printStackTrace();
+//        }
     }
  
     public static void checkConnectionStatus(Connection connection) throws SQLException {
