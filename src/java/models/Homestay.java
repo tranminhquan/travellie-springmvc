@@ -23,7 +23,7 @@ public class Homestay {
     private Integer TimeEnd;
     private Integer Rating;
     private String OwnerImage;
-    private Integer OwnerName;
+    private String OwnerName;
     private Date OwnerDoB;
     private Integer OwnerGender;
     private String OwnerPhone;
@@ -41,8 +41,13 @@ public class Homestay {
     private String HomestayFoodID;
     private String HomestayRuleID;
     private String Note;
+    
+    public Homestay()
+    {
+        
+    }
 
-    public Homestay(String ID, String Name, String Address, String FullAddress, String Distance, Integer NumberPeople, Integer NumberDays, Integer TimeStart, Integer TimeEnd, Integer Rating, String OwnerImage, Integer OwnerName, Date OwnerDoB, Integer OwnerGender, String OwnerPhone, String OwnerCareer, String Video, String RoomTypeID, String LocationTypeID, String VacationTypeID, String CuisineID, String LifeStyleID) {
+    public Homestay(String ID, String Name, String Address, String FullAddress, String Distance, Integer NumberPeople, Integer NumberDays, Integer TimeStart, Integer TimeEnd, Integer Rating, String OwnerImage, String OwnerName, Date OwnerDoB, Integer OwnerGender, String OwnerPhone, String OwnerCareer, String Video, String RoomTypeID, String LocationTypeID, String VacationTypeID, String CuisineID, String LifeStyleID) {
         this.ID = ID;
         this.Name = Name;
         this.Address = Address;
@@ -155,11 +160,11 @@ public class Homestay {
         this.OwnerImage = OwnerImage;
     }
 
-    public Integer getOwnerName() {
+    public String getOwnerName() {
         return OwnerName;
     }
 
-    public void setOwnerName(Integer OwnerName) {
+    public void setOwnerName(String OwnerName) {
         this.OwnerName = OwnerName;
     }
 
