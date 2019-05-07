@@ -14,6 +14,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import models.Homestay;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,14 +39,41 @@ public class HomestayController {
             System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
             checkConnectionStatus(connection);
 
-            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY where Rating like ?");
-            statement.setString(1, "5");	
+            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY");
+//            statement.setString(1, "5");	
 
             ResultSet rs = statement.executeQuery();
-
-            while (rs.next()) 
-            {
-                System.out.println(rs.getString("HomestayName"));
+            ArrayList<Homestay> list_hs = new ArrayList<>();
+            
+            while (rs.next()) {     
+                list_hs.add(new Homestay(rs.getString("HomestayID"), 
+                        rs.getString("HomestayName"), 
+                        rs.getString("HomestayAddress"), 
+                        rs.getString("FullAddress"), 
+                        rs.getString("Distance"), 
+                        rs.getInt("NumberPeople"), 
+                        rs.getInt("NumberDays"), 
+                        rs.getInt("TimeStart"), 
+                        rs.getInt("TimeEnd"), 
+                        rs.getInt("Rating"), 
+                        rs.getString("OwnerImage"), 
+                        rs.getString("OwnerName"), 
+                        rs.getDate("OwnerDoB"), 
+                        rs.getInt("OwnerGender"), 
+                        rs.getString("OwnerPhone"), 
+                        rs.getString("OwnerCareer"), 
+                        rs.getString("Video"), 
+                        rs.getString("RoomTypeID"), 
+                        rs.getString("LocationTypeID"), 
+                        rs.getString("VacationTypeID"), 
+                        rs.getString("CuisineID"), 
+                        rs.getString("LifeStyleID")));
+                        
+                
+            }
+            
+            for (int i = 0; i<list_hs.size();i++){
+                System.out.println(list_hs.get(i).getHomestayImageID());
             }
             connection.close();
             checkConnectionStatus(connection);
