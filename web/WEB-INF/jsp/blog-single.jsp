@@ -32,7 +32,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index">Travelie</a>
+        <a class="navbar-brand" href="index.html">Travelie</a>
         <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
                 data-target="#ftco-nav" data-toggle="collapse" type="button">
             <span class="oi oi-menu"></span> Menu
@@ -40,13 +40,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="listHomestay">Homestays</a></li>
+                <li class="nav-item"><a class="nav-link" href="homestays.html">Homestays</a></li>
                 <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item cta"><a class="nav-link" href="search"><span>Find homestay</span></a></li>
+                <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
             </ul>
         </div>
     </div>
@@ -61,7 +61,7 @@
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
                         class="mr-2"><a
-                        href="index">Home</a></span> <span class="mr-2"><a href="blog.html">Blog</a></span> <span>Blog Single</span>
+                        href="index.html">Home</a></span> <span class="mr-2"><a href="blog.html">Blog</a></span> <span>Blog Single</span>
                 </p>
                 <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Tips &amp;
                     Articles</h1>

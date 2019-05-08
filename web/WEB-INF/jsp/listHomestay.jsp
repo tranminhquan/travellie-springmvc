@@ -34,14 +34,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>${h1}</h1>
-    <div>
-        <c:forEach var="hs" items="${homestays}" varStatus="loopCounter" >
-            <c:out value="count: ${loopCounter.index}"/>
-            <c:out value="${homestays[loopCounter.index].name}"/> <br>
-        </c:forEach>
-    </div>
-
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Travelie</a>
@@ -54,21 +46,21 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>
+                    <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
                     <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item cta"><a class="nav-link" href="search"><span>Find homestay</span></a></li>
+                    <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-     END nav 
+     <!--END nav--> 
 
 
     <div class="hero-wrap">
         <div class="single-slider owl-carousel">
-            {{#each feature_homestay}}
+            <c:forEach var="hs" items="${homestays}" varStatus="status" >
                 <div class="item">
                     <div class="hotel-img" style="background-image: url({{feature_images.[0].images}});">
                         <div class="carousel-caption text-left">
@@ -78,11 +70,11 @@
                                      data-scrollax=" properties: { translateY: '70%' }">
                                     <div class="row">
                                         Left column
-                                        <a href="/detailHomestay?id={{_id}}">
+                                        <a href="/detailHomestay?id=${hs.id}">
                                         <div>
                                             <h1 class="mb-3 bread"
                                                 data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                                {{name}}
+                                                ${hs.name}
                                             </h1>
 
                                             <h2 class="mb-3 bread text-warning"
@@ -102,7 +94,7 @@
                                                                                     <span>
                                                                                             <i class="material-icons"
                                                    style="font-size:18px; vertical-align: middle;">access_time</i>
-                                                {{time_start}}:00 - {{time_end}}:00
+                                                ${hs.timeStart}:00 - ${hs.timeEnd}}:00
                                                                                     </span>
 
                                                 <br/>
@@ -110,7 +102,7 @@
                                                 <span>
                                                                                             <i class="material-icons"
                                                    style="font-size:18px; vertical-align: middle;">people_outline</i>
-                                                    {{nb_people}} persons
+                                                    ${hs.numberPeople} persons
                                                                                     </span>
 
                                                 <br/>
@@ -118,7 +110,7 @@
                                                 <span>
                                                                                             <i class="far fa-calendar-alt"
                                                    style="font-size:18px;"></i>
-                                                    {{np_days}} days
+                                                    ${hs.numberDays} days
                                                                                     </span>
                                             </p>
 
@@ -126,7 +118,7 @@
 
                                             <p class="bottom-area d-flex"
                                                data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                                <span><i class="icon-map-o"></i> {{distance}} </span>
+                                                <span><i class="icon-map-o"></i> ${hs.distance} </span>
                                             </p>
 
                                         </div>
@@ -137,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-            {{/each}}
+            </c:forEach>
         </div>
     </div>
 
@@ -306,9 +298,10 @@
                 <div class="col-lg-9">
                     <div class="row">
                         {{#each other_homestay}}
+                        <c:forEach var="hs" items="${homestays}" varStatus="status" >
                             <div class="col-md-4 ftco-animate">
                                 <div class="destination">
-                                    <a href="/detailHomestay?id={{_id}}"
+                                    <a href="/detailHomestay?id=${hs.id}"
                                     class="img img-2 d-flex justify-content-center align-items-center"
                                     style="background-image: url({{feature_images.[0].images}});">
                                     <div class="icon d-flex justify-content-center align-items-center">
@@ -318,7 +311,7 @@
                                     <div class="text p-3">
                                         <div class="d-flex">
                                             <div>
-                                                <h3><a href="/detailHomestay?id={{_id}}">{{name}}</a></h3>
+                                                <h3><a href="/detailHomestay?id=${hs.id}">${hs.name}</a></h3>
                                                 <p class="rate">
                                                     <i class="icon-star"></i>
                                                     <i class="icon-star"></i>
@@ -336,30 +329,30 @@
                                                                                     <span>
                                                                                             <i class="material-icons"
                                                    style="font-size:18px; vertical-align: middle;">access_time</i>
-                                                {{time_start}}:00 - {{time_end}}:00
+                                                ${hs.timeStart}:00 - ${hs.timeEnd}:00
                                                                                     </span>
                                             <br/>
                                             <span>
                                                                                             <i class="material-icons"
                                                    style="font-size:18px; vertical-align: middle;">people_outline</i>
-                                                {{nb_people}} persons
+                                                ${hs.numberPeople} persons
                                                                                     </span>
                                             <br/>
                                             <span>
                                                                                             <i class="far fa-calendar-alt"
                                                    style="font-size:18px; vertical-align: top;"></i>
-                                                {{np_days}} days
+                                                ${hs.numberDays} days
                                                                                     </span>
                                         </p>
 
                                         <hr>
                                         <p class="bottom-area d-flex">
-                                            <span><i class="icon-map-o"></i> {{distance}} </span>
+                                            <span><i class="icon-map-o"></i> ${hs.distance} </span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        {{/each}}
+                        </c:forEach>
                     </div>
 
                     <div class="row mt-5">

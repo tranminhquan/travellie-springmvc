@@ -23,18 +23,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
  
 @Controller
-public class HomestayController {
+public class HomepageController {
     HomestayService _homestayService;
-    public HomestayController()
+    public HomepageController()
     {
         _homestayService = new HomestayService();
     }
-    @RequestMapping(value="/homestays", method = RequestMethod.GET)
+    @RequestMapping(value="/index", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
         ArrayList<Homestay> list_homestay = _homestayService.Load();
         modelmap.put("homestays", list_homestay);
         
-        return "listHomestay";
+        return "index";
     }
     
 //    public static void main(String[] args) throws SQLException {

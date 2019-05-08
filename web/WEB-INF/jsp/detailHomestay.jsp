@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,13 +60,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
-                <li class="nav-item active"><a class="nav-link" href="listHomestay">Homestays</a></li>
+                <li class="nav-item active"><a class="nav-link" href="homestays.html">Homestays</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a class="nav-link" href="search"><span>Find homestay</span></a></li>
+                <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
             </ul>
         </div>
     </div>
