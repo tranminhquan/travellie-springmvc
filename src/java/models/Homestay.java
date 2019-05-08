@@ -12,35 +12,35 @@ import java.sql.Date;
  * @author Admin
  */
 public class Homestay {
-    private String ID;
-    private String Name;
-    private String Address;
-    private String FullAddress;
-    private String Distance;
-    private Integer NumberPeople;
-    private Integer NumberDays;
-    private Integer TimeStart;
-    private Integer TimeEnd;
-    private Integer Rating;
-    private String OwnerImage;
-    private String OwnerName;
-    private Date OwnerDoB;
-    private Integer OwnerGender;
-    private String OwnerPhone;
-    private String OwnerCareer;
-    private String Video;
-    private String RoomTypeID;
-    private String LocationTypeID;
-    private String VacationTypeID;
-    private String CuisineID;
-    private String LifeStyleID;
-    private String HomestayImageID;
-    private String HomestayOverviewID;
-    private String HomestayTourImageID;
-    private String HomestayTourDescriptionID;
-    private String HomestayFoodID;
-    private String HomestayRuleID;
-    private String Note;
+    private String id;
+    private String name;
+    private String address;
+    private String fullAddress;
+    private String distance;
+    private Integer numberPeople;
+    private Integer numberDays;
+    private Integer timeStart;
+    private Integer timeEnd;
+    private Integer rating;
+    private String ownerImage;
+    private String ownerName;
+    private Date ownerDoB;
+    private Integer ownerGender;
+    private String ownerPhone;
+    private String ownerCareer;
+    private String video;
+    private String roomTypeID;
+    private String locationTypeID;
+    private String vacationTypeID;
+    private String cuisineID;
+    private String lifeStyleID;
+    private String homestayImageID;
+    private String homestayOverviewID;
+    private String homestayTourImageID;
+    private String homestayTourDescriptionID;
+    private String homestayFoodID;
+    private String homestayRuleID;
+    private String note;
     
     public Homestay()
     {
@@ -48,261 +48,213 @@ public class Homestay {
     }
 
     public Homestay(String ID, String Name, String Address, String FullAddress, String Distance, Integer NumberPeople, Integer NumberDays, Integer TimeStart, Integer TimeEnd, Integer Rating, String OwnerImage, String OwnerName, Date OwnerDoB, Integer OwnerGender, String OwnerPhone, String OwnerCareer, String Video, String RoomTypeID, String LocationTypeID, String VacationTypeID, String CuisineID, String LifeStyleID) {
-        this.ID = ID;
-        this.Name = Name;
-        this.Address = Address;
-        this.FullAddress = FullAddress;
-        this.Distance = Distance;
-        this.NumberPeople = NumberPeople;
-        this.NumberDays = NumberDays;
-        this.TimeStart = TimeStart;
-        this.TimeEnd = TimeEnd;
-        this.Rating = Rating;
-        this.OwnerImage = OwnerImage;
-        this.OwnerName = OwnerName;
-        this.OwnerDoB = OwnerDoB;
-        this.OwnerGender = OwnerGender;
-        this.OwnerPhone = OwnerPhone;
-        this.OwnerCareer = OwnerCareer;
-        this.Video = Video;
-        this.RoomTypeID = RoomTypeID;
-        this.LocationTypeID = LocationTypeID;
-        this.VacationTypeID = VacationTypeID;
-        this.CuisineID = CuisineID;
-        this.LifeStyleID = LifeStyleID;
+        this.id = ID;
+        this.name = Name;
+        this.address = Address;
+        this.fullAddress = FullAddress;
+        this.distance = Distance;
+        this.numberPeople = NumberPeople;
+        this.numberDays = NumberDays;
+        this.timeStart = TimeStart;
+        this.timeEnd = TimeEnd;
+        this.rating = Rating;
+        this.ownerImage = OwnerImage;
+        this.ownerName = OwnerName;
+        this.ownerDoB = OwnerDoB;
+        this.ownerGender = OwnerGender;
+        this.ownerPhone = OwnerPhone;
+        this.ownerCareer = OwnerCareer;
+        this.video = Video;
+        this.roomTypeID = RoomTypeID;
+        this.locationTypeID = LocationTypeID;
+        this.vacationTypeID = VacationTypeID;
+        this.cuisineID = CuisineID;
+        this.lifeStyleID = LifeStyleID;
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getFullAddress() {
-        return FullAddress;
+        return fullAddress;
     }
 
-    public void setFullAddress(String FullAddress) {
-        this.FullAddress = FullAddress;
+    public void setFullAddress(String fullAddress) {
+        this.fullAddress = fullAddress;
     }
 
     public String getDistance() {
-        return Distance;
+        return distance;
     }
 
-    public void setDistance(String Distance) {
-        this.Distance = Distance;
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 
     public Integer getNumberPeople() {
-        return NumberPeople;
+        return numberPeople;
     }
 
-    public void setNumberPeople(Integer NumberPeople) {
-        this.NumberPeople = NumberPeople;
+    public void setNumberPeople(Integer numberPeople) {
+        this.numberPeople = numberPeople;
     }
 
     public Integer getNumberDays() {
-        return NumberDays;
+        return numberDays;
     }
 
-    public void setNumberDays(Integer NumberDays) {
-        this.NumberDays = NumberDays;
+    public void setNumberDays(Integer numberDays) {
+        this.numberDays = numberDays;
     }
 
     public Integer getTimeStart() {
-        return TimeStart;
+        return timeStart;
     }
 
-    public void setTimeStart(Integer TimeStart) {
-        this.TimeStart = TimeStart;
+    public void setTimeStart(Integer timeStart) {
+        this.timeStart = timeStart;
     }
 
     public Integer getTimeEnd() {
-        return TimeEnd;
+        return timeEnd;
     }
 
-    public void setTimeEnd(Integer TimeEnd) {
-        this.TimeEnd = TimeEnd;
+    public void setTimeEnd(Integer timeEnd) {
+        this.timeEnd = timeEnd;
     }
 
     public Integer getRating() {
-        return Rating;
+        return rating;
     }
 
-    public void setRating(Integer Rating) {
-        this.Rating = Rating;
+    public void setRating(Integer rating) {
+        this.rating = rating;
     }
 
     public String getOwnerImage() {
-        return OwnerImage;
+        return ownerImage;
     }
 
-    public void setOwnerImage(String OwnerImage) {
-        this.OwnerImage = OwnerImage;
+    public void setOwnerImage(String ownerImage) {
+        this.ownerImage = ownerImage;
     }
 
     public String getOwnerName() {
-        return OwnerName;
+        return ownerName;
     }
 
-    public void setOwnerName(String OwnerName) {
-        this.OwnerName = OwnerName;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 
     public Date getOwnerDoB() {
-        return OwnerDoB;
+        return ownerDoB;
     }
 
-    public void setOwnerDoB(Date OwnerDoB) {
-        this.OwnerDoB = OwnerDoB;
+    public void setOwnerDoB(Date ownerDoB) {
+        this.ownerDoB = ownerDoB;
     }
 
     public Integer getOwnerGender() {
-        return OwnerGender;
+        return ownerGender;
     }
 
-    public void setOwnerGender(Integer OwnerGender) {
-        this.OwnerGender = OwnerGender;
+    public void setOwnerGender(Integer ownerGender) {
+        this.ownerGender = ownerGender;
     }
 
     public String getOwnerPhone() {
-        return OwnerPhone;
+        return ownerPhone;
     }
 
-    public void setOwnerPhone(String OwnerPhone) {
-        this.OwnerPhone = OwnerPhone;
+    public void setOwnerPhone(String ownerPhone) {
+        this.ownerPhone = ownerPhone;
     }
 
     public String getOwnerCareer() {
-        return OwnerCareer;
+        return ownerCareer;
     }
 
-    public void setOwnerCareer(String OwnerCareer) {
-        this.OwnerCareer = OwnerCareer;
+    public void setOwnerCareer(String ownerCareer) {
+        this.ownerCareer = ownerCareer;
     }
 
     public String getVideo() {
-        return Video;
+        return video;
     }
 
-    public void setVideo(String Video) {
-        this.Video = Video;
+    public void setVideo(String video) {
+        this.video = video;
     }
 
     public String getRoomTypeID() {
-        return RoomTypeID;
+        return roomTypeID;
     }
 
-    public void setRoomTypeID(String RoomTypeID) {
-        this.RoomTypeID = RoomTypeID;
+    public void setRoomTypeID(String roomTypeID) {
+        this.roomTypeID = roomTypeID;
     }
 
     public String getLocationTypeID() {
-        return LocationTypeID;
+        return locationTypeID;
     }
 
-    public void setLocationTypeID(String LocationTypeID) {
-        this.LocationTypeID = LocationTypeID;
+    public void setLocationTypeID(String locationTypeID) {
+        this.locationTypeID = locationTypeID;
     }
 
     public String getVacationTypeID() {
-        return VacationTypeID;
+        return vacationTypeID;
     }
 
-    public void setVacationTypeID(String VacationTypeID) {
-        this.VacationTypeID = VacationTypeID;
+    public void setVacationTypeID(String vacationTypeID) {
+        this.vacationTypeID = vacationTypeID;
     }
 
     public String getCuisineID() {
-        return CuisineID;
+        return cuisineID;
     }
 
-    public void setCuisineID(String CuisineID) {
-        this.CuisineID = CuisineID;
+    public void setCuisineID(String cuisineID) {
+        this.cuisineID = cuisineID;
     }
 
     public String getLifeStyleID() {
-        return LifeStyleID;
+        return lifeStyleID;
     }
 
-    public void setLifeStyleID(String LifeStyleID) {
-        this.LifeStyleID = LifeStyleID;
-    }
-
-    public String getHomestayImageID() {
-        return HomestayImageID;
-    }
-
-    public void setHomestayImageID(String HomestayImageID) {
-        this.HomestayImageID = HomestayImageID;
-    }
-
-    public String getHomestayOverviewID() {
-        return HomestayOverviewID;
-    }
-
-    public void setHomestayOverviewID(String HomestayOverviewID) {
-        this.HomestayOverviewID = HomestayOverviewID;
-    }
-
-    public String getHomestayTourImageID() {
-        return HomestayTourImageID;
-    }
-
-    public void setHomestayTourImageID(String HomestayTourImageID) {
-        this.HomestayTourImageID = HomestayTourImageID;
-    }
-
-    public String getHomestayTourDescriptionID() {
-        return HomestayTourDescriptionID;
-    }
-
-    public void setHomestayTourDescriptionID(String HomestayTourDescriptionID) {
-        this.HomestayTourDescriptionID = HomestayTourDescriptionID;
-    }
-
-    public String getHomestayFoodID() {
-        return HomestayFoodID;
-    }
-
-    public void setHomestayFoodID(String HomestayFoodID) {
-        this.HomestayFoodID = HomestayFoodID;
-    }
-
-    public String getHomestayRuleID() {
-        return HomestayRuleID;
-    }
-
-    public void setHomestayRuleID(String HomestayRuleID) {
-        this.HomestayRuleID = HomestayRuleID;
+    public void setLifeStyleID(String lifeStyleID) {
+        this.lifeStyleID = lifeStyleID;
     }
 
     public String getNote() {
-        return Note;
+        return note;
     }
 
-    public void setNote(String Note) {
-        this.Note = Note;
+    public void setNote(String note) {
+        this.note = note;
     }
-    
+
     
 }

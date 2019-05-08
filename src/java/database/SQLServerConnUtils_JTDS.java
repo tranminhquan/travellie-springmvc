@@ -18,7 +18,10 @@ public class SQLServerConnUtils_JTDS {
                 + "user=kafeinadmin@kafein;password={Kafeinabsoluke123};"
                 + "encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
-        Connection conn = DriverManager.getConnection(connectionURL);
+        String localConnectionURL = "jdbc:sqlserver://" + "localhost" + ":1433" //
+                + ";instance=" + "AQUINOZ" + ";databaseName=" + "TRAVELIE";
+//        Connection conn = DriverManager.getConnection(connectionURL);
+        Connection conn = DriverManager.getConnection(localConnectionURL, "sa", "123456");
         return conn;
         
     }

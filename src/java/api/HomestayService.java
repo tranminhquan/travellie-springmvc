@@ -33,7 +33,7 @@ public class HomestayService {
             while (rs.next()) 
             {
                 models.Homestay _homestay = new models.Homestay();
-                _homestay.setID(rs.getString("HomestayID"));
+                _homestay.setId(rs.getString("HomestayID"));
                 _homestay.setName(rs.getString("HomestayName"));
                 _homestay.setAddress(rs.getString("HomestayAddress"));
                 _homestay.setFullAddress(rs.getString("FullAddress")); 
@@ -81,7 +81,7 @@ public class HomestayService {
             while (rs.next()) 
             {
                 models.Homestay _homestay = new models.Homestay();
-                _homestay.setID(rs.getString("HomestayID"));
+                _homestay.setId(rs.getString("HomestayID"));
                 _homestay.setName(rs.getString("HomestayName"));
                 _homestay.setAddress(rs.getString("HomestayAddress"));
                 _homestay.setFullAddress(rs.getString("FullAddress")); 
