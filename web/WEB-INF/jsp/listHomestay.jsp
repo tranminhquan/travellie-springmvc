@@ -70,7 +70,8 @@
                                      data-scrollax=" properties: { translateY: '70%' }">
                                     <div class="row">
                                         Left column
-                                        <a href="/detailHomestay?id=${hs.id}">
+                                        <!--<a href="/detailHomestay?id=${hs.id}">-->
+                                        <a href="./homestays/${hs.id}.html">                                            
                                         <div>
                                             <h1 class="mb-3 bread"
                                                 data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">

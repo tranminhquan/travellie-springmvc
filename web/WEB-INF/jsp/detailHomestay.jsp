@@ -52,7 +52,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="index">Travelie</a>
+        <a class="navbar-brand" href="../index.html">Travelie</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
@@ -60,13 +60,13 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
                 <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
-                <li class="nav-item active"><a class="nav-link" href="homestays.html">Homestays</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
+                <li class="nav-item active"><a class="nav-link" href="../homestays.html">Homestays</a></li>
+                <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a class="nav-link" href="../search.html"><span>Find homestay</span></a></li>
             </ul>
         </div>
     </div>
@@ -101,12 +101,12 @@
 <section class="ftco-section ftco-degree-bg pt-0 mt-3">
     <div class="container">
         <div class="col-md-12 hotel-single mt-0 mb-5 ftco-animate">
-            <h1 class="display-4">{{homestay.name}}</h1>
+            <h1 class="display-4">${detailHomestays.name}</h1>
             <p class="rate">
                 <span class="loc">
                 <a target="_blank"
-                   href="https://www.google.com/maps/search/?api=1&query={{homestay.full_address}}">
-                <i class="icon-my_location"></i> {{homestay.full_address}}
+                   href="https://www.google.com/maps/search/?api=1&query=${detailHomestays.fullAddress}">
+                <i class="icon-my_location"></i> ${detailHomestays.fullAddress}
                 </span></a>
             </p>
             <p class="rate mb-5">
@@ -122,7 +122,7 @@
                 <div class="card">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src={{homestay.owner.image}}
+                            <img src=${detailHomestays.ownerImage}
                                  class="w-100 rounded-circle p-4" style="max-height: 250px; max-width: 400px">
                         </div>
 
@@ -131,12 +131,12 @@
                                 <p class="p-1 pl-3 mt-2 mb-2">
                                     <i class="material-icons"
                                        style="font-size:24px; vertical-align: top;">person</i>
-                                    {{homestay.owner.name}}
+                                    ${detailHomestays.ownerName}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:24px; vertical-align: text-bottom;">cake</i>
-                                    {{homestay.owner.dob}}
+                                    ${detailHomestays.ownerDoB}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="fas fa-transgender mr-2"
@@ -150,12 +150,12 @@
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="fas fa-briefcase mr-2"
                                        style="font-size:18px; vertical-align: top;"></i>
-                                    {{homestay.owner.career}}
+                                    ${detailHomestays.ownerCareer}
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons mr-1"
                                        style="font-size:20px; vertical-align: top;">call</i>
-                                    {{homestay.owner.phone}}
+                                    ${detailHomestays.ownerPhone}
                                 </p>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                                 <p class="p-1 pl-3 mt-2 mb-2">
                                     <i class="icon-map"
                                        style="font-size:18px; vertical-align: top;"></i>
-                                    {{homestay.distance}}
+                                    ${detailHomestays.distance}
                                 </p>
                                 <p class="p-1 pl-3 mt-2 mb-2">
                                     <i class="material-icons"
@@ -178,17 +178,17 @@
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:20px; vertical-align: middle;">access_time</i>
-                                    {{homestay.time_start}}:00 - {{homestay.time_end}}:00
+                                    ${detailHomestays.timeStart}:00 - ${detailHomestays.timeEnd}:00
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="material-icons"
                                        style="font-size:20px; vertical-align: middle;">people</i>
-                                    {{homestay.nb_people}} persons
+                                    ${detailHomestays.numberPeople} persons
                                 </p>
                                 <p class="p-1 pl-3 mb-2">
                                     <i class="far fa-calendar-alt mr-1"
                                        style="font-size:20px; vertical-align: top;"></i>
-                                    {{homestay.np_days}} days
+                                    ${detailHomestays.numberDays} days
                                 </p>
                             </div>
                         </div>
@@ -607,7 +607,7 @@
             <!--</div>-->
             <!-- 16:9 aspect ratio -->
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="{{homestay.video}}" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="${detailHomestay.video}" allowfullscreen></iframe>
             </div>
         </div>
 

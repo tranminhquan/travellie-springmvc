@@ -17,8 +17,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import models.Homestay;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
  
@@ -35,6 +37,15 @@ public class HomestayController {
         modelmap.put("homestays", list_homestay);
         
         return "listHomestay";
+    }
+    
+    @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
+    public String CPUDetail(ModelMap modelmap,@PathVariable("homestayId") String homestayId)
+    {
+            Homestay _homestay = _homestayService.LoadById(homestayId);
+            modelmap.put("detailHomestays", _homestay);
+            
+            return "detailHomestay";
     }
     
 //    public static void main(String[] args) throws SQLException {
