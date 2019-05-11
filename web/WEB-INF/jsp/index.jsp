@@ -8,27 +8,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/animate.css">
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/jquery.timepicker.css">
 
 
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/flaticon.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/icomoon.css">
+    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/style.css">
 </head>
 <body>
     <h1>${h1}</h1>
@@ -53,9 +55,8 @@
             </div>
         </div>
     </nav>
-     <!--END nav--> 
-
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+     <!--END nav-->
+    <div class="hero-wrap js-fullheight" style="background-image: url('WEB-INF/Resources/Content/images/bg_1.jpg');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
@@ -815,7 +816,7 @@
             <div class="row d-flex">
                 <div class="col-md-3 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('/WEB-INF/Resources/Content/images/image_1.jpg');">
                         </a>
                         <div class="text p-4 d-block">
                             <span class="tag">Tips, Travel</span>
@@ -831,7 +832,7 @@
                 </div>
                 <div class="col-md-3 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('/WEB-INF/Resources/Content/images/image_2.jpg');">
                         </a>
                         <div class="text p-4">
                             <span class="tag">Culture</span>
@@ -848,7 +849,7 @@
                 </div>
                 <div class="col-md-3 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('/WEB-INF/Resources/Content/images/image_3.jpg');">
                         </a>
                         <div class="text p-4">
                             <span class="tag">Tips, Travel</span>
@@ -864,7 +865,7 @@
                 </div>
                 <div class="col-md-3 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_4.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('/WEB-INF/Resources/Content/images/image_4.jpg');">
                         </a>
                         <div class="text p-4">
                             <span class="tag">Tips, Travel</span>
@@ -991,22 +992,26 @@
     </div>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/popper.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/bootstrap.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.easing.1.3.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.waypoints.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.stellar.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/owl.carousel.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.magnific-popup.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/aos.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.animateNumber.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/bootstrap-datepicker.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/jquery.timepicker.min.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/scrollax.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/google-map.js"></script>
+    <script src="/WEB-INF/Resources/Scripts/js/main.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
