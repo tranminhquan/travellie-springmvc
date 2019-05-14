@@ -53,7 +53,7 @@
   </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');">
+    <div class="hero-wrap js-fullheight" style="background-image: url('Resources/Content/images/bg_2.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -69,7 +69,7 @@
     <section class="ftco-section">
     	<div class="container">
     		<div class="row d-md-flex">
-	    		<div class="col-md-6 ftco-animate img about-image" style="background-image: url(images/about.jpg);">
+	    		<div class="col-md-6 ftco-animate img about-image" style="background-image: url(Resources/Content/images/about.jpg);">
 	    		</div>
 	    		<div class="col-md-6 ftco-animate p-md-5">
 		    		<div class="row">

@@ -650,7 +650,7 @@
                 <ul class="comment-list">
                     <li class="comment">
                         <div class="vcard bio">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
+                            <img src="Resources/Content/images/person_1.jpg" alt="Image placeholder">
                         </div>
                     </li>
                 </ul>

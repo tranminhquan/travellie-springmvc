@@ -56,7 +56,7 @@
         </div>
     </nav>
      <!--END nav-->
-    <div class="hero-wrap js-fullheight" style="background-image: url('WEB-INF/Resources/Content/images/bg_1.jpg');">
+    <div class="hero-wrap js-fullheight" style="background-image: url('Resources/Content/images/bg_1.jpg');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
@@ -283,7 +283,7 @@
     <div class="destination-slider owl-carousel ftco-animate">
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-1.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-1.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -296,7 +296,7 @@
     </div>
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-2.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-2.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -309,7 +309,7 @@
     </div>
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-3.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-3.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -322,7 +322,7 @@
     </div>
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-4.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-4.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -335,7 +335,7 @@
     </div>
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-5.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-5.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -348,7 +348,7 @@
     </div>
     <div class="item">
     <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/destination-6.jpg);">
+    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-6.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -378,7 +378,7 @@
     <div class="row">
     <div class="col-sm col-md-6 col-lg ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-1.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-1.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -412,7 +412,7 @@
     </div>
     <div class="col-sm col-md-6 col-lg ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-2.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-2.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -446,7 +446,7 @@
     </div>
     <div class="col-sm col-md-6 col-lg ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-3.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-3.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -480,7 +480,7 @@
     </div>
     <div class="col-sm col-md-6 col-lg ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-4.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-4.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -514,7 +514,7 @@
     </div>
     <div class="col-sm col-md-6 col-lg ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/destination-5.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-5.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -550,7 +550,7 @@
     </div>
     </section>
 
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);">
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(Resources/Content/images/bg_1.jpg);">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -619,7 +619,7 @@
                             <div class="carousel-testimony owl-carousel">
                                 <div class="item">
                                     <div class="testimony-wrap d-flex">
-                                        <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                                        <div class="user-img mb-5" style="background-image: url(Resources/Content/images/person_1.jpg)">
                                         <span class="quote d-flex align-items-center justify-content-center">
                                           <i class="icon-quote-left"></i>
                                         </span>
@@ -640,7 +640,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="testimony-wrap d-flex">
-                                        <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
+                                        <div class="user-img mb-5" style="background-image: url(Resources/Content/images/person_2.jpg)">
                                         <span class="quote d-flex align-items-center justify-content-center">
                                           <i class="icon-quote-left"></i>
                                         </span>
@@ -659,7 +659,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="testimony-wrap d-flex">
-                                        <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                                        <div class="user-img mb-5" style="background-image: url(Resources/Content/images/person_3.jpg)">
                                         <span class="quote d-flex align-items-center justify-content-center">
                                           <i class="icon-quote-left"></i>
                                         </span>
@@ -699,7 +699,7 @@
     <div class="row">
     <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-1.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-1.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -725,7 +725,7 @@
     </div>
     <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-2.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-2.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -751,7 +751,7 @@
     </div>
     <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-3.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-3.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
@@ -777,7 +777,7 @@
     </div>
     <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-4.jpg);">
+    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-4.jpg);">
     <div class="icon d-flex justify-content-center align-items-center">
     <span class="icon-search2"></span>
     </div>
