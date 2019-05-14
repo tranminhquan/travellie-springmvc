@@ -18,12 +18,12 @@
     } </script>
     <!-- //custom-theme -->
     <!-- js -->
-    <script src="/WEB-INF/Resources/Scripts/js/booking_form/jquery.min.js"></script>
+    <script src="Resources/Scripts/js/booking_form/jquery.min.js"></script>
     <!-- //js -->
     <!-- font-awesome-icons -->
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/booking_form/font-awesome.css">
+    <link rel="stylesheet" href="Resources/Content/css/booking_form/font-awesome.css">
     <!-- //font-awesome-icons -->
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/booking_form/style.css" media="all" type="text/css"/>
+    <link rel="stylesheet" href="Resources/Content/css/booking_form/style.css" media="all" type="text/css"/>
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -444,12 +444,8 @@
     </div>
 </div>
 
-<script src="/WEB-INF/Resources/Scripts/js/booking_form/jquery.validate.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/booking_form/jquery.formtowizard.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="Resources/Scripts/js/booking_form/jquery.validate.min.js"></script>
+<script src="Resources/Scripts/js/booking_form/jquery.formtowizard.js"></script>
 
 <script>
     $(function () {

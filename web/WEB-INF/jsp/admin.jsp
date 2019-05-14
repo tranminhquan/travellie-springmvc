@@ -14,26 +14,26 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/animate.css">
+    <link rel="stylesheet" href="Resources/Content/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/animate.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/magnific-popup.css">
+    <link rel="stylesheet" href="Resources/Content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/aos.css">
+    <link rel="stylesheet" href="Resources/Content/css/aos.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/ionicons.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="Resources/Content/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="Resources/Content/css/jquery.timepicker.css">
 
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/flaticon.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/icomoon.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/style.css">
+    <link rel="stylesheet" href="Resources/Content/css/flaticon.css">
+    <link rel="stylesheet" href="Resources/Content/css/icomoon.css">
+    <link rel="stylesheet" href="Resources/Content/css/style.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/reset.css"> <!-- CSS reset timeline -->
+    <link rel="stylesheet" href="Resources/Content/css/reset.css"> <!-- CSS reset timeline -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!--rating-->

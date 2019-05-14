@@ -8,8 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <!-- CSS LIBRARY -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
@@ -19,26 +17,26 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/animate.css">
+    <link rel="stylesheet" href="Resources/Content/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/animate.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/magnific-popup.css">
+    <link rel="stylesheet" href="Resources/Content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/aos.css">
+    <link rel="stylesheet" href="Resources/Content/css/aos.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/ionicons.min.css">
+    <link rel="stylesheet" href="Resources/Content/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="Resources/Content/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="Resources/Content/css/jquery.timepicker.css">
 
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/flaticon.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/icomoon.css">
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/style.css">
+    <link rel="stylesheet" href="Resources/Content/css/flaticon.css">
+    <link rel="stylesheet" href="Resources/Content/css/icomoon.css">
+    <link rel="stylesheet" href="Resources/Content/css/style.css">
 
-    <link rel="stylesheet" href="/WEB-INF/Resources/Content/css/reset.css"> <!-- CSS reset timeline -->
+    <link rel="stylesheet" href="Resources/Content/css/reset.css"> <!-- CSS reset timeline -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!--rating-->
@@ -884,29 +882,25 @@
 <!--END / SROLL TOP-->
 
 <!-- LOAD JQUERY -->
-<script src="/WEB-INF/Resources/Scripts/js/jquery.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/popper.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/bootstrap.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery.easing.1.3.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery.waypoints.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery.stellar.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/owl.carousel.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery.magnific-popup.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/aos.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/jquery.animateNumber.min.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/bootstrap-datepicker.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/scrollax.min.js"></script>
+<script src="Resources/Scripts/js/jquery.min.js"></script>
+<script src="Resources/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="Resources/Scripts/js/popper.min.js"></script>
+<script src="Resources/Scripts/js/bootstrap.min.js"></script>
+<script src="Resources/Scripts/js/jquery.easing.1.3.js"></script>
+<script src="Resources/Scripts/js/jquery.waypoints.min.js"></script>
+<script src="Resources/Scripts/js/jquery.stellar.min.js"></script>
+<script src="Resources/Scripts/js/owl.carousel.min.js"></script>
+<script src="Resources/Scripts/js/jquery.magnific-popup.min.js"></script>
+<script src="Resources/Scripts/js/aos.js"></script>
+<script src="Resources/Scripts/js/jquery.animateNumber.min.js"></script>
+<script src="Resources/Scripts/js/bootstrap-datepicker.js"></script>
+<script src="Resources/Scripts/js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="/WEB-INF/Resources/Scripts/js/google-map.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/main.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/zoom-btn.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/timeline.js"></script>
-<script src="/WEB-INF/Resources/Scripts/js/rating.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="Resources/Scripts/js/google-map.js"></script>
+<script src="Resources/Scripts/js/main.js"></script>
+<script src="Resources/Scripts/js/zoom-btn.js"></script>
+<script src="Resources/Scripts/js/timeline.js"></script>
+<script src="Resources/Scripts/js/rating.js"></script>
 
 <script>
     $('[data-toggle^=tab]').click(function (e) {
