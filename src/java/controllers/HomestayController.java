@@ -9,14 +9,14 @@ package controllers;
  *
  * @author Admin
  */
-import api.HomestayService;
+import api.*;
 import database.SQLServerConnUtils_JTDS;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import models.Homestay;
+import models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,9 +27,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomestayController {
     HomestayService _homestayService;
+    HomestayImageService _homestayImageService;
+    HomestayOverviewService _homestayOverviewService;
+    HomestayFoodService _homestayFoodService;
+    HomestayTourImageService _homestayTourImageService;
+    HomestayTourDescriptionService _homestayTourDescriptionService;
+    HomestayRuleService _homestayRuleService;
+    
     public HomestayController()
     {
         _homestayService = new HomestayService();
+        _homestayImageService = new HomestayImageService();
+        _homestayOverviewService = new HomestayOverviewService();
+        _homestayFoodService = new HomestayFoodService();
+        _homestayTourImageService = new HomestayTourImageService();
+        _homestayTourDescriptionService = new HomestayTourDescriptionService();
+        _homestayRuleService = new HomestayRuleService();
     }
     @RequestMapping(value="/homestays", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
@@ -45,61 +58,38 @@ public class HomestayController {
             Homestay _homestay = _homestayService.LoadById(homestayId);
             modelmap.put("detailHomestays", _homestay);
             
+            ArrayList<HomestayImage> list_homestayImage = _homestayImageService.LoadById(homestayId);
+            modelmap.put("detailHomestaysImage", list_homestayImage);
+
+            ArrayList<HomestayOverview> list_homestayOverview = _homestayOverviewService.LoadById(homestayId);
+            modelmap.put("detailHomestaysOverview", list_homestayOverview);
+            
+            ArrayList<HomestayFood> list_homestayFood = _homestayFoodService.LoadById(homestayId);
+            modelmap.put("detailHomestaysFood", list_homestayFood);
+            
+            ArrayList<HomestayTourImage> list_homestayTourImage = _homestayTourImageService.LoadById(homestayId);
+            modelmap.put("detailHomestaysTourImage", list_homestayTourImage);
+            
+            ArrayList<HomestayTourDescription> list_homestayTourDescription = _homestayTourDescriptionService.LoadById(homestayId);
+            modelmap.put("detailHomestaysTourDescription", list_homestayTourDescription);
+            
+            ArrayList<HomestayRule> list_homestayRule = _homestayRuleService.LoadById(homestayId);
+            modelmap.put("detailHomestaysRule", list_homestayRule);
+            
             return "detailHomestay";
     }
     
-//    public static void main(String[] args) throws SQLException {
+//    public static void main(String[] args) {
 //        ArrayList<Homestay> list_homestay;
 //        list_homestay = new HomestayService().Load();
 //        for (int i = 0; i<list_homestay.size();i++){
 //            System.out.println(list_homestay.get(i).getFullAddress());
 //        }
-////        try {
-////            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-////            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
-////            checkConnectionStatus(connection);
-////
-////            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY");
-//////            statement.setString(1, "5");	
-////
-////            ResultSet rs = statement.executeQuery();
-////            ArrayList<Homestay> list_hs = new ArrayList<>();
-////            
-////            while (rs.next()) {     
-////                list_hs.add(new Homestay(rs.getString("HomestayID"), 
-////                        rs.getString("HomestayName"), 
-////                        rs.getString("HomestayAddress"), 
-////                        rs.getString("FullAddress"), 
-////                        rs.getString("Distance"), 
-////                        rs.getInt("NumberPeople"), 
-////                        rs.getInt("NumberDays"), 
-////                        rs.getInt("TimeStart"), 
-////                        rs.getInt("TimeEnd"), 
-////                        rs.getInt("Rating"), 
-////                        rs.getString("OwnerImage"), 
-////                        rs.getString("OwnerName"), 
-////                        rs.getDate("OwnerDoB"), 
-////                        rs.getInt("OwnerGender"), 
-////                        rs.getString("OwnerPhone"), 
-////                        rs.getString("OwnerCareer"), 
-////                        rs.getString("Video"), 
-////                        rs.getString("RoomTypeID"), 
-////                        rs.getString("LocationTypeID"), 
-////                        rs.getString("VacationTypeID"), 
-////                        rs.getString("CuisineID"), 
-////                        rs.getString("LifeStyleID"))); 
-////            }
-////            
-////            for (int i = 0; i<list_hs.size();i++){
-////                System.out.println(list_hs.get(i).getHomestayImageID());
-////            }
-////            connection.close();
-////            checkConnectionStatus(connection);
-////        } catch (ClassNotFoundException e) {
-////                e.printStackTrace();
-////        } catch (SQLException e) {
-////                e.printStackTrace();
-////        }
+//        ArrayList<HomestayImage> list_homestayImage;
+//        list_homestayImage = new HomestayImageService().LoadById("HID0000001");
+//        for (int i = 0; i<list_homestayImage.size();i++){
+//            System.out.println(list_homestayImage.get(i).getDescription());
+//        }
 //    }
  
     public static void checkConnectionStatus(Connection connection) throws SQLException {

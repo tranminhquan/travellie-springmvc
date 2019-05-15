@@ -12,107 +12,107 @@ import java.sql.Date;
  * @author tranminhquan
  */
 public class User {
-    private String ID;
-    private String Name;
-    private String Email;
-    private String Password;
-    private Date DoB;
-    private String IdCard;
-    private String Phone;
-    private Integer Gender;
-    private String Career;
-    private String Note;
+    private String id;
+    private String name;
+    private String email;
+    private String password;
+    private Date dob;
+    private String idCard;
+    private String phone;
+    private Integer gender;
+    private String career;
+    private String note;
 
     public User(String ID, String Name, String Email, String Password, Date DoB, String IdCard, String Phone, Integer Gender, String Career) {
-        this.ID = ID;
-        this.Name = Name;
-        this.Email = Email;
-        this.Password = Password;
-        this.DoB = DoB;
-        this.IdCard = IdCard;
-        this.Phone = Phone;
-        this.Gender = Gender;
-        this.Career = Career;
+        this.id = ID;
+        this.name = Name;
+        this.email = Email;
+        this.password = Password;
+        this.dob = DoB;
+        this.idCard = IdCard;
+        this.phone = Phone;
+        this.gender = Gender;
+        this.career = Career;
     }
 
     public String getID() {
-        return ID;
+        return id;
     }
 
     public void setID(String ID) {
-        this.ID = ID;
+        this.id = ID;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String Email) {
-        this.Email = Email;
+        this.email = Email;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String Password) {
-        this.Password = Password;
+        this.password = Password;
     }
 
     public Date getDoB() {
-        return DoB;
+        return dob;
     }
 
     public void setDoB(Date DoB) {
-        this.DoB = DoB;
+        this.dob = DoB;
     }
 
     public String getIdCard() {
-        return IdCard;
+        return idCard;
     }
 
     public void setIdCard(String IdCard) {
-        this.IdCard = IdCard;
+        this.idCard = IdCard;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String Phone) {
-        this.Phone = Phone;
+        this.phone = Phone;
     }
 
     public Integer getGender() {
-        return Gender;
+        return gender;
     }
 
     public void setGender(Integer Gender) {
-        this.Gender = Gender;
+        this.gender = Gender;
     }
 
     public String getCareer() {
-        return Career;
+        return career;
     }
 
     public void setCareer(String Career) {
-        this.Career = Career;
+        this.career = Career;
     }
 
     public String getNote() {
-        return Note;
+        return note;
     }
 
     public void setNote(String Note) {
-        this.Note = Note;
+        this.note = Note;
     }
     
     

@@ -9,18 +9,18 @@ package models;
  *
  * @author Admin
  */
-public class HomestayImage {
+public class HomestayFood {
     private String id;
     private String homestayID;
     private String location;
     private String description;
 
-    public HomestayImage()
+    public HomestayFood()
     {
     
     }
     
-    public HomestayImage(String Id, String homestayID, String location, String description) {
+    public HomestayFood(String Id, String homestayID, String location, String description) {
         this.id = Id;
         this.homestayID = homestayID;
         this.location = location;

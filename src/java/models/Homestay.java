@@ -34,12 +34,6 @@ public class Homestay {
     private String vacationTypeID;
     private String cuisineID;
     private String lifeStyleID;
-    private String homestayImageID;
-    private String homestayOverviewID;
-    private String homestayTourImageID;
-    private String homestayTourDescriptionID;
-    private String homestayFoodID;
-    private String homestayRuleID;
     private String note;
     
     public Homestay()

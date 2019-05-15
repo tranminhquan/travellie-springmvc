@@ -76,9 +76,9 @@
 <!--Header-->
 <div class="hero-wrap">
     <div class="single-slider owl-carousel">
-        {{#each homestay.feature_images}}
+        <c:forEach var="hsImage" items="${detailHomestaysImage}" varStatus="status" >
             <div class="item">
-                <div class="hotel-img" style="background-image: url({{images}});">
+                <div class="hotel-img" style="background-image: url(${hsImage.location});">
                     <div class="carousel-caption text-left">
                         <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
                              data-scrollax-parent="true">
@@ -86,14 +86,14 @@
                                  data-scrollax=" properties: { translateY: '70%' }">
                                 <h2 class="mb-3 bread text-white"
                                     data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
-                                    {{description}}
+                                    ${hsImage.description}
                                 </h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        {{/each}}
+        </c:forEach>
     </div>
 </div>
 
@@ -214,9 +214,9 @@
                             <div class="tab-pane fade active show" id="overview">
                                 <div class="product-detail_amenities">
                                     <ul>
-                                        {{#each homestay.overview}}
-                                            <li>  {{this}}</li>
-                                        {{/each}}
+                                        <c:forEach var="hsOverview" items="${detailHomestaysOverview}" varStatus="status" >
+                                            <li>  ${hsOverview.overview}</li>
+                                        </c:forEach>
                                     </ul>
                                 </div>
                             </div>
@@ -225,12 +225,12 @@
                             <div class="tab-pane fade" id="tour">
                                 <div class="product-detail_overview">
                                     <div class="single-slider owl-carousel">
-                                        {{#each homestay.tour.images}}
+                                        <c:forEach var="hsTourImage" items="${detailHomestaysTourImage}" varStatus="status" >                
                                             <div class="item">
-                                                <div class="hotel-img" style="background-image: url({{this}});">
+                                                <div class="hotel-img" style="background-image: url(${hsTourImage.location});">
                                                 </div>
                                             </div>
-                                        {{/each}}
+                                        </c:forEach>
                                     </div>
                                     <section class="cd-horizontal-timeline">
                                         <div class="timeline">
@@ -255,14 +255,14 @@
 
                                         <div class="events-content">
                                             <ol>
-                                                {{#each tours}}
+                                                <c:forEach var="hsTourDescription" items="${detailHomestaysTourDescription}" varStatus="status" >
                                                     <li data-date={{date}}>
                                                         <!--<h2>Horizontal Timeline</h2>-->
                                                         <p>
-                                                            {{description}}
+                                                            ${hsTourDescription.description}
                                                         </p>
                                                     </li>
-                                                {{/each}}
+                                                </c:forEach>
 
 
                                             </ol>
@@ -274,11 +274,11 @@
                             <!-- FOOD -->
                             <div class="tab-pane fade" id="food">
                                 <div id="even_odd" class="product-detail_overview">
-                                    {{#each homestay.food}}
+                                    <c:forEach var="hsFood" items="${detailHomestaysFood}" varStatus="status">
                                         <div class="row justify-content-center no-gutters mb-5">
                                             <!--<div class="col-lg-6">-->
                                             <div class="col-sm-6">
-                                                <img class="img-fluid" src="{{images}}" alt="">
+                                                <img class="img-fluid" src="${hsFood.location}" alt="">
                                             </div>
                                             <!--<div class="col-lg-6">-->
                                             <div class="col-sm-6 col-even_odd">
@@ -286,13 +286,13 @@
                                                     <div class="d-flex h-100">
                                                         <div id="text-lg-even_odd"
                                                              class="w-100 my-auto text-center text-lg-left">
-                                                            <p class="mb-0 text-50 pl-3">{{description}}</p>
+                                                            <p class="mb-0 text-50 pl-3">${hsFood.description}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    {{/each}}
+                                    </c:forEach>
                                 </div>
                             </div>
                             <!-- END / FOOD -->
@@ -301,9 +301,9 @@
                                 <div class="tab-pane fade active show" id="overview">
                                     <div class="product-detail_overview">
                                         <ul>
-                                            {{#each homestay.rule.description}}
-                                                <li><i class="fas fa-exclamation"></i>  {{this}}</li>
-                                            {{/each}}
+                                            <c:forEach var="hsRule" items="${detailHomestaysRule}" varStatus="status">
+                                                <li><i class="fas fa-exclamation"></i>  ${hsRule.rules}</li>
+                                            </c:forEach>
                                         </ul>
                                     </div>
                                 </div>

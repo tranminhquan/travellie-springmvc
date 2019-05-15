@@ -9,22 +9,20 @@ package models;
  *
  * @author Admin
  */
-public class HomestayImage {
+public class HomestayOverview {
     private String id;
     private String homestayID;
-    private String location;
-    private String description;
+    private String overview;
 
-    public HomestayImage()
+    public HomestayOverview()
     {
     
     }
     
-    public HomestayImage(String Id, String homestayID, String location, String description) {
+    public HomestayOverview(String Id, String homestayID, String overview) {
         this.id = Id;
         this.homestayID = homestayID;
-        this.location = location;
-        this.description = description;
+        this.overview = overview;
     }
 
     public String getId() {
@@ -43,21 +41,12 @@ public class HomestayImage {
         this.homestayID = homestayID;
     }
 
-    public String getLocation() {
-        return location;
+    public String getOverview() {
+        return overview;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }    
     
 }
