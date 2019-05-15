@@ -22,6 +22,7 @@ public class Homestay {
     private Integer timeStart;
     private Integer timeEnd;
     private Integer rating;
+    private String featureImage;
     private String ownerImage;
     private String ownerName;
     private Date ownerDoB;
@@ -41,29 +42,30 @@ public class Homestay {
         
     }
 
-    public Homestay(String ID, String Name, String Address, String FullAddress, String Distance, Integer NumberPeople, Integer NumberDays, Integer TimeStart, Integer TimeEnd, Integer Rating, String OwnerImage, String OwnerName, Date OwnerDoB, Integer OwnerGender, String OwnerPhone, String OwnerCareer, String Video, String RoomTypeID, String LocationTypeID, String VacationTypeID, String CuisineID, String LifeStyleID) {
-        this.id = ID;
-        this.name = Name;
-        this.address = Address;
-        this.fullAddress = FullAddress;
-        this.distance = Distance;
-        this.numberPeople = NumberPeople;
-        this.numberDays = NumberDays;
-        this.timeStart = TimeStart;
-        this.timeEnd = TimeEnd;
-        this.rating = Rating;
-        this.ownerImage = OwnerImage;
-        this.ownerName = OwnerName;
-        this.ownerDoB = OwnerDoB;
-        this.ownerGender = OwnerGender;
-        this.ownerPhone = OwnerPhone;
-        this.ownerCareer = OwnerCareer;
-        this.video = Video;
-        this.roomTypeID = RoomTypeID;
-        this.locationTypeID = LocationTypeID;
-        this.vacationTypeID = VacationTypeID;
-        this.cuisineID = CuisineID;
-        this.lifeStyleID = LifeStyleID;
+    public Homestay(String id, String name, String address, String fullAddress, String distance, Integer numberPeople, Integer numberDays, Integer timeStart, Integer timeEnd, Integer rating, String featureImage, String ownerImage, String ownerName, Date ownerDoB, Integer ownerGender, String ownerPhone, String ownerCareer, String video, String roomTypeID, String locationTypeID, String vacationTypeID, String cuisineID, String lifeStyleID) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.fullAddress = fullAddress;
+        this.distance = distance;
+        this.numberPeople = numberPeople;
+        this.numberDays = numberDays;
+        this.timeStart = timeStart;
+        this.timeEnd = timeEnd;
+        this.rating = rating;
+        this.featureImage = featureImage;
+        this.ownerImage = ownerImage;
+        this.ownerName = ownerName;
+        this.ownerDoB = ownerDoB;
+        this.ownerGender = ownerGender;
+        this.ownerPhone = ownerPhone;
+        this.ownerCareer = ownerCareer;
+        this.video = video;
+        this.roomTypeID = roomTypeID;
+        this.locationTypeID = locationTypeID;
+        this.vacationTypeID = vacationTypeID;
+        this.cuisineID = cuisineID;
+        this.lifeStyleID = lifeStyleID;
     }
 
     public String getId() {
@@ -144,6 +146,14 @@ public class Homestay {
 
     public void setRating(Integer rating) {
         this.rating = rating;
+    }
+
+    public String getFeatureImage() {
+        return featureImage;
+    }
+
+    public void setFeatureImage(String featureImage) {
+        this.featureImage = featureImage;
     }
 
     public String getOwnerImage() {
@@ -250,5 +260,6 @@ public class Homestay {
         this.note = note;
     }
 
+    
     
 }

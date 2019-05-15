@@ -62,14 +62,14 @@
         <div class="single-slider owl-carousel">
             <c:forEach var="hs" items="${homestays}" varStatus="status" >
                 <div class="item">
-                    <div class="hotel-img" style="background-image: url({{feature_images.[0].images}});">
+                    <div class="hotel-img" style="background-image: url(${hs.featureImage});">
                         <div class="carousel-caption text-left">
                             <div class="row p-0 slider-text js-fullheight align-items-end justify-content-left"
                                  data-scrollax-parent="true">
                                 <div class="col-md-9 ftco-animate text-left"
                                      data-scrollax=" properties: { translateY: '70%' }">
                                     <div class="row">
-                                        Left column
+                                        <!--Left column-->
                                         <!--<a href="/detailHomestay?id=${hs.id}">-->
                                         <a href="./homestays/${hs.id}.html">                                            
                                         <div>
@@ -303,9 +303,9 @@
                             <div class="col-md-4 ftco-animate">
                                 <div class="destination">
                                     <!--<a href="/detailHomestay?id=${hs.id}"-->
-                                    <a href="./homestays/${hs.id}.html"> 
+                                    <a href="./homestays/${hs.id}.html"
                                     class="img img-2 d-flex justify-content-center align-items-center"
-                                    style="background-image: url({{feature_images.[0].images}});">
+                                    style="background-image: url(${hs.featureImage});">
                                     <div class="icon d-flex justify-content-center align-items-center">
                                         <span class="icon-search2"></span>
                                     </div>

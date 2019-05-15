@@ -147,7 +147,7 @@
                     <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Restaurant</a></span>
                     <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-hotel"></i>Hotel</a></span> 
                     <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-meeting-point"></i>Places</a></span> 
-                    <span class="d-flex justify-content-md-center align-items-md-	center"><a href="#"><i class="flaticon-shopping-bag"></i>Shopping</a></span>
+                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-shopping-bag"></i>Shopping</a></span>
                     </p>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                             <div class="col-sm col-md-6 col-lg ftco-animate">
                                 <div class="destination">
                                     <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
-                                       style="background-image: url({{feature_images.[0].images}});">
+                                       style="background-image: url(${hs.featureImage});">
                                         <div class="icon d-flex justify-content-center align-items-center">
                                             <span class="icon-search2"></span>
                                         </div>
@@ -255,7 +255,7 @@
                                         <hr>
                                         <p class="bottom-area d-flex">
                                             <span><i class="icon-map-o"></i>  ${hs.distance}</span>
-                                            <span class="ml-auto"><a href="/detailHomestay?id=${hs.id}}">Discovery</span></a>
+                                            <span class="ml-auto"><a href="./homestays/${hs.id}.html">Discovery</span></a>
                                         </p>
                                     </div>
                                 </div>

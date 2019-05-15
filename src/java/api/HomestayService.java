@@ -43,6 +43,7 @@ public class HomestayService {
                 _homestay.setTimeStart(rs.getInt("TimeStart")); 
                 _homestay.setTimeEnd(rs.getInt("TimeEnd")); 
                 _homestay.setRating(rs.getInt("Rating")); 
+                _homestay.setFeatureImage(rs.getString("FeatureImage")); 
                 _homestay.setOwnerImage(rs.getString("OwnerImage")); 
                 _homestay.setOwnerName(rs.getString("OwnerName")); 
                 _homestay.setOwnerDoB(rs.getDate("OwnerDoB")); 
@@ -91,6 +92,7 @@ public class HomestayService {
                 _homestay.setTimeStart(rs.getInt("TimeStart")); 
                 _homestay.setTimeEnd(rs.getInt("TimeEnd")); 
                 _homestay.setRating(rs.getInt("Rating")); 
+                _homestay.setFeatureImage(rs.getString("FeatureImage"));
                 _homestay.setOwnerImage(rs.getString("OwnerImage")); 
                 _homestay.setOwnerName(rs.getString("OwnerName")); 
                 _homestay.setOwnerDoB(rs.getDate("OwnerDoB")); 
