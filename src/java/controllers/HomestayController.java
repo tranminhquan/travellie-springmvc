@@ -40,7 +40,7 @@ public class HomestayController {
     }
     
     @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
-    public String CPUDetail(ModelMap modelmap,@PathVariable("homestayId") String homestayId)
+    public String HomestayDetail(ModelMap modelmap,@PathVariable("homestayId") String homestayId)
     {
             Homestay _homestay = _homestayService.LoadById(homestayId);
             modelmap.put("detailHomestays", _homestay);
