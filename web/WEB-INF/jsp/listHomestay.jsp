@@ -372,10 +372,10 @@
                             </div>
                         </div>
                     </div>
-                </div>  .col-md-9 
+                </div>
             </div>
         </div>
-    </section>  .section 
+    </section> 
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">

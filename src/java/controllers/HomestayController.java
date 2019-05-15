@@ -58,6 +58,9 @@ public class HomestayController {
             Homestay _homestay = _homestayService.LoadById(homestayId);
             modelmap.put("detailHomestays", _homestay);
             
+            ArrayList<Homestay> list_homestay = _homestayService.Load();
+            modelmap.put("homestays", list_homestay);
+            
             ArrayList<HomestayImage> list_homestayImage = _homestayImageService.LoadById(homestayId);
             modelmap.put("detailHomestaysImage", list_homestayImage);
 

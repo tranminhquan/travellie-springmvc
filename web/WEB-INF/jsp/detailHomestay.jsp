@@ -672,11 +672,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="destination-slider owl-carousel ftco-animate">
-                {{#each other_homestay}}
-                        <div class="destination">
-                            <a href="/detailHomestay?id={{_id}}"
+                        <c:forEach var="hs" items="${homestays}" varStatus="status">
+                            <div class="destination">
+                            <a href="${hs.id}.html"
                             class="img img-2 d-flex justify-content-center align-items-center"
-                            style="background-image: url({{feature_images.[0].images}});">
+                            style="background-image: url(${hs.featureImage});">
                             <div class="icon d-flex justify-content-center align-items-center">
                                 <span class="icon-search2"></span>
                             </div>
@@ -684,7 +684,7 @@
                             <div class="text p-3">
                                 <div class="d-flex">
                                     <div>
-                                        <h3><a href="/detailHomestay?id={{_id}}">{{name}}</a></h3>
+                                        <h3><a href="${hs.id}.html">${hs.name}</a></h3>
                                         <p class="rate">
                                             <i class="icon-star"></i>
                                             <i class="icon-star"></i>
@@ -699,32 +699,29 @@
                                     <!--</div>-->
                                 </div>
                                 <p>
-										<span>
-											<i class="material-icons"
-                                               style="font-size:18px; vertical-align: middle;">access_time</i>
-                                            {{time_start}}:00 - {{time_end}}:00
-										</span>
+                                    <span>
+					<i class="material-icons" style="font-size:18px; vertical-align: middle;">access_time</i>
+                                        ${hs.timeStart}:00 - ${hs.timeEnd}:00
+                                    </span>
                                     <br/>
                                     <span>
-											<i class="material-icons"
-                                               style="font-size:18px; vertical-align: middle;">people_outline</i>
-                                        {{nb_people}} persons
-										</span>
+					<i class="material-icons" style="font-size:18px; vertical-align: middle;">people_outline</i>
+                                        ${hs.numberPeople} persons
+                                    </span>
                                     <br/>
                                     <span>
-											<i class="far fa-calendar-alt"
-                                               style="font-size:18px; vertical-align: top;"></i>
-                                        {{np_days}} days
-										</span>
+					<i class="far fa-calendar-alt" style="font-size:18px; vertical-align: top;"></i>
+                                        ${hs.numberDays} days
+                                    </span>
                                 </p>
 
                                 <hr>
                                 <p class="bottom-area d-flex">
-                                    <span><i class="icon-map-o"></i> {{distance}} </span>
+                                    <span><i class="icon-map-o"></i> ${hs.distance} </span>
                                 </p>
                             </div>
-                        </div>
-                {{/each}}
+                            </div>
+                        </c:forEach>                        
                     </div>
                 </div>
             </div>
