@@ -616,19 +616,19 @@
 
             <!-- comment-list -->
             <ul class="comment-list">
-                {{#each comments}}
+                <c:forEach var="hsComment" items="${comments}" varStatus="status" >
                     <li class="comment">
                         <div class="vcard bio">
-                            <img src={{image}} alt="Image placeholder">
+                            <img src=${hsComment.userImage} alt="Image placeholder">
                         </div>
                         <div class="comment-body">
-                            <h3>{{name}}</h3>
-                            <div class="meta">{{time}}</div>
-                            <p>{{content}}</p>
+                            <h3>${hsComment.userName}</h3>
+                            <div class="meta">${hsComment.date}</div>
+                            <p>${hsComment.content}</p>
                             <p><a class="reply" href="#">Reply</a></p>
                         </div>
                     </li>
-                {{/each}}
+                </c:forEach>
             </ul>
         </div>
         <!-- END comment-list -->

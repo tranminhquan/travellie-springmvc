@@ -33,6 +33,7 @@ public class HomestayController {
     HomestayTourImageService _homestayTourImageService;
     HomestayTourDescriptionService _homestayTourDescriptionService;
     HomestayRuleService _homestayRuleService;
+    CommentService _commentService;
     
     public HomestayController()
     {
@@ -43,6 +44,7 @@ public class HomestayController {
         _homestayTourImageService = new HomestayTourImageService();
         _homestayTourDescriptionService = new HomestayTourDescriptionService();
         _homestayRuleService = new HomestayRuleService();
+        _commentService = new CommentService();
     }
     @RequestMapping(value="/homestays", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
@@ -78,6 +80,9 @@ public class HomestayController {
             
             ArrayList<HomestayRule> list_homestayRule = _homestayRuleService.LoadById(homestayId);
             modelmap.put("detailHomestaysRule", list_homestayRule);
+            
+            ArrayList<Comment> list_comment = _commentService.LoadById(homestayId);
+            modelmap.put("comments", list_comment);
             
             return "detailHomestay";
     }
