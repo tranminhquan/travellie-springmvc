@@ -145,12 +145,11 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid col-md-6">
             <div class="row">
                 <div class="col-md-12">
                     <div class="destination-slider owl-carousel ftco-animate">
                         <c:forEach var="hs" items="${homestays}" varStatus="status" >
-                            <div class="col-sm col-md-6 col-lg ftco-animate">
                                 <div class="destination">
                                     <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
                                        style="background-image: url(${hs.featureImage});">
@@ -170,9 +169,9 @@
                                                     <i class="icon-star-o"></i>
                                                 </p>
                                             </div>
-                                            <div class="two">
+<!--                                            <div class="two">
                                                 <span class="price per-price">$40<br><small>/night</small></span>
-                                            </div>
+                                            </div>-->
                                         </div>
 
                                         <hr>
@@ -182,7 +181,6 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
                         </c:forEach>
                     </div>
                 </div>

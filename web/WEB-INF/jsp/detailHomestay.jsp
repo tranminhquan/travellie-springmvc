@@ -62,9 +62,8 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
-                <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
                 <li class="nav-item active"><a class="nav-link" href="../homestays.html">Homestays</a></li>
-                <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="../blog.html">News</a></li>
                 <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
                 <li class="nav-item cta"><a class="nav-link" href="../search.html"><span>Find homestay</span></a></li>
             </ul>
@@ -205,7 +204,7 @@
                             <li><a data-toggle="tab" href="#tour">TOUR</a></li>
                             <li><a data-toggle="tab" href="#food">FOOD</a></li>
                             <li><a data-toggle="tab" href="#rules">RULES</a></li>
-                            <li><a data-toggle="tab" href="#calendar">CALENDAR</a></li>
+                            <!--<li><a data-toggle="tab" href="#calendar">CALENDAR</a></li>-->
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -310,10 +309,10 @@
                             </div>
                             <!-- END / RULES -->
                             <!-- CALENDAR -->
-                            <div class="tab-pane fade" id="calendar">
+<!--                            <div class="tab-pane fade" id="calendar">
                                 <div class="product-detail_calendar-wrap row">
                                     <div class="col-sm-6">
-                                        <!-- CALENDAR ITEM -->
+                                         CALENDAR ITEM 
                                         <div class="calendar_custom">
                                             <div class="calendar_title">
                                                 <span class="calendar_month">JUNE</span>
@@ -446,10 +445,10 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <!-- END CALENDAR ITEM -->
+                                         END CALENDAR ITEM 
                                     </div>
                                     <div class="col-sm-6">
-                                        <!-- CALENDAR ITEM -->
+                                         CALENDAR ITEM 
                                         <div class="calendar_custom">
                                             <div class="calendar_title">
                                                 <span class="calendar_month">JUNE</span>
@@ -582,14 +581,14 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <!-- END CALENDAR ITEM -->
+                                         END CALENDAR ITEM 
                                     </div>
                                     <div class="calendar_status text-center col-sm-12">
                                         <span>Available</span>
                                         <span class="not-available">Not Available</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!-- END / CALENDAR -->
                         </div>
                     </div>

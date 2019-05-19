@@ -46,9 +46,8 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
                     <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
                 </ul>
@@ -150,7 +149,7 @@
                     </div>
 
                     <div class="sidebar-wrap bg-light ftco-animate mt-3">
-                        <h3 class="heading mb-4">Find City</h3>
+                        <h3 class="heading mb-4">Find Homestay</h3>
                         <form action="#">
                             <div class="fields">
                                 <div class="form-group">
@@ -228,10 +227,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
+                                    <input type="text" class="form-control" placeholder="Duration">
                                 </div>
                                 <div class="form-group">
                                     <div class="range-slider">
@@ -244,9 +240,9 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-                                </div>
+                                </div>-->
                             </div>
                         </form>
                     </div>
@@ -323,9 +319,9 @@
                                                     <span>8 Ratings</span>
                                                 </p>
                                             </div>
-                                            <div class="two">
+<!--                                            <div class="two">
                                             <span class="price per-price">$40<br><small>/night</small></span>
-                                            </div>
+                                            </div>-->
                                         </div>
                                         <p>
                                                                                     <span>
