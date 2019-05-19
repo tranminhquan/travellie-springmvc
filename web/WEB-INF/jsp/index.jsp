@@ -43,9 +43,8 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <!--<li class="nav-item"><a href="tour.html" class="nav-link">Tour</a></li>-->
                     <li class="nav-item"><a href="homestays.html" class="nav-link" >Homestays</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">News</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
                 </ul>
@@ -69,86 +68,10 @@
                                 <div class="textfield-search one-third">
                                     <input type="text" class="form-control" placeholder="Your name of homestay">
                                 </div>
-                                <div class="select-wrap one-third">
-                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                    <select name="" id="" class="form-control">
-                                        <option value="an giang">An Giang</option>
-                                        <option value="ba ria - vung tau">Bà Rịa - Vũng Tàu</option>
-                                        <option value="bac lieu">Bạc Liêu</option>
-                                        <option value="bac kan">Bắc Kạn</option>
-                                        <option value="bac giang">Bắc Giang</option>
-                                        <option value="bac ninh">Bắc Ninh</option>
-                                        <option value="ben tre">Bến Tre</option>
-                                        <option value="binh duong">Bình Dương</option>
-                                        <option value="binh dinh">Bình Định</option>
-                                        <option value="binh phuoc">Bình Phước</option>
-                                        <option value="binh thuan">Bình Thuận</option>
-                                        <option value="ca mau">Cà Mau</option>
-                                        <option value="cao bang">Cao Bằng</option>
-                                        <option value="can tho">Cần Thơ</option>
-                                        <option value="da nang">Đà Nẵng</option>
-                                        <option value="dak lak">Đắk Lắk</option>
-                                        <option value="dak nong">Đắk Nông</option>
-                                        <option value="dien bien">Điện Biên</option>
-                                        <option value="dong nai">Đồng Nai</option>
-                                        <option value="dong thap">Đồng Tháp</option>
-                                        <option value="gia lai">Gia Lai</option>
-                                        <option value="ha giang">Hà Giang</option>
-                                        <option value="ha nam">Hà Nam</option>
-                                        <option value="ha noi">Hà Nội</option>
-                                        <option value="ha tay">Hà Tây</option>
-                                        <option value="ha tinh">Hà Tĩnh</option>
-                                        <option value="hai duong">Hải Dương</option>
-                                        <option value="hai phong">Hải Phòng</option>
-                                        <option value="hoa binh">Hòa Bình</option>
-                                        <option value="ho chi minh">Hồ Chí Minh</option>
-                                        <option value="hau giang">Hậu Giang</option>
-                                        <option value="hung yen">Hưng Yên</option>
-                                        <option value="khanh hoa">Khánh Hòa</option>
-                                        <option value="kien giang">Kiên Giang</option>
-                                        <option value="kon tum">Kon Tum</option>
-                                        <option value="lai chau">Lai Châu</option>
-                                        <option value="lao cai">Lào Cai</option>
-                                        <option value="lang son">Lạng Sơn</option>
-                                        <option value="lam dong">Lâm Đồng</option>
-                                        <option value="long an">Long An</option>
-                                        <option value="nam dinh">Nam Định</option>
-                                        <option value="nghe an">Nghệ An</option>
-                                        <option value="ninh binh">Ninh Bình</option>
-                                        <option value="ninh thuan">Ninh Thuận</option>
-                                        <option value="phu tho">Phú Thọ</option>
-                                        <option value="phu yen">Phú Yên</option>
-                                        <option value="quang binh">Quảng Bình</option>
-                                        <option value="quang nam">Quảng Nam</option>
-                                        <option value="quang ngai">Quảng Ngãi</option>
-                                        <option value="quang ninh">Quảng Ninh</option>
-                                        <option value="quang tri">Quảng Trị</option>
-                                        <option value="soc trang">Sóc Trăng</option>
-                                        <option value="son la">Sơn La</option>
-                                        <option value="tay ninh">Tây Ninh</option>
-                                        <option value="thai binh">Thái Bình</option>
-                                        <option value="thai nguyen">Thái Nguyên</option>
-                                        <option value="thanh hoa">Thanh Hóa</option>
-                                        <option value="thua thien - hue">Thừa Thiên - Huế</option>
-                                        <option value="tien giang">Tiền Giang</option>
-                                        <option value="tra vinh">Trà Vinh</option>
-                                        <option value="tuyen quang">Tuyên Quang</option>
-                                        <option value="vinh long">Vĩnh Long</option>
-                                        <option value="vinh phuc">Vĩnh Phúc</option>
-                                        <option value="yen bai">Yên Bái</option>
-                                    </select>
-                                </div>
                             </div>
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
                         </form>
                     </div>
-                    <p>Or browse the highlights</p>
-                    <p class="browse d-md-flex">
-                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Restaurant</a></span>
-                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-hotel"></i>Hotel</a></span> 
-                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-meeting-point"></i>Places</a></span> 
-                    <span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-shopping-bag"></i>Shopping</a></span>
-                    </p>
                 </div>
             </div>
         </div>
@@ -267,286 +190,6 @@
         </div>
     </section>
 
-    <section class="ftco-section ftco-destination">
-    <div class="container">
-    <div class="row justify-content-start mb-5 pb-3">
-    <div class="col-md-7 heading-section ftco-animate">
-    <span class="subheading">Featured</span>
-    <h2 class="mb-4"><strong>Featured</strong> Destination</h2>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12">
-    <div class="destination-slider owl-carousel ftco-animate">
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-1.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <span class="listing">15 Listing</span>
-    </div>
-    </div>
-    </div>
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-2.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">San Francisco, USA</a></h3>
-    <span class="listing">20 Listing</span>
-    </div>
-    </div>
-    </div>
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-3.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Lodon, UK</a></h3>
-    <span class="listing">10 Listing</span>
-    </div>
-    </div>
-    </div>
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-4.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Lion, Singapore</a></h3>
-    <span class="listing">3 Listing</span>
-    </div>
-    </div>
-    </div>
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-5.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Australia</a></h3>
-    <span class="listing">5 Listing</span>
-    </div>
-    </div>
-    </div>
-    <div class="item">
-    <div class="destination">
-    <a href="#" class="img d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-6.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <span class="listing">14 Listing</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-
-    <section class="ftco-section bg-light">
-    <div class="container">
-    <div class="row justify-content-start mb-5 pb-3">
-    <div class="col-md-7 heading-section ftco-animate">
-    <span class="subheading">Special Offers</span>
-    <h2 class="mb-4"><strong>Top</strong> Tour Packages</h2>
-    </div>
-    </div>    		
-    </div>
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-sm col-md-6 col-lg ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-1.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <div class="d-flex">
-    <div class="one">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    </div>
-    <div class="two">
-    <span class="price">$200</span>
-    </div>
-    </div>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <p class="days"><span>2 days 3 nights</span></p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-sm col-md-6 col-lg ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-2.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <div class="d-flex">
-    <div class="one">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    </div>
-    <div class="two">
-    <span class="price">$200</span>
-    </div>
-    </div>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <p class="days"><span>2 days 3 nights</span></p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-sm col-md-6 col-lg ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-3.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <div class="d-flex">
-    <div class="one">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    </div>
-    <div class="two">
-    <span class="price">$200</span>
-    </div>
-    </div>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <p class="days"><span>2 days 3 nights</span></p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-sm col-md-6 col-lg ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-4.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <div class="d-flex">
-    <div class="one">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    </div>
-    <div class="two">
-    <span class="price">$200</span>
-    </div>
-    </div>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <p class="days"><span>2 days 3 nights</span></p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-sm col-md-6 col-lg ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/destination-5.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <div class="d-flex">
-    <div class="one">
-    <h3><a href="#">Paris, Italy</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    </div>
-    <div class="two">
-    <span class="price">$200</span>
-    </div>
-    </div>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <p class="days"><span>2 days 3 nights</span></p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-
     <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(Resources/Content/images/bg_1.jpg);">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
@@ -581,14 +224,6 @@
                                     <span>Homestays</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                        <div class="block-18 text-center">
-                        <div class="text">
-                        <strong class="number" data-number="56400">0</strong>
-                        <span>Restaurant</span>
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -685,128 +320,11 @@
         </div>
     </section>
 
-    <section class="ftco-section">
-    <div class="container">
-    <div class="row justify-content-start mb-5 pb-3">
-    <div class="col-md-7 heading-section ftco-animate">
-    <span class="subheading">Special Offers</span>
-    <h2 class="mb-4"><strong>Popular</strong> Restaurants</h2>
-    </div>
-    </div>    		
-    <div class="row">
-    <div class="col-md-6 col-lg-3 ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-1.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Luxury Restaurant</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-3 ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-2.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">ABC Bar</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-3 ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-3.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Cafeteria</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-6 col-lg-3 ftco-animate">
-    <div class="destination">
-    <a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(Resources/Content/images/restaurant-4.jpg);">
-    <div class="icon d-flex justify-content-center align-items-center">
-    <span class="icon-search2"></span>
-    </div>
-    </a>
-    <div class="text p-3">
-    <h3><a href="#">Coffee shop</a></h3>
-    <p class="rate">
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star"></i>
-    <i class="icon-star-o"></i>
-    <span>8 Ratings</span>
-    </p>
-    <p>Far far away, behind the word mountains, far from the countries</p>
-    <hr>
-    <p class="bottom-area d-flex">
-    <span><i class="icon-map-o"></i> 0.5km from Noi Bai</span>
-    <span class="ml-auto"><a href="#">Discover</a></span>
-    </p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
-
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="row justify-content-start mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate">
-                    <span class="subheading">Recent Blog</span>
+                    <span class="subheading">Recent News</span>
                     <h2><strong>Tips</strong> &amp; Articles</h2>
                 </div>
             </div>
@@ -979,7 +497,7 @@
     </footer>
 
 
-     loader 
+     <!--loader--> 
     <div id="ftco-loader" class="show fullscreen">
         <svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
@@ -987,7 +505,6 @@
                     stroke="#F96D00"/>
         </svg>
     </div>
-
 
     <script src="Resources/Scripts/js/jquery.min.js"></script>
     <script src="Resources/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
