@@ -23,9 +23,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
- 
+
 @Controller
 public class HomestayController {
+
     HomestayService _homestayService;
     HomestayImageService _homestayImageService;
     HomestayOverviewService _homestayOverviewService;
@@ -34,9 +35,8 @@ public class HomestayController {
     HomestayTourDescriptionService _homestayTourDescriptionService;
     HomestayRuleService _homestayRuleService;
     CommentService _commentService;
-    
-    public HomestayController()
-    {
+
+    public HomestayController() {
         _homestayService = new HomestayService();
         _homestayImageService = new HomestayImageService();
         _homestayOverviewService = new HomestayOverviewService();
@@ -46,47 +46,47 @@ public class HomestayController {
         _homestayRuleService = new HomestayRuleService();
         _commentService = new CommentService();
     }
-    @RequestMapping(value="/homestays", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/homestays", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
         ArrayList<Homestay> list_homestay = _homestayService.Load();
         modelmap.put("homestays", list_homestay);
-        
+
         return "listHomestay";
     }
-    
-    @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
-    public String HomestayDetail(ModelMap modelmap,@PathVariable("homestayId") String homestayId)
-    {
-            Homestay _homestay = _homestayService.LoadById(homestayId);
-            modelmap.put("detailHomestays", _homestay);
-            
-            ArrayList<Homestay> list_homestay = _homestayService.Load();
-            modelmap.put("homestays", list_homestay);
-            
-            ArrayList<HomestayImage> list_homestayImage = _homestayImageService.LoadById(homestayId);
-            modelmap.put("detailHomestaysImage", list_homestayImage);
 
-            ArrayList<HomestayOverview> list_homestayOverview = _homestayOverviewService.LoadById(homestayId);
-            modelmap.put("detailHomestaysOverview", list_homestayOverview);
-            
-            ArrayList<HomestayFood> list_homestayFood = _homestayFoodService.LoadById(homestayId);
-            modelmap.put("detailHomestaysFood", list_homestayFood);
-            
-            ArrayList<HomestayTourImage> list_homestayTourImage = _homestayTourImageService.LoadById(homestayId);
-            modelmap.put("detailHomestaysTourImage", list_homestayTourImage);
-            
-            ArrayList<HomestayTourDescription> list_homestayTourDescription = _homestayTourDescriptionService.LoadById(homestayId);
-            modelmap.put("detailHomestaysTourDescription", list_homestayTourDescription);
-            
-            ArrayList<HomestayRule> list_homestayRule = _homestayRuleService.LoadById(homestayId);
-            modelmap.put("detailHomestaysRule", list_homestayRule);
-            
-            ArrayList<Comment> list_comment = _commentService.LoadById(homestayId);
-            modelmap.put("comments", list_comment);
-            
-            return "detailHomestay";
+    @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
+    public String HomestayDetail(ModelMap modelmap, @PathVariable("homestayId") String homestayId) {
+        Homestay _homestay = _homestayService.LoadById(homestayId);
+        modelmap.put("detailHomestays", _homestay);
+
+        ArrayList<Homestay> list_homestay = _homestayService.Load();
+        modelmap.put("homestays", list_homestay);
+
+        ArrayList<HomestayImage> list_homestayImage = _homestayImageService.LoadById(homestayId);
+        modelmap.put("detailHomestaysImage", list_homestayImage);
+
+        ArrayList<HomestayOverview> list_homestayOverview = _homestayOverviewService.LoadById(homestayId);
+        modelmap.put("detailHomestaysOverview", list_homestayOverview);
+
+        ArrayList<HomestayFood> list_homestayFood = _homestayFoodService.LoadById(homestayId);
+        modelmap.put("detailHomestaysFood", list_homestayFood);
+
+        ArrayList<HomestayTourImage> list_homestayTourImage = _homestayTourImageService.LoadById(homestayId);
+        modelmap.put("detailHomestaysTourImage", list_homestayTourImage);
+
+        ArrayList<HomestayTourDescription> list_homestayTourDescription = _homestayTourDescriptionService.LoadById(homestayId);
+        modelmap.put("detailHomestaysTourDescription", list_homestayTourDescription);
+
+        ArrayList<HomestayRule> list_homestayRule = _homestayRuleService.LoadById(homestayId);
+        modelmap.put("detailHomestaysRule", list_homestayRule);
+
+        ArrayList<Comment> list_comment = _commentService.LoadById(homestayId);
+        modelmap.put("comments", list_comment);
+
+        return "detailHomestay";
     }
-    
+
 //    public static void main(String[] args) {
 //        ArrayList<Homestay> list_homestay;
 //        list_homestay = new HomestayService().Load();
@@ -99,7 +99,6 @@ public class HomestayController {
 //            System.out.println(list_homestayImage.get(i).getDescription());
 //        }
 //    }
- 
     public static void checkConnectionStatus(Connection connection) throws SQLException {
         if (connection.isClosed()) {
             System.out.println("Hiện tại Không có kết nối đến Hệ Quản trị Cơ sở dữ liệu");
@@ -107,5 +106,5 @@ public class HomestayController {
             System.out.println("Hiện tại Đang có kết nối đến Hệ quản trị CSDL");
         }
     }
- 
+
 }

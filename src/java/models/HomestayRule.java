@@ -10,15 +10,15 @@ package models;
  * @author Admin
  */
 public class HomestayRule {
+
     private String id;
     private String homestayID;
     private String rules;
 
-    public HomestayRule()
-    {
-    
+    public HomestayRule() {
+
     }
-    
+
     public HomestayRule(String Id, String homestayID, String rules) {
         this.id = Id;
         this.homestayID = homestayID;

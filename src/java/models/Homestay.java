@@ -12,6 +12,7 @@ import java.sql.Date;
  * @author Admin
  */
 public class Homestay {
+
     private String id;
     private String name;
     private String address;
@@ -36,10 +37,9 @@ public class Homestay {
     private String cuisineID;
     private String lifeStyleID;
     private String note;
-    
-    public Homestay()
-    {
-        
+
+    public Homestay() {
+
     }
 
     public Homestay(String id, String name, String address, String fullAddress, String distance, Integer numberPeople, Integer numberDays, Integer timeStart, Integer timeEnd, Integer rating, String featureImage, String ownerImage, String ownerName, Date ownerDoB, Integer ownerGender, String ownerPhone, String ownerCareer, String video, String roomTypeID, String locationTypeID, String vacationTypeID, String cuisineID, String lifeStyleID) {
@@ -260,6 +260,4 @@ public class Homestay {
         this.note = note;
     }
 
-    
-    
 }

@@ -14,11 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import models.Homestay;
+
 /**
  *
  * @author Admin
  */
 public class HomestayService {
+
     public ArrayList<Homestay> Load() {
         ArrayList<models.Homestay> list_homestay = new ArrayList<models.Homestay>();
         try {
@@ -30,31 +32,30 @@ public class HomestayService {
 
             ResultSet rs = statement.executeQuery(sql);
 
-            while (rs.next()) 
-            {
+            while (rs.next()) {
                 models.Homestay _homestay = new models.Homestay();
                 _homestay.setId(rs.getString("HomestayID"));
                 _homestay.setName(rs.getString("HomestayName"));
                 _homestay.setAddress(rs.getString("HomestayAddress"));
-                _homestay.setFullAddress(rs.getString("FullAddress")); 
+                _homestay.setFullAddress(rs.getString("FullAddress"));
                 _homestay.setDistance(rs.getString("Distance"));
                 _homestay.setNumberPeople(rs.getInt("NumberPeople"));
-                _homestay.setNumberDays(rs.getInt("NumberDays")); 
-                _homestay.setTimeStart(rs.getInt("TimeStart")); 
-                _homestay.setTimeEnd(rs.getInt("TimeEnd")); 
-                _homestay.setRating(rs.getInt("Rating")); 
-                _homestay.setFeatureImage(rs.getString("FeatureImage")); 
-                _homestay.setOwnerImage(rs.getString("OwnerImage")); 
-                _homestay.setOwnerName(rs.getString("OwnerName")); 
-                _homestay.setOwnerDoB(rs.getDate("OwnerDoB")); 
-                _homestay.setOwnerGender(rs.getInt("OwnerGender")); 
-                _homestay.setOwnerPhone(rs.getString("OwnerPhone")); 
-                _homestay.setOwnerCareer(rs.getString("OwnerCareer")); 
-                _homestay.setVideo(rs.getString("Video")); 
-                _homestay.setRoomTypeID(rs.getString("RoomTypeID")); 
-                _homestay.setLocationTypeID(rs.getString("LocationTypeID")); 
-                _homestay.setVacationTypeID(rs.getString("VacationTypeID")); 
-                _homestay.setCuisineID(rs.getString("CuisineID")); 
+                _homestay.setNumberDays(rs.getInt("NumberDays"));
+                _homestay.setTimeStart(rs.getInt("TimeStart"));
+                _homestay.setTimeEnd(rs.getInt("TimeEnd"));
+                _homestay.setRating(rs.getInt("Rating"));
+                _homestay.setFeatureImage(rs.getString("FeatureImage"));
+                _homestay.setOwnerImage(rs.getString("OwnerImage"));
+                _homestay.setOwnerName(rs.getString("OwnerName"));
+                _homestay.setOwnerDoB(rs.getDate("OwnerDoB"));
+                _homestay.setOwnerGender(rs.getInt("OwnerGender"));
+                _homestay.setOwnerPhone(rs.getString("OwnerPhone"));
+                _homestay.setOwnerCareer(rs.getString("OwnerCareer"));
+                _homestay.setVideo(rs.getString("Video"));
+                _homestay.setRoomTypeID(rs.getString("RoomTypeID"));
+                _homestay.setLocationTypeID(rs.getString("LocationTypeID"));
+                _homestay.setVacationTypeID(rs.getString("VacationTypeID"));
+                _homestay.setCuisineID(rs.getString("CuisineID"));
                 _homestay.setLifeStyleID(rs.getString("LifeStyleID"));
 
                 list_homestay.add(_homestay);
@@ -68,6 +69,7 @@ public class HomestayService {
         }
         return list_homestay;
     }
+
     public Homestay LoadById(String Id) {
         ArrayList<models.Homestay> list_homestay = new ArrayList<models.Homestay>();
         try {
@@ -76,34 +78,33 @@ public class HomestayService {
 
             PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY where HomestayID = ?");
             statement.setString(1, Id);
-            
+
             ResultSet rs = statement.executeQuery();
 
-            while (rs.next()) 
-            {
+            while (rs.next()) {
                 models.Homestay _homestay = new models.Homestay();
                 _homestay.setId(rs.getString("HomestayID"));
                 _homestay.setName(rs.getString("HomestayName"));
                 _homestay.setAddress(rs.getString("HomestayAddress"));
-                _homestay.setFullAddress(rs.getString("FullAddress")); 
+                _homestay.setFullAddress(rs.getString("FullAddress"));
                 _homestay.setDistance(rs.getString("Distance"));
                 _homestay.setNumberPeople(rs.getInt("NumberPeople"));
-                _homestay.setNumberDays(rs.getInt("NumberDays")); 
-                _homestay.setTimeStart(rs.getInt("TimeStart")); 
-                _homestay.setTimeEnd(rs.getInt("TimeEnd")); 
-                _homestay.setRating(rs.getInt("Rating")); 
+                _homestay.setNumberDays(rs.getInt("NumberDays"));
+                _homestay.setTimeStart(rs.getInt("TimeStart"));
+                _homestay.setTimeEnd(rs.getInt("TimeEnd"));
+                _homestay.setRating(rs.getInt("Rating"));
                 _homestay.setFeatureImage(rs.getString("FeatureImage"));
-                _homestay.setOwnerImage(rs.getString("OwnerImage")); 
-                _homestay.setOwnerName(rs.getString("OwnerName")); 
-                _homestay.setOwnerDoB(rs.getDate("OwnerDoB")); 
-                _homestay.setOwnerGender(rs.getInt("OwnerGender")); 
-                _homestay.setOwnerPhone(rs.getString("OwnerPhone")); 
-                _homestay.setOwnerCareer(rs.getString("OwnerCareer")); 
-                _homestay.setVideo(rs.getString("Video")); 
-                _homestay.setRoomTypeID(rs.getString("RoomTypeID")); 
-                _homestay.setLocationTypeID(rs.getString("LocationTypeID")); 
-                _homestay.setVacationTypeID(rs.getString("VacationTypeID")); 
-                _homestay.setCuisineID(rs.getString("CuisineID")); 
+                _homestay.setOwnerImage(rs.getString("OwnerImage"));
+                _homestay.setOwnerName(rs.getString("OwnerName"));
+                _homestay.setOwnerDoB(rs.getDate("OwnerDoB"));
+                _homestay.setOwnerGender(rs.getInt("OwnerGender"));
+                _homestay.setOwnerPhone(rs.getString("OwnerPhone"));
+                _homestay.setOwnerCareer(rs.getString("OwnerCareer"));
+                _homestay.setVideo(rs.getString("Video"));
+                _homestay.setRoomTypeID(rs.getString("RoomTypeID"));
+                _homestay.setLocationTypeID(rs.getString("LocationTypeID"));
+                _homestay.setVacationTypeID(rs.getString("VacationTypeID"));
+                _homestay.setCuisineID(rs.getString("CuisineID"));
                 _homestay.setLifeStyleID(rs.getString("LifeStyleID"));
 
                 list_homestay.add(_homestay);
@@ -116,5 +117,5 @@ public class HomestayService {
             e.printStackTrace();
         }
         return list_homestay.get(0);
-    }    
+    }
 }

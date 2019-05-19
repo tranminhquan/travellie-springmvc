@@ -10,16 +10,16 @@ package models;
  * @author Admin
  */
 public class HomestayImage {
+
     private String id;
     private String homestayID;
     private String location;
     private String description;
 
-    public HomestayImage()
-    {
-    
+    public HomestayImage() {
+
     }
-    
+
     public HomestayImage(String Id, String homestayID, String location, String description) {
         this.id = Id;
         this.homestayID = homestayID;
@@ -58,6 +58,5 @@ public class HomestayImage {
     public void setDescription(String description) {
         this.description = description;
     }
-    
-    
+
 }

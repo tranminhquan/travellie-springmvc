@@ -12,16 +12,16 @@ import java.sql.Date;
  * @author Admin
  */
 public class Comment {
+
     private String id;
     private String homestayID;
     private String userName;
     private String userImage;
     private Date date;
     private String content;
-    
-    public Comment()
-    {
-        
+
+    public Comment() {
+
     }
 
     public Comment(String id, String homestayID, String userName, String userImage, Date date, String content) {
@@ -81,6 +81,4 @@ public class Comment {
         this.content = content;
     }
 
-    
-    
 }

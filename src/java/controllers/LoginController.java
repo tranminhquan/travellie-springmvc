@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author tranminhquan
  */
-
 @Controller
-@RequestMapping(value="/login")
+@RequestMapping(value = "/login")
 public class LoginController {
-    
+
 }

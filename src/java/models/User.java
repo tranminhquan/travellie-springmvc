@@ -12,6 +12,7 @@ import java.sql.Date;
  * @author tranminhquan
  */
 public class User {
+
     private String id;
     private String name;
     private String email;
@@ -114,6 +115,5 @@ public class User {
     public void setNote(String Note) {
         this.note = Note;
     }
-    
-    
+
 }

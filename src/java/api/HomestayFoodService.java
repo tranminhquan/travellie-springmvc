@@ -14,11 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import models.*;
+
 /**
  *
  * @author Admin
  */
 public class HomestayFoodService {
+
     public ArrayList<models.HomestayFood> LoadById(String Id) {
         ArrayList<models.HomestayFood> list_homestayFood = new ArrayList<models.HomestayFood>();
         try {
@@ -27,16 +29,15 @@ public class HomestayFoodService {
 
             PreparedStatement statement = connection.prepareStatement("select * from HOMESTAYFOOD where HomestayID = ?");
             statement.setString(1, Id);
-            
+
             ResultSet rs = statement.executeQuery();
 
-            while (rs.next()) 
-            {
+            while (rs.next()) {
                 models.HomestayFood _homestay = new models.HomestayFood();
                 _homestay.setId(rs.getString("HomestayFoodID"));
                 _homestay.setHomestayID(rs.getString("HomestayID"));
                 _homestay.setLocation(rs.getString("FoodImage"));
-                _homestay.setDescription(rs.getString("FoodDescription")); 
+                _homestay.setDescription(rs.getString("FoodDescription"));
 
                 list_homestayFood.add(_homestay);
             }
@@ -48,5 +49,5 @@ public class HomestayFoodService {
             e.printStackTrace();
         }
         return list_homestayFood;
-    }    
+    }
 }

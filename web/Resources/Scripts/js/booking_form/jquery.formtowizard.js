@@ -1,17 +1,18 @@
 /*
  Form To Wizard https://github.com/artoodetoo/formToWizard
  Free to use under MIT license.
-
+ 
  Originally created by Janko.
  Featured by iFadey.
  Polishing by artoodetoo.
-
+ 
  */
 
 (function ($) {
     $.fn.formToWizard = function (options, cmdParam1) {
         // Stop when selector found nothing!
-        if (this.length == 0) return this;
+        if (this.length == 0)
+            return this;
 
         if (typeof options !== 'string') {
             options = $.extend({
@@ -30,10 +31,10 @@
         }
 
         var element = this
-            , steps = $(element).find("fieldset")
-            , count = steps.size()
-            , submmitButtonName = "#" + options.submitButton
-            , commands = null;
+                , steps = $(element).find("fieldset")
+                , count = steps.size()
+                , submmitButtonName = "#" + options.submitButton
+                , commands = null;
 
 
         if (typeof options !== 'string') {
@@ -129,10 +130,10 @@
         function createPrevButton(i) {
             var stepName = 'step' + i;
             $('#' + stepName + 'commands').append(
-                '<' + options.buttonTag + ' href="#" id="' + stepName + 'Prev" class="' + options.prevBtnClass + '">' +
-                options.prevBtnName +
-                '</' + options.buttonTag + '>'
-            );
+                    '<' + options.buttonTag + ' href="#" id="' + stepName + 'Prev" class="' + options.prevBtnClass + '">' +
+                    options.prevBtnName +
+                    '</' + options.buttonTag + '>'
+                    );
 
             $("#" + stepName + "Prev").bind("click", function (e) {
                 $("#" + stepName).hide();
@@ -145,9 +146,9 @@
         function createNextButton(i) {
             var stepName = 'step' + i;
             $('#' + stepName + 'commands').append(
-                '<' + options.buttonTag + ' href="#" id="' + stepName + 'Next" class="' + options.nextBtnClass + '">' +
-                options.nextBtnName +
-                '</' + options.buttonTag + '>');
+                    '<' + options.buttonTag + ' href="#" id="' + stepName + 'Next" class="' + options.nextBtnClass + '">' +
+                    options.nextBtnName +
+                    '</' + options.buttonTag + '>');
 
             $("#" + stepName + "Next").bind("click", function (e) {
                 if (options.validateBeforeNext(element, $("#" + stepName)) === true) {

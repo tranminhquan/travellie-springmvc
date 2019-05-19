@@ -1,4 +1,5 @@
-;(function ($, window) {
+;
+(function ($, window) {
     $.fn.textWidth = function () {
         var html_calc = $('<span>' + $(this).html() + '</span>');
         html_calc.css('font-size', $(this).css('font-size')).hide();
@@ -41,7 +42,7 @@
 
     String.fromCodePoint = function () {
         var chars = Array.prototype.slice.call(arguments);
-        for (var i = chars.length; i-- > 0;) {
+        for (var i = chars.length; i-- > 0; ) {
             var n = chars[i] - 0x10000;
             if (n >= 0)
                 chars.splice(i, 1, 0xD800 + (n >> 10), 0xDC00 + (n & 0x3FF));
@@ -117,16 +118,16 @@
          * Making the three main layers (base, select, hover)
          */
         var base_layer = this.addLayer("base-layer", 100, this.settings.symbols[
-            this.settings.selected_symbol_type]["base"], true);
+                this.settings.selected_symbol_type]["base"], true);
 
         var select_layer = this.addLayer("select-layer", selected_width,
-            this.settings.symbols[this.settings.selected_symbol_type]["selected"], true);
+                this.settings.symbols[this.settings.selected_symbol_type]["selected"], true);
 
         var hover_layer = this.addLayer("hover-layer", 0, this.settings.symbols[
-            this.settings.selected_symbol_type]["hover"], false);
+                this.settings.selected_symbol_type]["hover"], false);
 
         /* var face_layer = this.addLayer("face-layer", 1, this.settings
-            .symbols[this.settings.face_layer_symbol_type][0], true); */
+         .symbols[this.settings.face_layer_symbol_type][0], true); */
 
         this.layers["base_layer"] = base_layer;
         this.layers["select_layer"] = select_layer;
@@ -358,7 +359,7 @@
                 var hover_layer_element = this.getElement('hover-layer', index_value);
 
                 var left_pos = base_layer_element.textWidth() * (index_value - 1)
-                    + (base_layer_element.textWidth() - $(face).textWidth()) / 2;
+                        + (base_layer_element.textWidth() - $(face).textWidth()) / 2;
 
                 $(face).appendTo(this.element).css({
                     display: 'inline-block',

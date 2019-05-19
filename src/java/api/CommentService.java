@@ -14,11 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import models.*;
+
 /**
  *
  * @author Admin
  */
 public class CommentService {
+
     public ArrayList<models.Comment> LoadById(String Id) {
         ArrayList<models.Comment> list_comment = new ArrayList<models.Comment>();
         try {
@@ -27,19 +29,18 @@ public class CommentService {
 
             PreparedStatement statement = connection.prepareStatement("select * from COMMENT where HomestayID = ?");
             statement.setString(1, Id);
-            
+
             ResultSet rs = statement.executeQuery();
 
-            while (rs.next()) 
-            {
+            while (rs.next()) {
                 models.Comment _comment = new models.Comment();
                 _comment.setId(rs.getString("CommentID"));
                 _comment.setHomestayID(rs.getString("HomestayID"));
                 _comment.setUserName(rs.getString("UserName"));
-                _comment.setUserImage(rs.getString("UserImage")); 
+                _comment.setUserImage(rs.getString("UserImage"));
                 _comment.setDate(rs.getDate("CommentDate"));
-                _comment.setContent(rs.getString("Content")); 
-                
+                _comment.setContent(rs.getString("Content"));
+
                 list_comment.add(_comment);
             }
 
@@ -50,5 +51,5 @@ public class CommentService {
             e.printStackTrace();
         }
         return list_comment;
-    }    
+    }
 }

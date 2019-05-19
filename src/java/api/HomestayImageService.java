@@ -14,11 +14,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import models.HomestayImage;
+
 /**
  *
  * @author Admin
  */
 public class HomestayImageService {
+
     public ArrayList<models.HomestayImage> LoadById(String Id) {
         ArrayList<models.HomestayImage> list_homestayImage = new ArrayList<models.HomestayImage>();
         try {
@@ -27,17 +29,16 @@ public class HomestayImageService {
 
             PreparedStatement statement = connection.prepareStatement("select * from HOMESTAYIMAGES where HomestayID = ?");
             statement.setString(1, Id);
-            
+
             ResultSet rs = statement.executeQuery();
 
-            while (rs.next()) 
-            {
+            while (rs.next()) {
                 models.HomestayImage _homestay = new models.HomestayImage();
                 _homestay.setId(rs.getString("HomestayImageID"));
                 _homestay.setHomestayID(rs.getString("HomestayID"));
                 _homestay.setLocation(rs.getString("ImageLocation"));
-                _homestay.setDescription(rs.getString("ImageDescription")); 
-                
+                _homestay.setDescription(rs.getString("ImageDescription"));
+
                 list_homestayImage.add(_homestay);
             }
 
@@ -48,5 +49,5 @@ public class HomestayImageService {
             e.printStackTrace();
         }
         return list_homestayImage;
-    }    
+    }
 }
