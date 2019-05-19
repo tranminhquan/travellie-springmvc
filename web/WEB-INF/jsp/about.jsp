@@ -43,7 +43,10 @@
             <li class="nav-item"><a class="nav-link" href="homestays.html">Homestays</a></li>
           <li class="nav-item"><a href="blog.html" class="nav-link">News</a></li>
           <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
+            <form action="" method="post" class="d-block d-flex">
+                                    <input type="text" class="form-control mr-sm-2" placeholder="Homestay, News">
+                            <input type="submit" class="search-submit btn btn-primary" value="Search">
+                        </form>
         </ul>
       </div>
     </div>

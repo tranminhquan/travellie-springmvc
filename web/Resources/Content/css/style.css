@@ -10315,16 +10315,3 @@ input.form-control {
     font-size: 38px;
     color: #f85959;
 }
-
-/*even_odd*/
-/*#even_odd :nth-child(even) :first-child : first:nth-child(2){*/
-/*background-color: #0b0b0b;*/
-/*}*/
-
-/*.col-even_odd :nth-child(odd){*/
-/*}*/
-/*.col-even_odd :nth-child(even){*/
-/*-webkit-box-ordinal-group: 0;*/
-/*-ms-flex-order: -1;*/
-/*order: -1;*/
-/*}*/

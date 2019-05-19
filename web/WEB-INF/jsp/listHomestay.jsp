@@ -49,7 +49,10 @@
                     <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>
+                    <form action="" method="post" class="d-block d-flex">
+                                    <input type="text" class="form-control mr-sm-2" placeholder="Homestay, News">
+                            <input type="submit" class="search-submit btn btn-primary" value="Search">
+                        </form>
                 </ul>
             </div>
         </div>
@@ -152,9 +155,6 @@
                         <h3 class="heading mb-4">Find Homestay</h3>
                         <form action="#">
                             <div class="fields">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Homestay">
-                                </div>
                                 <div class="form-group">
                                     <div class="select-wrap one-third">
                                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
