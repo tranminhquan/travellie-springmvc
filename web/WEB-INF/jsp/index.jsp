@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid col-md-6">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="destination-slider owl-carousel ftco-animate">
