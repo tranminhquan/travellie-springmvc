@@ -56,7 +56,7 @@
                         <li class="nav-item avatar dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
                                      alt="avatar image">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
@@ -85,7 +85,7 @@
                             <form action="" method="post" class="d-block d-flex">
                                 <div class="fields d-block d-flex">
                                     <div class="textfield-search one-third">
-                                        <input type="text" class="form-control" placeholder="Homestay">
+                                        <input type="text" class="form-control" placeholder="Homestay, News">
                                     </div>
                                 </div>
                                 <input type="submit" class="search-submit btn btn-primary" value="Search">
