@@ -27,7 +27,7 @@ public class Homestay {
     private String ownerImage;
     private String ownerName;
     private Date ownerDoB;
-    private Integer ownerGender;
+    private String ownerGender;
     private String ownerPhone;
     private String ownerCareer;
     private String video;
@@ -42,7 +42,7 @@ public class Homestay {
 
     }
 
-    public Homestay(String id, String name, String address, String fullAddress, String distance, Integer numberPeople, Integer numberDays, Integer timeStart, Integer timeEnd, Integer rating, String featureImage, String ownerImage, String ownerName, Date ownerDoB, Integer ownerGender, String ownerPhone, String ownerCareer, String video, String roomTypeID, String locationTypeID, String vacationTypeID, String cuisineID, String lifeStyleID) {
+    public Homestay(String id, String name, String address, String fullAddress, String distance, Integer numberPeople, Integer numberDays, Integer timeStart, Integer timeEnd, Integer rating, String featureImage, String ownerImage, String ownerName, Date ownerDoB, String ownerGender, String ownerPhone, String ownerCareer, String video, String roomTypeID, String locationTypeID, String vacationTypeID, String cuisineID, String lifeStyleID) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -180,11 +180,11 @@ public class Homestay {
         this.ownerDoB = ownerDoB;
     }
 
-    public Integer getOwnerGender() {
+    public String getOwnerGender() {
         return ownerGender;
     }
 
-    public void setOwnerGender(Integer ownerGender) {
+    public void setOwnerGender(String ownerGender) {
         this.ownerGender = ownerGender;
     }
 

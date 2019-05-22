@@ -143,11 +143,7 @@
                                         <p class="p-1 pl-3 mb-2">
                                             <i class="fas fa-transgender mr-2"
                                                style="font-size:24px; vertical-align: top;"></i>
-                                            {{#if homestay.owner.gender}}
-                                            Male
-                                            {{else}}
-                                            Female
-                                            {{/if}}
+                                            ${detailHomestays.ownerGender}
                                         </p>
                                         <p class="p-1 pl-3 mb-2">
                                             <i class="fas fa-briefcase mr-2"
@@ -240,9 +236,9 @@
                                                     <div class="events-wrapper">
                                                         <div class="events">
                                                             <ol>
-                                                                {{#each tours}}
-                                                                <li><a href="#0" data-date={{date}}>{{index}}</a></li>
-                                                                {{/each}}
+                                                                <c:forEach var="hsTourDescription" items="${detailHomestaysTourDescription}" varStatus="status" >
+                                                                    <li><a href="#0" data-date="${status.count}/05/2019" class="cd-h-timeline__date">Day ${status.count}</a></li>
+                                                                </c:forEach>
                                                             </ol>
 
                                                             <span class="filling-line" aria-hidden="true"></span>
@@ -258,7 +254,7 @@
                                                 <div class="events-content">
                                                     <ol>
                                                         <c:forEach var="hsTourDescription" items="${detailHomestaysTourDescription}" varStatus="status" >
-                                                            <li data-date={{date}}>
+                                                            <li data-date="${status.count}/05/2019">
                                                                 <!--<h2>Horizontal Timeline</h2>-->
                                                                 <p>
                                                                     ${hsTourDescription.description}

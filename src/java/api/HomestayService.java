@@ -48,7 +48,11 @@ public class HomestayService {
                 _homestay.setOwnerImage(rs.getString("OwnerImage"));
                 _homestay.setOwnerName(rs.getString("OwnerName"));
                 _homestay.setOwnerDoB(rs.getDate("OwnerDoB"));
-                _homestay.setOwnerGender(rs.getInt("OwnerGender"));
+                if (rs.getInt("OwnerGender") == 0) {
+                    _homestay.setOwnerGender("Female");
+                } else {
+                    _homestay.setOwnerGender("Male");
+                }           
                 _homestay.setOwnerPhone(rs.getString("OwnerPhone"));
                 _homestay.setOwnerCareer(rs.getString("OwnerCareer"));
                 _homestay.setVideo(rs.getString("Video"));
@@ -97,7 +101,11 @@ public class HomestayService {
                 _homestay.setOwnerImage(rs.getString("OwnerImage"));
                 _homestay.setOwnerName(rs.getString("OwnerName"));
                 _homestay.setOwnerDoB(rs.getDate("OwnerDoB"));
-                _homestay.setOwnerGender(rs.getInt("OwnerGender"));
+                if (rs.getInt("OwnerGender") == 0) {
+                    _homestay.setOwnerGender("Female");
+                } else {
+                    _homestay.setOwnerGender("Male");
+                }  
                 _homestay.setOwnerPhone(rs.getString("OwnerPhone"));
                 _homestay.setOwnerCareer(rs.getString("OwnerCareer"));
                 _homestay.setVideo(rs.getString("Video"));

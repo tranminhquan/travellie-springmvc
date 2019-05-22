@@ -21,6 +21,24 @@ import models.*;
  */
 public class CommentService {
 
+    public void InsertComment(Comment comment) {
+        try
+        {
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            PreparedStatement statement = connection.prepareStatement("insert into comment values( ? , ? , ? , ? , ? , ? )");
+            statement.setString(1, comment.getId());
+            statement.setString(2, comment.getHomestayID());
+            statement.setString(3, comment.getUserName());
+            statement.setString(4, comment.getUserImage());
+            statement.setDate(5, comment.getDate());
+            statement.setString(6, comment.getContent());
+
+            statement.executeUpdate();
+            connection.close();
+        }
+        catch(Exception e) {}
+    }
+    
     public ArrayList<models.Comment> LoadById(String Id) {
         ArrayList<models.Comment> list_comment = new ArrayList<models.Comment>();
         try {
