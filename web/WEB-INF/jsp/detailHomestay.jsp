@@ -729,18 +729,18 @@
 
             <!-- Button trigger modal -->
             <div class="zoom">
-                <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#exampleModal">
+                <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#bookingModal">
                     <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
                 </span>
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Booking Form</h5>
+                            <h5 class="modal-title" id="bookingModalLabel">Booking Form</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
