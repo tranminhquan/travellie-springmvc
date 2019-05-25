@@ -21,6 +21,44 @@ import models.*;
  */
 public class CommentService {
 
+    public String generateID() {
+        StringBuilder id = new StringBuilder();
+        try
+        {
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
+
+            Statement statement = connection.createStatement();
+            String sql = "SELECT MAX(CommentId) AS CommentId FROM COMMENT ";
+            ResultSet rs = statement.executeQuery(sql);
+            Integer firstID = 0;
+                   
+            while(rs.next()) {
+                firstID = Integer.parseInt(rs.getString("CommentId").substring(3)) + 1;
+            }
+            if (firstID < 10) {
+                id.append("CID000000" + firstID.toString());
+            } else if (firstID < 100) {
+                id.append("CID00000" + firstID.toString());
+            } else if (firstID < 1000) {
+                id.append("CID0000" + firstID.toString());
+            } else if (firstID < 10000) {
+                id.append("CID000" + firstID.toString());
+            } else if (firstID < 100000) {
+                id.append("CID00" + firstID.toString());
+            } else if (firstID < 1000000) {
+                id.append("CID0" + firstID.toString());
+            } else {
+                id.append("CID" + firstID.toString());
+            }
+
+            connection.close();
+        }
+        catch(Exception e) {}
+        
+        return id.toString();
+    }
+    
     public void InsertComment(Comment comment) {
         try
         {

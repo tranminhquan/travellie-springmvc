@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
@@ -33,7 +34,7 @@
         <link rel="stylesheet" href="Resources/Content/css/icomoon.css">
         <link rel="stylesheet" href="Resources/Content/css/style.css">
     </head>
-    <body>
+    <body>                       
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Travelie</a>
@@ -153,98 +154,36 @@
 
                         <div class="sidebar-wrap bg-light ftco-animate mt-3">
                             <h3 class="heading mb-4">Find Homestay</h3>
-                            <form action="#">
+                            <spring:form method="post" commandName="homestay" action="homestaysFilter.html">
                                 <div class="fields">
                                     <div class="form-group">
                                         <div class="select-wrap one-third">
                                             <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="an giang">An Giang</option>
-                                                <option value="ba ria - vung tau">Bà Rịa - Vũng Tàu</option>
-                                                <option value="bac lieu">Bạc Liêu</option>
-                                                <option value="bac kan">Bắc Kạn</option>
-                                                <option value="bac giang">Bắc Giang</option>
-                                                <option value="bac ninh">Bắc Ninh</option>
-                                                <option value="ben tre">Bến Tre</option>
-                                                <option value="binh duong">Bình Dương</option>
-                                                <option value="binh dinh">Bình Định</option>
-                                                <option value="binh phuoc">Bình Phước</option>
-                                                <option value="binh thuan">Bình Thuận</option>
-                                                <option value="ca mau">Cà Mau</option>
-                                                <option value="cao bang">Cao Bằng</option>
-                                                <option value="can tho">Cần Thơ</option>
-                                                <option value="da nang">Đà Nẵng</option>
-                                                <option value="dak lak">Đắk Lắk</option>
-                                                <option value="dak nong">Đắk Nông</option>
-                                                <option value="dien bien">Điện Biên</option>
-                                                <option value="dong nai">Đồng Nai</option>
-                                                <option value="dong thap">Đồng Tháp</option>
-                                                <option value="gia lai">Gia Lai</option>
-                                                <option value="ha giang">Hà Giang</option>
-                                                <option value="ha nam">Hà Nam</option>
-                                                <option value="ha noi">Hà Nội</option>
-                                                <option value="ha tay">Hà Tây</option>
-                                                <option value="ha tinh">Hà Tĩnh</option>
-                                                <option value="hai duong">Hải Dương</option>
-                                                <option value="hai phong">Hải Phòng</option>
-                                                <option value="hoa binh">Hòa Bình</option>
-                                                <option value="ho chi minh">Hồ Chí Minh</option>
-                                                <option value="hau giang">Hậu Giang</option>
-                                                <option value="hung yen">Hưng Yên</option>
-                                                <option value="khanh hoa">Khánh Hòa</option>
-                                                <option value="kien giang">Kiên Giang</option>
-                                                <option value="kon tum">Kon Tum</option>
-                                                <option value="lai chau">Lai Châu</option>
-                                                <option value="lao cai">Lào Cai</option>
-                                                <option value="lang son">Lạng Sơn</option>
-                                                <option value="lam dong">Lâm Đồng</option>
-                                                <option value="long an">Long An</option>
-                                                <option value="nam dinh">Nam Định</option>
-                                                <option value="nghe an">Nghệ An</option>
-                                                <option value="ninh binh">Ninh Bình</option>
-                                                <option value="ninh thuan">Ninh Thuận</option>
-                                                <option value="phu tho">Phú Thọ</option>
-                                                <option value="phu yen">Phú Yên</option>
-                                                <option value="quang binh">Quảng Bình</option>
-                                                <option value="quang nam">Quảng Nam</option>
-                                                <option value="quang ngai">Quảng Ngãi</option>
-                                                <option value="quang ninh">Quảng Ninh</option>
-                                                <option value="quang tri">Quảng Trị</option>
-                                                <option value="soc trang">Sóc Trăng</option>
-                                                <option value="son la">Sơn La</option>
-                                                <option value="tay ninh">Tây Ninh</option>
-                                                <option value="thai binh">Thái Bình</option>
-                                                <option value="thai nguyen">Thái Nguyên</option>
-                                                <option value="thanh hoa">Thanh Hóa</option>
-                                                <option value="thua thien - hue">Thừa Thiên - Huế</option>
-                                                <option value="tien giang">Tiền Giang</option>
-                                                <option value="tra vinh">Trà Vinh</option>
-                                                <option value="tuyen quang">Tuyên Quang</option>
-                                                <option value="vinh long">Vĩnh Long</option>
-                                                <option value="vinh phuc">Vĩnh Phúc</option>
-                                                <option value="yen bai">Yên Bái</option>
-                                            </select>
+                                            <spring:select class="form-control" path="address">
+                                                <spring:option value = "" label = "Location"/>
+                                                <spring:options items = "${addressList}"/>
+                                            </spring:select>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Duration">
+                                        <spring:input type="text" class="form-control" placeholder="Duration" path="numberDays"/>
                                     </div>
                                     <div class="form-group">
-                                        <div class="range-slider">
-                                            <span>
-                                                <input type="number" value="25000" min="0" max="120000"/>	-
-                                                <input max="120000" min="0" type="number" value="50000"/> km
-                                            </span>
-                                            <input value="1000" min="0" max="120000" step="500" type="range"/>
-                                            <input value="50000" min="0" max="120000" step="500" type="range"/>
-                                            </svg>
-                                        </div>
+                                        <!--<div class="range-slider">-->
+                                        <span>
+                                            <spring:input type="number" placeholder="Start" min="0" max="24" path="timeStart"/> : 00 h	-
+                                            <spring:input max="24" min="0" type="number" placeholder="End" path="timeEnd"/> : 00 h
+                                        </span>
+<!--                                            <input value="1000" min="0" max="120000" step="500" type="range"/>
+                                            <input value="50000" min="0" max="120000" step="500" type="range"/>-->
+                                            <!--</svg>-->
+                                        <!--</div>-->
                                     </div>
-                                    <!--                                <div class="form-group">
-                                                                        <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-                                                                    </div>-->
+                                    <div class="form-group">
+                                        <input type="submit" value="Search" class="btn btn-primary py-3 px-5"/>
+                                    </div>
                                 </div>
-                            </form>
+                            </spring:form>
                         </div>
                         <div class="sidebar-wrap bg-light ftco-animate">
                             <h3 class="heading mb-4">Star Rating</h3>
@@ -294,7 +233,6 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
-                            <!--{{#each other_homestay}}-->
                             <c:forEach var="hs" items="${homestays}" varStatus="status" >
                                 <div class="col-md-4 ftco-animate">
                                     <div class="destination">
@@ -319,7 +257,7 @@
                                                         <span>8 Ratings</span>
                                                     </p>
                                                 </div>
-                                                <!--                                            <div class="two">
+<!--                                                                                            <div class="two">
                                                                                             <span class="price per-price">$40<br><small>/night</small></span>
                                                                                             </div>-->
                                             </div>

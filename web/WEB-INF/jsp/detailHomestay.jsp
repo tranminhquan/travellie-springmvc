@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
@@ -214,7 +215,7 @@
                                             <ul>
                                                 <c:forEach var="hsOverview" items="${detailHomestaysOverview}" varStatus="status" >
                                                     <li>  ${hsOverview.overview}</li>
-                                                    </c:forEach>
+                                                </c:forEach>
                                             </ul>
                                         </div>
                                     </div>
@@ -634,7 +635,7 @@
                 <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
                     <h4 class="mb-4">Leave A Comment</h4>
 
-                    <form action="/detailHomestay/submit-comment?id={{homestay._id}}" class="p-5 bg-light" method="post">
+                    <spring:form action="#" class="p-5 bg-light" commandName="comment" method="post">
                         <div class="rate1" style="float: none; margin: 0 auto;"></div>
                         <!--<div class="form-group">
                         <label for="name">Name *</label>
@@ -652,8 +653,8 @@
                             </ul>
 
                             <div class="col">
-                                <textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
-                                          required="" placeholder="What do you think?"></textarea>
+                                <spring:textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
+                                    required="" placeholder="What do you think?" path="content"/>
                             </div>
 
                             <div class="col-auto">
@@ -662,7 +663,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </spring:form>
                 </div>
 
                 <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
@@ -898,21 +899,21 @@
         <script src="../Resources/Scripts/js/rating.js"></script>
 
         <script>
-                                $('[data-toggle^=tab]').click(function (e) {
+            $('[data-toggle^=tab]').click(function (e) {
 
 
-                                    if ($(this).parent().hasClass('active')) {
-                                        console.log($(this).parent().removeClass('active'));
-                                        console.log($($(this).attr('href')).removeClass('in active'))
+                if ($(this).parent().hasClass('active')) {
+                    console.log($(this).parent().removeClass('active'));
+                    console.log($($(this).attr('href')).removeClass('in active'))
 
-                                    } else {
-                                        $('[data-toggle^=tab]').parent().removeClass('active');
-                                        $('[class^=tab-pane]').removeClass('in active');
+                } else {
+                    $('[data-toggle^=tab]').parent().removeClass('active');
+                    $('[class^=tab-pane]').removeClass('in active');
 
-                                        console.log($(this).parent().addClass('active'));
-                                        console.log($($(this).attr('href')).addClass('in active'))
-                                    }
-                                })
+                    console.log($(this).parent().addClass('active'));
+                    console.log($($(this).attr('href')).addClass('in active'))
+                }
+            })
         </script>
 
     </body>
