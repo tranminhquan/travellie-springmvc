@@ -171,8 +171,8 @@
                                     <div class="form-group">
                                         <!--<div class="range-slider">-->
                                         <span>
-                                            <spring:input type="number" placeholder="Start" min="0" max="24" path="timeStart"/> : 00 h	-
-                                            <spring:input max="24" min="0" type="number" placeholder="End" path="timeEnd"/> : 00 h
+                                            Start: <spring:input type="number" placeholder="time" min="0" max="24" path="timeStart"/> h	-
+                                            End: <spring:input max="24" min="0" type="number" placeholder="time" path="timeEnd"/> h
                                         </span>
 <!--                                            <input value="1000" min="0" max="120000" step="500" type="range"/>
                                             <input value="50000" min="0" max="120000" step="500" type="range"/>-->

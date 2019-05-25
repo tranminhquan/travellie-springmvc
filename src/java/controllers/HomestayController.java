@@ -70,30 +70,6 @@ public class HomestayController {
         return "listHomestay";
     }
     
-//    @RequestMapping(value = "/homestaysDuration", method = RequestMethod.POST)
-//    public String HomestayDuration(@ModelAttribute(value="homestay") Homestay hs, ModelMap modelmap) {
-//        ArrayList<Homestay> list_homestay = _homestayService.LoadByDuration(hs.getNumberDays());
-//
-//        if (list_homestay.isEmpty()) {
-//            list_homestay = _homestayService.Load();
-//        }
-//        modelmap.put("homestays", list_homestay);
-//        
-//        return "listHomestay";
-//    }
-//    
-//    @RequestMapping(value = "/homestaysTime", method = RequestMethod.POST)
-//    public String HomestayTime(@ModelAttribute(value="homestay") Homestay hs, ModelMap modelmap) {
-//        ArrayList<Homestay> list_homestay = _homestayService.LoadByTime(hs.getTimeStart(), hs.getTimeEnd());
-//
-//        if (list_homestay.isEmpty()) {
-//            list_homestay = _homestayService.Load();
-//        }
-//        modelmap.put("homestays", list_homestay);
-//        
-//        return "listHomestay";
-//    }
-    
     @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
     public String HomestayDetail(ModelMap modelmap, @PathVariable("homestayId") String homestayId) {
         Homestay _homestay = _homestayService.LoadById(homestayId);
