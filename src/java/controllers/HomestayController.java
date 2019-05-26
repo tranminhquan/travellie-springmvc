@@ -61,7 +61,7 @@ public class HomestayController {
     @RequestMapping(value = "/homestaysFilter", method = RequestMethod.POST)
     public String HomestayAddress(@ModelAttribute(value="homestay") Homestay hs, ModelMap modelmap) {
         ArrayList<Homestay> list_homestay = _homestayService.LoadByAdressDurationTime(hs.getAddress(), hs.getNumberDays(), hs.getTimeStart(), hs.getTimeEnd());
-        
+                modelmap.addAttribute("homestay", new Homestay());
 //        if (list_homestay.isEmpty()) {
 //            list_homestay = _homestayService.Load();
 //        }

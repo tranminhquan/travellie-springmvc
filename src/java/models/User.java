@@ -24,6 +24,10 @@ public class User {
     private String career;
     private String note;
 
+    public User() {
+        
+    }
+    
     public User(String ID, String Name, String Email, String Password, Date DoB, String IdCard, String Phone, Integer Gender, String Career) {
         this.id = ID;
         this.name = Name;

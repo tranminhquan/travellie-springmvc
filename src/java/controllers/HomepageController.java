@@ -9,16 +9,17 @@ package controllers;
  *
  * @author Admin
  */
-import api.HomestayService;
+import api.*;
 import database.SQLServerConnUtils_JTDS;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import models.Homestay;
+import models.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -26,19 +27,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomepageController {
 
     HomestayService _homestayService;
+    UserService _userService;
 
     public HomepageController() {
         _homestayService = new HomestayService();
+        _userService = new UserService();
     }
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String HomestayAction(ModelMap modelmap) {
         ArrayList<Homestay> list_homestay = _homestayService.Load();
         modelmap.put("homestays", list_homestay);
-
+        modelmap.addAttribute("user", new User());
         return "index";
     }
-
+    
+    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    public String SignInAction (@ModelAttribute(value="user") User user, ModelMap modelmap) {
+        if (_userService.SignIn(user.getEmail(), user.getPassword())) {
+            return "about";
+        } else {
+            return "index";
+        }
+    }
 //    public static void main(String[] args) throws SQLException {
 //        ArrayList<Homestay> list_homestay;
 //        list_homestay = new HomestayService().Load();

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
@@ -532,22 +533,23 @@
                         </div>
                         
                         <div class="modal-body">
-                            <form action="" method="get">
+                            <spring:form method="post" commandName="user" action="index.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
-                                               type="text"/>
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
+                                               type="text" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
-                                        <input class="form-control" id="Password" name="password" placeholder="Password" required=""
-                                               type="password"/>
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                               type="password" path="password"/>
                                     </div>
                                 </div>
                                     <input type="submit" value="Sign in" class="btn btn-primary">
+                            </spring:form>
                         </div>
                     </div>
                 </div>
@@ -567,22 +569,23 @@
                         </div>
                         
                         <div class="modal-body">
-                            <form action="" method="get">
+                            <spring:form method="post" commandName="user" action="index.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
-                                               type="text"/>
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
+                                               type="text" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
-                                        <input class="form-control" id="Password" name="password" placeholder="Password" required=""
-                                               type="password"/>
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                               type="password" path="password"/>
                                     </div>
                                 </div>
                                     <input type="submit" value="Create an account" class="btn btn-primary">
+                            </spring:form>
                         </div>
                     </div>
                 </div>
