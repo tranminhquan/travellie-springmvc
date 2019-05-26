@@ -56,7 +56,7 @@
                         <!--<li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>-->
                     </ul>
                     <form action="" method="post" class="d-block d-flex">
-                        <input type="text" class="form-control mr-sm-2" placeholder="Homestay, News">
+                        <input type="search" class="form-control mr-sm-2" placeholder="Homestay, News">
                         <input type="submit" class="search-submit btn btn-primary" value="Search">
                     </form>
                     <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -92,7 +92,7 @@
                             <form action="" method="post" class="d-block d-flex">
                                 <div class="fields d-block d-flex">
                                     <div class="textfield-search one-third">
-                                        <input type="text" class="form-control" placeholder="Homestay, News">
+                                        <input type="search" class="form-control" placeholder="Homestay, News">
                                     </div>
                                 </div>
                                 <input type="submit" class="search-submit btn btn-primary" value="Search">
@@ -177,35 +177,56 @@
                         <div class="destination-slider owl-carousel ftco-animate">
                             <c:forEach var="hs" items="${homestays}" varStatus="status" >
                                 <div class="destination">
-                                    <a href="#" class="img img-2 d-flex justify-content-center align-items-center"
-                                       style="background-image: url(${hs.featureImage});">
-                                        <div class="icon d-flex justify-content-center align-items-center">
-                                            <span class="icon-search2"></span>
-                                        </div>
-                                    </a>
-                                    <div class="text p-3">
-                                        <div class="d-flex">
-                                            <div class="one">
-                                                <h3><a href="#">${hs.name}</a></h3>
-                                                <p class="rate">
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star"></i>
-                                                    <i class="icon-star-o"></i>
-                                                </p>
+                                    <!--<a href="/detailHomestay?id=${hs.id}"-->
+                                        <a href="./homestays/${hs.id}.html"
+                                           class="img img-2 d-flex justify-content-center align-items-center"
+                                           style="background-image: url(${hs.featureImage});">
+                                            <div class="icon d-flex justify-content-center align-items-center">
+                                                <span class="icon-search2"></span>
                                             </div>
-                                            <!--                                            <div class="two">
+                                        </a>
+                                        <div class="text p-3">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <h3><a href="./homestays/${hs.id}.html">${hs.name}</a></h3>
+                                                    <p class="rate">
+                                                        <i class="icon-star"></i>
+                                                        <i class="icon-star"></i>
+                                                        <i class="icon-star"></i>
+                                                        <i class="icon-star"></i>
+                                                        <i class="icon-star-o"></i>
+                                                        <span>8 Ratings</span>
+                                                    </p>
+                                                </div>
+<!--                                                                                            <div class="two">
                                                                                             <span class="price per-price">$40<br><small>/night</small></span>
-                                                                                        </div>-->
-                                        </div>
+                                                                                            </div>-->
+                                            </div>
+                                            <p>
+                                                <span>
+                                                    <i class="material-icons"
+                                                       style="font-size:18px; vertical-align: middle;">access_time</i>
+                                                    ${hs.timeStart}:00 - ${hs.timeEnd}:00
+                                                </span>
+                                                <br/>
+                                                <span>
+                                                    <i class="material-icons"
+                                                       style="font-size:18px; vertical-align: middle;">people_outline</i>
+                                                    ${hs.numberPeople} persons
+                                                </span>
+                                                <br/>
+                                                <span>
+                                                    <i class="far fa-calendar-alt"
+                                                       style="font-size:18px; vertical-align: top;"></i>
+                                                    ${hs.numberDays} days
+                                                </span>
+                                            </p>
 
-                                        <hr>
-                                        <p class="bottom-area d-flex">
-                                            <span><i class="icon-map-o"></i>  ${hs.distance}</span>
-                                            <span class="ml-auto"><a href="./homestays/${hs.id}.html">Discovery</span></a>
-                                        </p>
-                                    </div>
+                                            <hr>
+                                            <p class="bottom-area d-flex">
+                                                <span><i class="icon-map-o"></i> ${hs.distance} </span>
+                                            </p>
+                                        </div>
                                 </div>
                             </c:forEach>
                         </div>
@@ -538,7 +559,7 @@
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
                                         <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
-                                               type="text" path="email"/>
+                                               type="email" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -574,7 +595,7 @@
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
                                         <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
-                                               type="text" path="email"/>
+                                               type="email" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -584,6 +605,20 @@
                                                type="password" path="password"/>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""
+                                               type="password"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
+                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                               type="text"/>
+                                    </div>
+                                </div>
+
                                     <input type="submit" value="Create an account" class="btn btn-primary">
                             </spring:form>
                         </div>
