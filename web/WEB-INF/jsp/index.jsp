@@ -605,17 +605,17 @@
                                                type="password" path="password"/>
                                     </div>
                                 </div>
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <div class="wthree_input">
-                                        <input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""
-                                               type="password"/>
+                                        <%--<spring:input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""--%>
+                                               type="password" path="password"/>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="form-group">
-                                    <div class="wthree_input">
+                                    <div class="wthree_input">                                      
                                         <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
-                                               type="text"/>
+                                        <spring:input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                               type="text" path="name"/>
                                     </div>
                                 </div>
 

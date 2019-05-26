@@ -98,7 +98,7 @@
                                                         <span>
                                                             <i class="material-icons"
                                                                style="font-size:18px; vertical-align: middle;">access_time</i>
-                                                            ${hs.timeStart}:00 - ${hs.timeEnd}}:00
+                                                            ${hs.timeStart}:00 - ${hs.timeEnd}:00
                                                         </span>
 
                                                         <br/>
