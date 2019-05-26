@@ -22,13 +22,14 @@ public class User {
     private String phone;
     private Integer gender;
     private String career;
+    private String image;
     private String note;
 
     public User() {
         
     }
     
-    public User(String ID, String Name, String Email, String Password, Date DoB, String IdCard, String Phone, Integer Gender, String Career) {
+    public User(String ID, String Name, String Email, String Password, Date DoB, String IdCard, String Phone, Integer Gender, String Career, String Image) {
         this.id = ID;
         this.name = Name;
         this.email = Email;
@@ -38,6 +39,7 @@ public class User {
         this.phone = Phone;
         this.gender = Gender;
         this.career = Career;
+        this.image = Image;
     }
 
     public String getID() {
@@ -110,6 +112,14 @@ public class User {
 
     public void setCareer(String Career) {
         this.career = Career;
+    }
+    
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String Image) {
+        this.image = Image;
     }
 
     public String getNote() {

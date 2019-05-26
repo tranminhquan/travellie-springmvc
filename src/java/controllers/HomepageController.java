@@ -17,11 +17,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import models.*;
+import org.jboss.logging.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomepageController {
@@ -42,13 +44,32 @@ public class HomepageController {
         return "index";
     }
     
-    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    @RequestMapping(value = "/signin", method = RequestMethod.POST)
     public String SignInAction (@ModelAttribute(value="user") User user, ModelMap modelmap) {
         if (_userService.SignIn(user.getEmail(), user.getPassword())) {
-            return "about";
+            modelmap.put("message", "Login success!");
+            return "redirect:/index.html";
         } else {
-            return "index";
+            modelmap.put("message", "Login failed!");
+            return "redirect:/index.html";
         }
+    }
+    
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public String SignUpAction (@ModelAttribute(value="user") User user, ModelMap modelmap) {
+        User _user = new User();
+        _user.setID(_userService.generateID());
+        _user.setEmail(user.getEmail());
+        _user.setPassword(user.getPassword());
+        _user.setName(user.getName());
+        if (user.getImage() == null) {
+            _user.setImage("https://iupac.org/cms/wp-content/uploads/2018/05/default-avatar.png");
+        } else {
+            _user.setImage(user.getImage());
+        }
+        _userService.SignUp(_user);
+        modelmap.put("message", "signup sucess!");
+        return "redirect:/index.html";
     }
 //    public static void main(String[] args) throws SQLException {
 //        ArrayList<Homestay> list_homestay;

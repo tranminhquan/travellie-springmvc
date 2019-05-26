@@ -554,18 +554,18 @@
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" commandName="user" action="index.html">
+                            <spring:form method="post" commandName="user" action="signin.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required="true"
                                                type="email" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
-                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required="true"
                                                type="password" path="password"/>
                                     </div>
                                 </div>
@@ -590,18 +590,18 @@
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" commandName="user" action="index.html">
+                            <spring:form method="post" commandName="user" action="signup.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required=""
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required="true"
                                                type="email" path="email"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
-                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required="true"
                                                type="password" path="password"/>
                                     </div>
                                 </div>
@@ -614,10 +614,18 @@
                                 <div class="form-group">
                                     <div class="wthree_input">                                      
                                         <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
-                                        <spring:input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                        <spring:input class="form-control" id="Name" name="name" placeholder="Name" required="true"
                                                type="text" path="name"/>
                                     </div>
                                 </div>
+                                    
+                                <div class="form-group">
+                                    <div class="wthree_input">                                      
+                                        <i aria-hidden="true" class="fas fa-image" style="font-size:18px;"></i>
+                                        <spring:input class="form-control" id="Image" name="image" placeholder="Image URL"
+                                               type="url" path="image"/>
+                                    </div>
+                                </div>    
 
                                     <input type="submit" value="Create an account" class="btn btn-primary">
                             </spring:form>

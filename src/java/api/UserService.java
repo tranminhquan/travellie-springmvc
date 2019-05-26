@@ -63,13 +63,12 @@ public class UserService {
         try
         {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-            PreparedStatement statement = connection.prepareStatement("insert into ENDUSER values( ? , ? , ? , ? , ? , ? )");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO ENDUSER (UserID, UserEmail, UserPassword, UserName, UserImage) VALUES (?, ?, ?, ?, ?)");
             statement.setString(1, user.getID());
-//            statement.setString(2, comment.getHomestayID());
-//            statement.setString(3, comment.getUserName());
-//            statement.setString(4, comment.getUserImage());
-//            statement.setDate(5, comment.getDate());
-//            statement.setString(6, comment.getContent());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getPassword());
+            statement.setString(4, user.getName());
+            statement.setString(5, user.getImage());
 
             statement.executeUpdate();
             connection.close();
