@@ -536,7 +536,7 @@
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                        <input class="form-control" id="Email" name="email" placeholder="Email" required=""
                                                type="text"/>
                                     </div>
                                 </div>
@@ -571,7 +571,7 @@
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                        <input class="form-control" id="Email" name="email" placeholder="Email" required=""
                                                type="text"/>
                                     </div>
                                 </div>
@@ -582,6 +582,20 @@
                                                type="password"/>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""
+                                               type="password"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
+                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                               type="text"/>
+                                    </div>
+                                </div>
+
                                     <input type="submit" value="Create an account" class="btn btn-primary">
                         </div>
                     </div>
