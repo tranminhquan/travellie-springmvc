@@ -10,6 +10,12 @@
 
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+        
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+              integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="Resources/Content/css/open-iconic-bootstrap.min.css">
         <link rel="stylesheet" href="Resources/Content/css/animate.css">
@@ -61,8 +67,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
                                  aria-labelledby="navbarDropdownMenuLink-55">
-                                <a class="dropdown-item" href="#">Sign in</a>
-                                <a class="dropdown-item" href="#">Create an account</a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#">Create an account</a>
                                 <a class="dropdown-item" href="#">Sign out</a>
                             </div>
                         </li>
@@ -70,7 +76,7 @@
                 </div>
             </div>
         </nav>
-        <!--END nav-->
+        
         <div class="hero-wrap js-fullheight" style="background-image: url('Resources/Content/images/bg_1.jpg');">
             <div class="overlay"></div>
             <div class="container">
@@ -513,7 +519,76 @@
             </div>
         </footer>
 
-
+        <!-- Signin Modal -->
+            <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signinModalLabel">Sign in</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form action="" method="get">
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
+                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                               type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
+                                        <input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                               type="password"/>
+                                    </div>
+                                </div>
+                                    <input type="submit" value="Sign in" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signin Modal-->
+        
+                <!-- Signup Modal -->
+            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signupModalLabel">Create an account</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form action="" method="get">
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
+                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                               type="text"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
+                                        <input class="form-control" id="Password" name="password" placeholder="Password" required=""
+                                               type="password"/>
+                                    </div>
+                                </div>
+                                    <input type="submit" value="Create an account" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signup Modal-->
+        
         <!--loader--> 
         <div id="ftco-loader" class="show fullscreen">
             <svg class="circular" width="48px" height="48px">
