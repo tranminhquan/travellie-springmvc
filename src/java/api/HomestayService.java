@@ -127,17 +127,17 @@ public class HomestayService {
         return list_homestay.get(0);
     }
     
-    public ArrayList<Homestay> LoadByAdressDurationTime(String address, Integer duration, Integer timeStart, Integer timeEnd) {
+    public ArrayList<Homestay> LoadByAdressDurationTime(String address, Integer duration, Integer timeStart, Integer timeEnd, Integer quantity) {
         ArrayList<models.Homestay> list_homestay = new ArrayList<models.Homestay>();
         try {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
             System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
 
             StringBuilder query = new StringBuilder();
-            Integer count = 0, temp1 = 0, temp2 = 0, temp3 = 0, temp4 = 0;
+            Integer count = 0, temp1 = 0, temp2 = 0, temp3 = 0, temp4 = 0, temp5 = 0;
             query.append("select * from HOMESTAY");
             
-            if (!address.isEmpty() || duration != null || timeStart != null || timeEnd != null)
+            if (!address.isEmpty() || duration != null || timeStart != null || timeEnd != null || quantity != null)
                 query.append(" where");
             
             if (!address.isEmpty()) {
@@ -156,7 +156,11 @@ public class HomestayService {
                 query.append(" TimeEnd = ? and");
                 temp4 = ++count;
             }
-            if (!address.isEmpty() || duration != null || timeStart != null || timeEnd != null)
+            if (quantity != null) {
+                query.append(" NumberPeople = ? and");
+                temp5 = ++count;
+            }
+            if (!address.isEmpty() || duration != null || timeStart != null || timeEnd != null || quantity != null)
                 query.delete(query.length() - 3, query.length());
 
             PreparedStatement statement = connection.prepareStatement(query.toString());
@@ -169,6 +173,8 @@ public class HomestayService {
                 statement.setInt(temp3, timeStart);
             if (timeEnd != null)
                 statement.setInt(temp4, timeEnd);
+            if (quantity != null)
+                statement.setInt(temp5, quantity);
 
             ResultSet rs = statement.executeQuery();
 
