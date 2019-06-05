@@ -9,6 +9,7 @@ package controllers;
  *
  * @author Admin
  */
+import models.Homestay;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class BlogSingleController {
 
     @RequestMapping(value = "/blog-single", method = RequestMethod.GET)
-    public String SearchAction() {
-
+    public String SearchAction(ModelMap modelmap) {
+        modelmap.addAttribute("homestay", new Homestay());
         return "blog-single";
     }
 }

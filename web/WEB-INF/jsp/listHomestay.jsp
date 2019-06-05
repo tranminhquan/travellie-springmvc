@@ -50,10 +50,10 @@
                         <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <form action="" method="post" class="d-block d-flex">
-                            <input type="text" class="form-control mr-sm-2" placeholder="Homestay, News">
+                        <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
+                            <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
-                        </form>
+                        </spring:form>
                     </ul>
                 </div>
             </div>

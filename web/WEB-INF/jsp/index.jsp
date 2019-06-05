@@ -55,10 +55,10 @@
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                         <!--<li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>-->
                     </ul>
-                    <form action="" method="post" class="d-block d-flex">
-                        <input type="search" class="form-control mr-sm-2" placeholder="Homestay, News">
+                    <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
+                        <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                         <input type="submit" class="search-submit btn btn-primary" value="Search">
-                    </form>
+                    </spring:form>
                     <ul class="navbar-nav ml-auto nav-flex-icons">
                         <li class="nav-item avatar dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
@@ -89,14 +89,14 @@
                         <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop,
                             or visit from local experts</p>
                         <div class="block-17 my-4">
-                            <form action="" method="post" class="d-block d-flex">
+                            <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
                                 <div class="fields d-block d-flex">
                                     <div class="textfield-search one-third">
-                                        <input type="search" class="form-control" placeholder="Homestay, News">
+                                        <spring:input type="search" class="form-control" placeholder="Homestay, News" path="name"/>
                                     </div>
                                 </div>
                                 <input type="submit" class="search-submit btn btn-primary" value="Search">
-                            </form>
+                            </spring:form>
                         </div>
                     </div>
                 </div>

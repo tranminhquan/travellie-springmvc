@@ -41,6 +41,7 @@ public class HomepageController {
         ArrayList<Homestay> list_homestay = _homestayService.Load();
         modelmap.put("homestays", list_homestay);
         modelmap.addAttribute("user", new User());
+        modelmap.addAttribute("homestay", new Homestay());
         return "index";
     }
     
@@ -70,6 +71,14 @@ public class HomepageController {
         _userService.SignUp(_user);
         modelmap.put("message", "signup sucess!");
         return "redirect:/index.html";
+    }
+    
+    @RequestMapping(value = "/searchHomestay", method = RequestMethod.POST)
+    public String SearchHomestayAction (@ModelAttribute(value="homestay") Homestay hs, ModelMap modelmap) {
+        ArrayList<Homestay> list_homestay = _homestayService.LoadByName(hs.getName());
+        modelmap.put("homestays", list_homestay);
+        
+        return "listHomestay";
     }
 //    public static void main(String[] args) throws SQLException {
 //        ArrayList<Homestay> list_homestay;

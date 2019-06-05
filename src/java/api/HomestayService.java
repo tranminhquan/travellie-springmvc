@@ -127,6 +127,59 @@ public class HomestayService {
         return list_homestay.get(0);
     }
     
+    public ArrayList<Homestay> LoadByName(String name) {
+        ArrayList<models.Homestay> list_homestay = new ArrayList<models.Homestay>();
+        try {
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
+
+            PreparedStatement statement = connection.prepareStatement("select * from HOMESTAY where HomestayName = ?");
+            statement.setString(1, name);
+
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                models.Homestay _homestay = new models.Homestay();
+                _homestay.setId(rs.getString("HomestayID"));
+                _homestay.setName(rs.getString("HomestayName"));
+                _homestay.setAddress(rs.getString("HomestayAddress"));
+                _homestay.setFullAddress(rs.getString("FullAddress"));
+                _homestay.setDistance(rs.getString("Distance"));
+                _homestay.setNumberPeople(rs.getInt("NumberPeople"));
+                _homestay.setNumberDays(rs.getInt("NumberDays"));
+                _homestay.setTimeStart(rs.getInt("TimeStart"));
+                _homestay.setTimeEnd(rs.getInt("TimeEnd"));
+                _homestay.setRating(rs.getInt("Rating"));
+                _homestay.setFeatureImage(rs.getString("FeatureImage"));
+                _homestay.setOwnerImage(rs.getString("OwnerImage"));
+                _homestay.setOwnerName(rs.getString("OwnerName"));
+                _homestay.setOwnerDoB(rs.getDate("OwnerDoB"));
+                if (rs.getInt("OwnerGender") == 0) {
+                    _homestay.setOwnerGender("Female");
+                } else {
+                    _homestay.setOwnerGender("Male");
+                }  
+                _homestay.setOwnerPhone(rs.getString("OwnerPhone"));
+                _homestay.setOwnerCareer(rs.getString("OwnerCareer"));
+                _homestay.setVideo(rs.getString("Video"));
+                _homestay.setRoomTypeID(rs.getString("RoomTypeID"));
+                _homestay.setLocationTypeID(rs.getString("LocationTypeID"));
+                _homestay.setVacationTypeID(rs.getString("VacationTypeID"));
+                _homestay.setCuisineID(rs.getString("CuisineID"));
+                _homestay.setLifeStyleID(rs.getString("LifeStyleID"));
+
+                list_homestay.add(_homestay);
+            }
+
+            connection.close();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list_homestay;
+    }
+    
     public ArrayList<Homestay> LoadByAdressDurationTime(String address, Integer duration, Integer timeStart, Integer timeEnd, Integer quantity) {
         ArrayList<models.Homestay> list_homestay = new ArrayList<models.Homestay>();
         try {

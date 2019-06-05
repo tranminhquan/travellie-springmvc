@@ -1,3 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,10 +49,10 @@
                         <li class="nav-item"><a class="nav-link" href="homestays.html">Homestays</a></li>
                         <li class="nav-item active"><a class="nav-link" href="blog.html">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <form action="" method="post" class="d-block d-flex">
-                            <input type="text" class="form-control mr-sm-2" placeholder="Homestay, News">
+                        <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
+                            <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
-                        </form>
+                        </spring:form>
                     </ul>
                 </div>
             </div>
