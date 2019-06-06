@@ -114,10 +114,16 @@
                     </p>
                     <p class="rate mb-5">
                         <span class="star">
-                            {{#each stars}}
+<!--                            {{#each stars}}
                             <i class={{this}}></i>
                             {{/each}}
-                            8 Ratings</span>
+                            8 Ratings</span>-->
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                            <i class="icon-star-o"></i>
+                            <span>8 Ratings</span>
                     </p>
 
                     <div class="hotel-single ftco-animate mb-5 mt-4">

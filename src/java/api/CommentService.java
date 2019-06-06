@@ -63,13 +63,12 @@ public class CommentService {
         try
         {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-            PreparedStatement statement = connection.prepareStatement("insert into comment values( ? , ? , ? , ? , ? , ? )");
+            PreparedStatement statement = connection.prepareStatement("insert into comment values( ? , ? , ? , ? , ? )");
             statement.setString(1, comment.getId());
             statement.setString(2, comment.getHomestayID());
-            statement.setString(3, comment.getUserName());
-            statement.setString(4, comment.getUserImage());
-            statement.setDate(5, comment.getDate());
-            statement.setString(6, comment.getContent());
+            statement.setString(3, comment.getUserID());
+            statement.setDate(4, comment.getDate());
+            statement.setString(5, comment.getContent());
 
             statement.executeUpdate();
             connection.close();
@@ -92,8 +91,17 @@ public class CommentService {
                 models.Comment _comment = new models.Comment();
                 _comment.setId(rs.getString("CommentID"));
                 _comment.setHomestayID(rs.getString("HomestayID"));
-                _comment.setUserName(rs.getString("UserName"));
-                _comment.setUserImage(rs.getString("UserImage"));
+                _comment.setUserID(rs.getString("UserID"));
+                
+                Statement subStatement = connection.createStatement();
+                String sql = "select UserName, UserImage from ENDUSER where UserID = " + "'" + rs.getString("UserID") + "'";
+
+                ResultSet sub = subStatement.executeQuery(sql);
+                while (sub.next()) {
+                    _comment.setUserName(sub.getString("UserName"));
+                    _comment.setUserImage(sub.getString("UserImage"));
+                }
+                
                 _comment.setDate(rs.getDate("CommentDate"));
                 _comment.setContent(rs.getString("Content"));
 

@@ -15,6 +15,7 @@ public class Comment {
 
     private String id;
     private String homestayID;
+    private String userID;
     private String userName;
     private String userImage;
     private Date date;
@@ -24,11 +25,10 @@ public class Comment {
 
     }
 
-    public Comment(String id, String homestayID, String userName, String userImage, Date date, String content) {
+    public Comment(String id, String homestayID, String userID, Date date, String content) {
         this.id = id;
         this.homestayID = homestayID;
-        this.userName = userName;
-        this.userImage = userImage;
+        this.userID = userID;
         this.date = date;
         this.content = content;
     }
@@ -49,20 +49,12 @@ public class Comment {
         this.homestayID = homestayId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserImage() {
-        return userImage;
-    }
-
-    public void setUserImage(String userImage) {
-        this.userImage = userImage;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public Date getDate() {
@@ -79,6 +71,22 @@ public class Comment {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 
 }

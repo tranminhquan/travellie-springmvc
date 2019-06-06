@@ -109,8 +109,7 @@ public class HomestayController {
         Comment _comment = new Comment();
         _comment.setId(_commentService.generateID());
         _comment.setHomestayID(homestayId);
-        _comment.setUserName("Admin");
-        _comment.setUserImage("https://iupac.org/cms/wp-content/uploads/2018/05/default-avatar.png");
+        _comment.setUserID(comment.getUserID());
         _comment.setDate(java.sql.Date.valueOf(LocalDate.now()));
         _comment.setContent(comment.getContent());
         _commentService.InsertComment(_comment);
@@ -141,6 +140,7 @@ public class HomestayController {
 
         ArrayList<Comment> list_comment = _commentService.LoadById(homestayId);
         modelmap.put("comments", list_comment);
+        modelmap.addAttribute("homestay", new Homestay());
         
         return "detailHomestay";
     }
