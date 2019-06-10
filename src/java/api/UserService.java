@@ -96,4 +96,33 @@ public class UserService {
         catch(Exception e) {}
         return false;
     }      
+    
+    public User getUserByEmail(String email){
+        User user = new User();
+        try{
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            Statement statement = connection.createStatement();
+
+            String sql = "select * from ENDUSER where UserEmail = '" + email + "'";
+
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next()){
+                user.setID(rs.getString("UserID"));
+                user.setName(rs.getString("UserName"));
+                user.setEmail(rs.getString("UserEmail"));
+                user.setDoB(rs.getDate("UserDoB"));
+                user.setIdCard(rs.getString("UserIdCard"));
+                user.setPhone(rs.getString("UserPhone"));
+                user.setGender(rs.getInt("UserGender"));
+                user.setCareer(rs.getString("UserCareer"));
+                user.setImage(rs.getString("UserImage"));
+            }
+            
+        }
+        catch (Exception e){
+            return null;
+        }
+        
+        return user;
+    }
 }
