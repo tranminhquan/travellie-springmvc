@@ -55,10 +55,12 @@
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                         <!--<li class="nav-item cta"><a class="nav-link" href="search.html"><span>Find homestay</span></a></li>-->
                     </ul>
+                    
                     <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
                         <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                         <input type="submit" class="search-submit btn btn-primary" value="Search">
                     </spring:form>
+                    
                     <ul class="navbar-nav ml-auto nav-flex-icons">
                         <li class="nav-item avatar dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
@@ -66,7 +68,7 @@
 <!--                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
                                      alt="avatar image">-->
                                 <img src="${sessionScope.userinfo.image}" class="rounded-circle z-depth-0" style="height: 50px;"
-                                     alt="avatar image"
+                                     alt="avatar image">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
                                  aria-labelledby="navbarDropdownMenuLink-55">
@@ -196,14 +198,14 @@
                                             <div class="d-flex">
                                                 <div>
                                                     <h3><a href="./homestays/${hs.id}.html">${hs.name}</a></h3>
-                                                    <p class="rate">
+<!--                                                    <p class="rate">
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star-o"></i>
                                                         <span>8 Ratings</span>
-                                                    </p>
+                                                    </p>-->
                                                 </div>
 <!--                                                                                            <div class="two">
                                                                                             <span class="price per-price">$40<br><small>/night</small></span>

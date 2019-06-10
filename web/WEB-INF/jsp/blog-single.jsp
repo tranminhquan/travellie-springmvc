@@ -49,10 +49,34 @@
                         <li class="nav-item"><a class="nav-link" href="homestays.html">Homestays</a></li>
                         <li class="nav-item active"><a class="nav-link" href="blog.html">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
+                    </ul>
+                    
+                    <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
                             <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
                         </spring:form>
+                    
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item avatar dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+<!--                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">-->
+                                <img src="${sessionScope.userinfo.image}" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
+                                 aria-labelledby="navbarDropdownMenuLink-55">
+                                <a class="dropdown-item" href="#">${sessionScope.userinfo.name}</a>
+                                <c:if test="${sessionScope.userinfo==null}">
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
+                                </c:if>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#">Create an account</a>
+                                <c:if test="${sessionScope.userinfo!=null}">    
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signoutModal" href="#">Sign out</a>
+                                </c:if>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -50,10 +50,34 @@
                         <li class="nav-item active"><a href="homestays.html" class="nav-link">Homestays</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
+                    </ul>
+                    
+                    <spring:form action="searchHomestay.html" method="post" class="d-block d-flex" commandName="homestay">
                             <spring:input type="search" class="form-control mr-sm-2" placeholder="Homestay, News" autocomplete="true" path="name"/>
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
                         </spring:form>
+                    
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+                        <li class="nav-item avatar dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+<!--                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">-->
+                                <img src="${sessionScope.userinfo.image}" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
+                                 aria-labelledby="navbarDropdownMenuLink-55">
+                                <a class="dropdown-item" href="#">${sessionScope.userinfo.name}</a>
+                                <c:if test="${sessionScope.userinfo==null}">
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
+                                </c:if>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#">Create an account</a>
+                                <c:if test="${sessionScope.userinfo!=null}">    
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signoutModal" href="#">Sign out</a>
+                                </c:if>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -81,7 +105,7 @@
                                                         ${hs.name}
                                                     </h1>
 
-                                                    <h2 class="mb-3 bread text-warning"
+<!--                                                    <h2 class="mb-3 bread text-warning"
                                                         data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
                                                         <p class="rate">
 
@@ -91,7 +115,7 @@
                                                             <i class="icon-star"></i>
                                                             <i class="icon-star-half-o"></i>
                                                             <span>7.5 Rating</span>
-                                                    </h2>
+                                                    </h2>-->
 
                                                     <p class="mb-3" data-scrollax="properties: { translateY: '10%', opacity: 0.5 }">
 
@@ -142,7 +166,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 ftco-animate sidebar">
-                        <div class="tagcloud">
+<!--                        <div class="tagcloud">
                             <a href="#" class="tag-cloud-link">Single</a>
                             <a href="#" class="tag-cloud-link">Seaside</a>
                             <a href="#" class="tag-cloud-link">Expedition</a>
@@ -150,9 +174,10 @@
                             <a href="#" class="tag-cloud-link">A day out</a>
                             <a href="#" class="tag-cloud-link">Local cuisine</a>
                             <a href="#" class="tag-cloud-link">Leisure</a>
-                        </div>
+                        </div>-->
 
-                        <div class="sidebar-wrap bg-light ftco-animate mt-3">
+                        <!--<div class="sidebar-wrap bg-light ftco-animate mt-3">-->
+                        <div class="sidebar-wrap bg-light ftco-animate">
                             <h3 class="heading mb-4">Find Homestay</h3>
                             <spring:form method="post" commandName="homestay" action="homestaysFilter.html">
                                 <div class="fields">
@@ -166,10 +191,10 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <spring:input type="number" min="1" class="form-control" placeholder="Duration" path="numberDays"/>
+                                        <spring:input type="number" min="1" class="form-control" placeholder="Duration" path="numberDays" style="text-align: left;"/>
                                     </div>
                                     <div class="form-group">
-                                        <spring:input type="number" min="1" class="form-control" placeholder="Quantity of People" path="numberPeople"/>
+                                        <spring:input type="number" min="1" class="form-control" placeholder="Quantity of People" path="numberPeople" style="text-align: left;"/>
                                     </div>
                                     <div class="form-group">
                                         <!--<div class="range-slider">-->
@@ -188,7 +213,7 @@
                                 </div>
                             </spring:form>
                         </div>
-                        <div class="sidebar-wrap bg-light ftco-animate">
+<!--                        <div class="sidebar-wrap bg-light ftco-animate">
                             <h3 class="heading mb-4">Star Rating</h3>
                             <form method="post" class="star-rating">
                                 <div class="form-check">
@@ -232,7 +257,8 @@
                                     </label>
                                 </div>
                             </form>
-                        </div>
+                        </div>-->
+
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
@@ -251,14 +277,14 @@
                                             <div class="d-flex">
                                                 <div>
                                                     <h3><a href="./homestays/${hs.id}.html">${hs.name}</a></h3>
-                                                    <p class="rate">
+<!--                                                    <p class="rate">
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star"></i>
                                                         <i class="icon-star-o"></i>
                                                         <span>8 Ratings</span>
-                                                    </p>
+                                                    </p>-->
                                                 </div>
 <!--                                                                                            <div class="two">
                                                                                             <span class="price per-price">$40<br><small>/night</small></span>
