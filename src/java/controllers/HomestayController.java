@@ -39,7 +39,8 @@ public class HomestayController {
     HomestayTourDescriptionService _homestayTourDescriptionService;
     HomestayRuleService _homestayRuleService;
     CommentService _commentService;
-
+    UserService _userService;
+    
     public HomestayController() {
         _homestayService = new HomestayService();
         _homestayImageService = new HomestayImageService();
@@ -49,6 +50,7 @@ public class HomestayController {
         _homestayTourDescriptionService = new HomestayTourDescriptionService();
         _homestayRuleService = new HomestayRuleService();
         _commentService = new CommentService();
+        _userService = new UserService();
     }
 
     @RequestMapping(value = "/homestays", method = RequestMethod.GET)
@@ -56,6 +58,7 @@ public class HomestayController {
         ArrayList<Homestay> list_homestay = _homestayService.Load();
         modelmap.put("homestays", list_homestay);
         modelmap.addAttribute("homestay", new Homestay());
+        modelmap.addAttribute("user", new User());
         return "listHomestay";
     }
 
@@ -66,6 +69,7 @@ public class HomestayController {
 //            list_homestay = _homestayService.Load();
 //        }
         modelmap.put("homestays", list_homestay);
+        modelmap.addAttribute("user", new User());
         
         return "listHomestay";
     }
@@ -73,6 +77,7 @@ public class HomestayController {
     @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.GET)
     public String HomestayDetail(ModelMap modelmap, @PathVariable("homestayId") String homestayId) {
         modelmap.addAttribute("homestay", new Homestay());
+        modelmap.addAttribute("user", new User());
         
         Homestay _homestay = _homestayService.LoadById(homestayId);
         modelmap.put("detailHomestays", _homestay);
@@ -109,7 +114,8 @@ public class HomestayController {
     public String HomestayComment(@ModelAttribute(value="comment") Comment comment, ModelMap modelmap, @PathVariable("homestayId") String homestayId, HttpSession session) {
         Comment _comment = new Comment();
         User user = (User)session.getAttribute("userinfo");
-        
+        modelmap.addAttribute("user", new User());
+
         _comment.setId(_commentService.generateID());
         _comment.setHomestayID(homestayId);
         _comment.setUserID(user.getID());
@@ -220,25 +226,4 @@ public class HomestayController {
     
         return addressList; 
     }
-
-//    public static void main(String[] args) {
-//        ArrayList<Homestay> list_homestay;
-//        list_homestay = new HomestayService().Load();
-//        for (int i = 0; i<list_homestay.size();i++){
-//            System.out.println(list_homestay.get(i).getFullAddress());
-//        }
-//        ArrayList<HomestayImage> list_homestayImage;
-//        list_homestayImage = new HomestayImageService().LoadById("HID0000001");
-//        for (int i = 0; i<list_homestayImage.size();i++){
-//            System.out.println(list_homestayImage.get(i).getDescription());
-//        }
-//    }
-    public static void checkConnectionStatus(Connection connection) throws SQLException {
-        if (connection.isClosed()) {
-            System.out.println("Hiện tại Không có kết nối đến Hệ Quản trị Cơ sở dữ liệu");
-        } else {
-            System.out.println("Hiện tại Đang có kết nối đến Hệ quản trị CSDL");
-        }
-    }
-
 }

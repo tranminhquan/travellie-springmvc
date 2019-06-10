@@ -770,7 +770,7 @@
             </c:if>
             <c:if test="${sessionScope.userinfo==null}">
                 <div class="zoom">
-                    <a class="zoom-fab zoom-btn-large" id="zoomBtn" href="../index.html">
+                    <a class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#signinModal">
                         <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
                     </span>
                 </div>                
@@ -916,7 +916,7 @@
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" commandName="user" action="signin.html">
+                            <spring:form method="post" commandName="user" action="../signin.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
@@ -952,7 +952,7 @@
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" commandName="user" action="signup.html">
+                            <spring:form method="post" commandName="user" action="../signup.html">
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
@@ -1010,7 +1010,7 @@
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" action="signout.html">
+                            <spring:form method="post" action="../signout.html">
                                 <input type="submit" value="Yes" class="btn btn-primary">
                             </spring:form>
                         </div>
