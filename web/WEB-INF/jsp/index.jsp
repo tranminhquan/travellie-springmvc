@@ -71,9 +71,13 @@
                             <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
                                  aria-labelledby="navbarDropdownMenuLink-55">
                                 <a class="dropdown-item" href="#">${sessionScope.userinfo.name}</a>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
+                                <c:if test="${sessionScope.userinfo==null}">
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
+                                </c:if>
                                 <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#">Create an account</a>
-                                <a class="dropdown-item" href="#" method="post" action="signout.html">Sign out</a>
+                                <c:if test="${sessionScope.userinfo!=null}">    
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#signoutModal" href="#">Sign out</a>
+                                </c:if>
                             </div>
                         </li>
                     </ul>
@@ -580,7 +584,7 @@
             </div>
         <!--END Signin Modal-->
         
-                <!-- Signup Modal -->
+            <!-- Signup Modal -->
             <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -637,6 +641,28 @@
                 </div>
             </div>
         <!--END Signup Modal-->
+        
+        <!--Signout Modal-->
+        <div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="signoutModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signoutModalLabel">Are you signing out?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <spring:form method="post" action="signout.html">
+                                <input type="submit" value="Yes" class="btn btn-primary">
+                            </spring:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signout Modal-->
         
         <!--loader--> 
         <div id="ftco-loader" class="show fullscreen">

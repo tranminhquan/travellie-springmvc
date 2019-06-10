@@ -86,7 +86,8 @@ public class HomepageController {
     @RequestMapping(value = "/signout", method = RequestMethod.POST)
     public String SignOutAction (ModelMap modelmap, HttpSession session) {
         session.invalidate();
-
+        modelmap.put("message", "sign out sucess!");
+        
         return "redirect:/index.html";
     }
     

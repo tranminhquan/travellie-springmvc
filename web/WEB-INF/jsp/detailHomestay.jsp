@@ -637,40 +637,42 @@
                     </ul>
                 </div>
                 <!-- END comment-list -->
+                
+                <c:if test="${sessionScope.userinfo!=null}">
+                    <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
+                        <h4 class="mb-4">Leave A Comment</h4>
 
-                <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
-                    <h4 class="mb-4">Leave A Comment</h4>
-
-                    <spring:form action="#" class="p-5 bg-light" commandName="comment" method="post">
-                        <div class="rate1" style="float: none; margin: 0 auto;"></div>
-                        <!--<div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" class="form-control" name="name" required="">
-                        </div>
-            
-                        <label for="message">Comment *</label>-->
-                        <div class="row mt-4 mb-4">
-                            <ul class="comment-list">
-                                <li class="comment">
-                                    <div class="vcard bio">
-                                        <img src="../Resources/Content/images/person_1.jpg" alt="Image placeholder">
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="col">
-                                <spring:textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
-                                    required="" placeholder="What do you think?" path="content"/>
+                        <spring:form action="#" class="p-5 bg-light" commandName="comment" method="post">
+                            <div class="rate1" style="float: none; margin: 0 auto;"></div>
+                            <!--<div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" class="form-control" name="name" required="">
                             </div>
 
-                            <div class="col-auto">
-                                <button type="submit" class="btn py-3 px-1 btn-primary">
-                                    <i class="col material-icons" style="font-size: 20px; vertical-align: middle;">send</i>
-                                </button>
+                            <label for="message">Comment *</label>-->
+                            <div class="row mt-4 mb-4">
+                                <ul class="comment-list">
+                                    <li class="comment">
+                                        <div class="vcard bio">
+                                            <img src="${sessionScope.userinfo.image}" alt="Image placeholder">                                            
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="col">
+                                    <spring:textarea name="content" rows="2" class="form-control mr-3" style="min-width: 100%;"
+                                        required="" placeholder="What do you think?" path="content"/>
+                                </div>
+
+                                <div class="col-auto">
+                                    <button type="submit" class="btn py-3 px-1 btn-primary">
+                                        <i class="col material-icons" style="font-size: 20px; vertical-align: middle;">send</i>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </spring:form>
-                </div>
+                        </spring:form>
+                    </div>
+                </c:if>
 
                 <div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
                     <h4 class="mb-4">Other Homestays</h4>
@@ -734,12 +736,20 @@
             </div>
 
             <!-- Button trigger modal -->
-            <div class="zoom">
-                <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#bookingModal">
-                    <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
-                </span>
-            </div>
-
+            <c:if test="${sessionScope.userinfo!=null}">
+                <div class="zoom">
+                    <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#bookingModal">
+                        <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
+                    </span>
+                </div>                
+            </c:if>
+            <c:if test="${sessionScope.userinfo==null}">
+                <div class="zoom">
+                    <a class="zoom-fab zoom-btn-large" id="zoomBtn" href="../index.html">
+                        <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
+                    </span>
+                </div>                
+            </c:if>
             <!-- Modal -->
             <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
                  aria-hidden="true">

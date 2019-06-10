@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import models.*;
 import api.*;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  *
@@ -34,9 +37,11 @@ public class BookingServlet extends HttpServlet {
      */
     
     BookingService _bookingService;
+    HomestayService _homestayService;
     
     public BookingServlet() {
         _bookingService = new BookingService();
+        _homestayService = new HomestayService();
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -92,7 +97,32 @@ public class BookingServlet extends HttpServlet {
             if (paramName.equals("nb_people"))
                 _booking.setQuantity(Integer.parseInt(paramValue[0]));      
         }
-        _bookingService.InsertBookingTour(_booking);
+        Homestay _homestay = _homestayService.LoadById(_booking.getHomestayID());
+        ArrayList<Booking> _list_booking = new ArrayList<Booking>();
+        _list_booking = _bookingService.LoadById(_booking.getHomestayID());
+        Date initialDate;
+        Calendar c = Calendar.getInstance();
+        boolean flag = true;
+        
+        // Kiểm tra xem ngày khách chọn checkin có hợp lý với thời gian các đơn booking khác hay ko
+        for (int i = 0; i < _list_booking.size(); i++) {
+            initialDate = _list_booking.get(i).getCheckin();
+            System.out.println("Initial date:" + initialDate);
+            c.setTime(initialDate);
+            c.add(Calendar.DATE, _homestay.getNumberDays());
+            if (_booking.getCheckin().compareTo(c.getTime()) <= 0) {
+                flag = false;
+                break;
+            }           
+        }
+        
+        // Kiểm tra số lượng khách mà người dùng nhập có lớn hơn số người quy định ở homestay ko
+        if (_booking.getQuantity() > _homestay.getNumberPeople() || flag == false) {
+            response.sendRedirect("index.html");
+        } else {
+            _bookingService.InsertBookingTour(_booking);    
+            response.sendRedirect("homestays/" + _booking.getHomestayID() + ".html");
+        }
     }
 
     /**
