@@ -16,7 +16,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javax.servlet.http.HttpSession;
 import models.*;
+import net.sf.cglib.core.Constants;
 import org.jboss.logging.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -46,9 +48,12 @@ public class HomepageController {
     }
     
     @RequestMapping(value = "/signin", method = RequestMethod.POST)
-    public String SignInAction (@ModelAttribute(value="user") User user, ModelMap modelmap) {
+    public String SignInAction (@ModelAttribute(value="user") User user, ModelMap modelmap, HttpSession session) {
         if (_userService.SignIn(user.getEmail(), user.getPassword())) {
             modelmap.put("message", "Login success!");
+            User loginUser = _userService.getUserByEmail(user.getEmail());
+            session.setAttribute("userinfo", loginUser);
+            
             return "redirect:/index.html";
         } else {
             modelmap.put("message", "Login failed!");
