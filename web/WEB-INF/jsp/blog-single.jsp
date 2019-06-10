@@ -460,6 +460,121 @@
             </div>
         </footer>
 
+                <!-- Signin Modal -->
+            <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signinModalLabel">Sign in</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <spring:form method="post" commandName="user" action="signin.html">
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required="true"
+                                               type="email" path="email"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required="true"
+                                               type="password" path="password"/>
+                                    </div>
+                                </div>
+                                    <input type="submit" value="Sign in" class="btn btn-primary">
+                            </spring:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signin Modal-->
+        
+            <!-- Signup Modal -->
+            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signupModalLabel">Create an account</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <spring:form method="post" commandName="user" action="signup.html">
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
+                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required="true"
+                                               type="email" path="email"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
+                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required="true"
+                                               type="password" path="password"/>
+                                    </div>
+                                </div>
+<!--                                <div class="form-group">
+                                    <div class="wthree_input">
+                                        <%--<spring:input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""--%>
+                                               type="password" path="password"/>
+                                    </div>
+                                </div>-->
+                                <div class="form-group">
+                                    <div class="wthree_input">                                      
+                                        <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
+                                        <spring:input class="form-control" id="Name" name="name" placeholder="Name" required="true"
+                                               type="text" path="name"/>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <div class="wthree_input">                                      
+                                        <i aria-hidden="true" class="fas fa-image" style="font-size:18px;"></i>
+                                        <spring:input class="form-control" id="Image" name="image" placeholder="Image URL"
+                                               type="url" path="image"/>
+                                    </div>
+                                </div>    
+
+                                    <input type="submit" value="Create an account" class="btn btn-primary">
+                            </spring:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signup Modal-->
+        
+        <!--Signout Modal-->
+        <div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="signoutModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signoutModalLabel">Are you signing out?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <spring:form method="post" action="signout.html">
+                                <input type="submit" value="Yes" class="btn btn-primary">
+                            </spring:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END Signout Modal-->
 
         <!-- loader -->
         <div class="show fullscreen" id="ftco-loader">
