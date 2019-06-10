@@ -630,7 +630,7 @@
                                     <h3>${hsComment.userName}</h3>
                                     <div class="meta">${hsComment.date}</div>
                                     <p>${hsComment.content}</p>
-                                    <p><a class="reply" href="#">Reply</a></p>
+                                    <!--<p><a class="reply" href="#">Reply</a></p>-->
                                 </div>
                             </li>
                         </c:forEach>
@@ -654,6 +654,7 @@
                                 <ul class="comment-list">
                                     <li class="comment">
                                         <div class="vcard bio">
+                                            <h3>${sessionScope.userinfo.name}</h3>
                                             <img src="${sessionScope.userinfo.image}" alt="Image placeholder">                                            
                                         </div>
                                     </li>
