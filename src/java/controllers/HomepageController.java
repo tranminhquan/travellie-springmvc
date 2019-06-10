@@ -83,6 +83,13 @@ public class HomepageController {
         return "redirect:/index.html";
     }
     
+    @RequestMapping(value = "/signout", method = RequestMethod.POST)
+    public String SignOutAction (ModelMap modelmap, HttpSession session) {
+        session.invalidate();
+
+        return "redirect:/index.html";
+    }
+    
     @RequestMapping(value = "/searchHomestay", method = RequestMethod.POST)
     public String SearchHomestayAction (@ModelAttribute(value="homestay") Homestay hs, ModelMap modelmap) {
         ArrayList<Homestay> list_homestay = _homestayService.LoadByName(hs.getName());

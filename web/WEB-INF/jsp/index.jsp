@@ -63,14 +63,17 @@
                         <li class="nav-item avatar dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
-                                     alt="avatar image">
+<!--                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">-->
+                                <img src="${sessionScope.userinfo.image}" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image"
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-secondary"
                                  aria-labelledby="navbarDropdownMenuLink-55">
+                                <a class="dropdown-item" href="#">${sessionScope.userinfo.name}</a>
                                 <a class="dropdown-item" data-toggle="modal" data-target="#signinModal" href="#">Sign in</a>
                                 <a class="dropdown-item" data-toggle="modal" data-target="#signupModal" href="#">Create an account</a>
-                                <a class="dropdown-item" href="#">Sign out</a>
+                                <a class="dropdown-item" href="#" method="post" action="signout.html">Sign out</a>
                             </div>
                         </li>
                     </ul>
