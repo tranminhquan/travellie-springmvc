@@ -64,7 +64,14 @@ public class BookingService {
         {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
             PreparedStatement statement = connection.prepareStatement("insert into Booking values( ? , ? , ? , ? , ? , ? )");
-
+            System.out.println("Booking info");
+            System.out.println(booking.getId());
+            System.out.println(booking.getHomestayID());
+            System.out.println(booking.getUserID());
+            System.out.println(booking.getId());
+            System.out.println(booking.getCheckin());
+            System.out.println(booking.getQuantity());
+            
             statement.setString(1, booking.getId());
             statement.setString(2, booking.getHomestayID());
             statement.setString(3, booking.getUserID());
