@@ -7,11 +7,14 @@ package controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import models.*;
+import api.*;
 
 /**
  *
@@ -29,6 +32,13 @@ public class BookingServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    BookingService _bookingService;
+    
+    public BookingServlet() {
+        _bookingService = new BookingService();
+    }
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
    
@@ -63,12 +73,26 @@ public class BookingServlet extends HttpServlet {
         processRequest(request, response);
         
         Enumeration<String> parameterNames = request.getParameterNames();
-         while (parameterNames.hasMoreElements()) {
+
+        Booking _booking = new Booking();
+        _booking.setId(_bookingService.generateID());
+        _booking.setUserID("UID0000001");
+        
+        while (parameterNames.hasMoreElements()) {
             String paramName = parameterNames.nextElement();
             System.out.println(paramName);
             String[] paramValue = request.getParameterValues(paramName);
             System.out.println(paramValue[0]);
-         }
+            
+            if (paramName.equals("id"))
+                _booking.setHomestayID(paramValue[0].substring(0, paramValue[0].length() - 1));
+//            _booking.setUserID(_booking.getUserID());
+            if (paramName.equals("checkin"))
+                _booking.setCheckin(java.sql.Date.valueOf(paramValue[0]));
+            if (paramName.equals("nb_people"))
+                _booking.setQuantity(Integer.parseInt(paramValue[0]));      
+        }
+        _bookingService.InsertBookingTour(_booking);
     }
 
     /**

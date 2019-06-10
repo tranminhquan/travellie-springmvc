@@ -764,14 +764,14 @@
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">call</i>
-                                        <input class="form-control" id="Phone" name="phone" placeholder="Phone" required=""
+                                        <input class="form-control" id="Phone" name="phone" placeholder="Phone" required="true"
                                                type="number"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fas fa-id-card" style="font-size:20px;"></i>
-                                        <input class="form-control" id="ID card" name="id_card" placeholder="ID card" required=""
+                                        <input class="form-control" id="ID card" name="id_card" placeholder="ID card" required="true"
                                                type="number"/>
                                     </div>
                                 </div>
@@ -779,14 +779,14 @@
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">people</i>
                                         <input class="form-control" id="Guests" name="nb_people" placeholder="Number of guests"
-                                               required=""
+                                               required="true"
                                                type="number"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fas fa-calendar-alt" style="font-size:20px;"></i>
-                                        <input class="form-control" id="Checkin" name="checkin" placeholder="Check in" required=""
+                                        <input class="form-control" id="Checkin" name="checkin" placeholder="Check in" required="true"
                                                type="date"/>
                                     </div>
                                 </div>

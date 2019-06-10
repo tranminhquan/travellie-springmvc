@@ -109,7 +109,8 @@ public class HomestayController {
         Comment _comment = new Comment();
         _comment.setId(_commentService.generateID());
         _comment.setHomestayID(homestayId);
-        _comment.setUserID(comment.getUserID());
+//        _comment.setUserID(comment.getUserID());
+        _comment.setUserID("UID0000001");
         _comment.setDate(java.sql.Date.valueOf(LocalDate.now()));
         _comment.setContent(comment.getContent());
         _commentService.InsertComment(_comment);

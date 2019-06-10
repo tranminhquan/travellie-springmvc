@@ -19,7 +19,7 @@ import models.*;
  *
  * @author Admin
  */
-public class CommentService {
+public class BookingService {
 
     public String generateID() {
         StringBuilder id = new StringBuilder();
@@ -29,27 +29,27 @@ public class CommentService {
             System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
 
             Statement statement = connection.createStatement();
-            String sql = "SELECT MAX(CommentId) AS CommentId FROM COMMENT ";
+            String sql = "SELECT MAX(BookingID) AS BookingID FROM BOOKING ";
             ResultSet rs = statement.executeQuery(sql);
             Integer firstID = 0;
                    
             while(rs.next()) {
-                firstID = Integer.parseInt(rs.getString("CommentId").substring(3)) + 1;
+                firstID = Integer.parseInt(rs.getString("BookingID").substring(3)) + 1;
             }
             if (firstID < 10) {
-                id.append("CID000000" + firstID.toString());
+                id.append("BID000000" + firstID.toString());
             } else if (firstID < 100) {
-                id.append("CID00000" + firstID.toString());
+                id.append("BID00000" + firstID.toString());
             } else if (firstID < 1000) {
-                id.append("CID0000" + firstID.toString());
+                id.append("BID0000" + firstID.toString());
             } else if (firstID < 10000) {
-                id.append("CID000" + firstID.toString());
+                id.append("BID000" + firstID.toString());
             } else if (firstID < 100000) {
-                id.append("CID00" + firstID.toString());
+                id.append("BID00" + firstID.toString());
             } else if (firstID < 1000000) {
-                id.append("CID0" + firstID.toString());
+                id.append("BID0" + firstID.toString());
             } else {
-                id.append("CID" + firstID.toString());
+                id.append("BID" + firstID.toString());
             }
 
             connection.close();
@@ -59,16 +59,18 @@ public class CommentService {
         return id.toString();
     }
     
-    public void InsertComment(Comment comment) {
+    public void InsertBookingTour(Booking booking) {
         try
         {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
-            PreparedStatement statement = connection.prepareStatement("insert into comment values( ? , ? , ? , ? , ?)");
-            statement.setString(1, comment.getId());
-            statement.setString(2, comment.getHomestayID());
-            statement.setString(3, comment.getUserID());
-            statement.setDate(4, comment.getDate());
-            statement.setString(5, comment.getContent());
+            PreparedStatement statement = connection.prepareStatement("insert into Booking values( ? , ? , ? , ? , ? , ? )");
+
+            statement.setString(1, booking.getId());
+            statement.setString(2, booking.getHomestayID());
+            statement.setString(3, booking.getUserID());
+            statement.setDate(4, booking.getCheckin());
+            statement.setInt(5, booking.getQuantity());
+            statement.setString(6, "");
 
             statement.executeUpdate();
             connection.close();
@@ -76,36 +78,35 @@ public class CommentService {
         catch(Exception e) {}
     }
     
-    public ArrayList<models.Comment> LoadById(String Id) {
-        ArrayList<models.Comment> list_comment = new ArrayList<models.Comment>();
+    public ArrayList<Booking> LoadById(String Id) {
+        ArrayList<Booking> list_booking = new ArrayList<Booking>();
         try {
             Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
             System.out.println("Kết nối Hệ quản trị Cơ sở dữ liệu thành công");
 
-            PreparedStatement statement = connection.prepareStatement("select * from COMMENT where HomestayID = ?");
+            PreparedStatement statement = connection.prepareStatement("select * from BOOKING where HomestayID = ?");
             statement.setString(1, Id);
 
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
-                models.Comment _comment = new models.Comment();
-                _comment.setId(rs.getString("CommentID"));
-                _comment.setHomestayID(rs.getString("HomestayID"));
-                _comment.setUserID(rs.getString("UserID"));
+                Booking _booking = new Booking();
+                _booking.setId(rs.getString("BookingID"));
+                _booking.setHomestayID(rs.getString("HomestayID"));
+                _booking.setUserID(rs.getString("UserID"));
                 
                 Statement subStatement = connection.createStatement();
                 String sql = "select UserName, UserImage from ENDUSER where UserID = " + "'" + rs.getString("UserID") + "'";
 
                 ResultSet sub = subStatement.executeQuery(sql);
                 while (sub.next()) {
-                    _comment.setUserName(sub.getString("UserName"));
-                    _comment.setUserImage(sub.getString("UserImage"));
+                    _booking.setUserName(sub.getString("UserName"));
                 }
                 
-                _comment.setDate(rs.getDate("CommentDate"));
-                _comment.setContent(rs.getString("Content"));
+                _booking.setCheckin(rs.getDate("Checkin"));
+                _booking.setQuantity(rs.getInt("NumberPeople"));
 
-                list_comment.add(_comment);
+                list_booking.add(_booking);
             }
 
             connection.close();
@@ -114,6 +115,6 @@ public class CommentService {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return list_comment;
+        return list_booking;
     }
 }
