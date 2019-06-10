@@ -752,7 +752,8 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form action="/detailHomestay/booking?id={{homestay.name}}" method="get">
+                            <form action="/travellie-springmvc/Booking" method="POST">
+                                <input type="hidden" name="id" value=${detailHomestays.id}/>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
