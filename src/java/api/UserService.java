@@ -97,6 +97,27 @@ public class UserService {
         return false;
     }      
     
+        public boolean checkEmailValid(String email) {
+        try
+        {
+            Connection connection = SQLServerConnUtils_JTDS.getSQLServerConnection_SQLJDBC();
+            Statement statement = connection.createStatement();
+
+            String sql = "select UserEmail from ENDUSER";
+
+            ResultSet rs = statement.executeQuery(sql);
+
+            while (rs.next()) {
+                if (email.equals(rs.getString("UserEmail"))) {
+                    return false;
+                }
+            }
+            connection.close();
+        }
+        catch(Exception e) {}
+        return true;
+    } 
+    
     public User getUserByEmail(String email){
         User user = new User();
         try{

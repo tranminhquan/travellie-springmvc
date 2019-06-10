@@ -17,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import javax.servlet.http.HttpSession;
 import models.*;
 import org.jboss.weld.module.web.HttpSessionBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,12 +106,13 @@ public class HomestayController {
     }
 
     @RequestMapping(value = "/homestays/{homestayId}", method = RequestMethod.POST)
-    public String HomestayComment(@ModelAttribute(value="comment") Comment comment, ModelMap modelmap, @PathVariable("homestayId") String homestayId) {
+    public String HomestayComment(@ModelAttribute(value="comment") Comment comment, ModelMap modelmap, @PathVariable("homestayId") String homestayId, HttpSession session) {
         Comment _comment = new Comment();
+        User user = (User)session.getAttribute("userinfo");
+        
         _comment.setId(_commentService.generateID());
         _comment.setHomestayID(homestayId);
-//        _comment.setUserID(comment.getUserID());
-        _comment.setUserID("UID0000001");
+        _comment.setUserID(user.getID());
         _comment.setDate(java.sql.Date.valueOf(LocalDate.now()));
         _comment.setContent(comment.getContent());
         _commentService.InsertComment(_comment);

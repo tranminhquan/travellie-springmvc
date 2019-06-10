@@ -757,21 +757,21 @@
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <input class="form-control" id="Name" name="name" placeholder="Name" required=""
+                                        <input class="form-control" id="Name" name="name" value="${sessionScope.userinfo.name}" placeholder="Name" disabled="true"
                                                type="text"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="material-icons" style="font-size:22px;">call</i>
-                                        <input class="form-control" id="Phone" name="phone" placeholder="Phone" required="true"
+                                        <input class="form-control" id="Phone" name="phone" value="${sessionScope.userinfo.phone}" placeholder="Phone" required="true"
                                                type="number"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="wthree_input">
                                         <i aria-hidden="true" class="fas fa-id-card" style="font-size:20px;"></i>
-                                        <input class="form-control" id="ID card" name="id_card" placeholder="ID card" required="true"
+                                        <input class="form-control" id="ID card" name="id_card" value="${sessionScope.userinfo.idCard}" placeholder="ID card" required="true"
                                                type="number"/>
                                     </div>
                                 </div>

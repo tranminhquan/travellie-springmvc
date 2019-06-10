@@ -53,7 +53,7 @@ public class HomepageController {
             modelmap.put("message", "Login success!");
             User loginUser = _userService.getUserByEmail(user.getEmail());
             session.setAttribute("userinfo", loginUser);
-            
+
             return "redirect:/index.html";
         } else {
             modelmap.put("message", "Login failed!");
@@ -73,8 +73,13 @@ public class HomepageController {
         } else {
             _user.setImage(user.getImage());
         }
-        _userService.SignUp(_user);
-        modelmap.put("message", "signup sucess!");
+        if (_userService.checkEmailValid(user.getEmail()) == true) {
+            _userService.SignUp(_user);
+            modelmap.put("message", "signup sucess!");
+        } else {
+            modelmap.put("message", "Email duplicate! Please use another email");
+        }
+
         return "redirect:/index.html";
     }
     

@@ -75,8 +75,9 @@ public class BookingServlet extends HttpServlet {
         Enumeration<String> parameterNames = request.getParameterNames();
 
         Booking _booking = new Booking();
+        User user = (User)request.getSession().getAttribute("userinfo");
         _booking.setId(_bookingService.generateID());
-        _booking.setUserID("UID0000001");
+        _booking.setUserID(user.getID());
         
         while (parameterNames.hasMoreElements()) {
             String paramName = parameterNames.nextElement();
@@ -86,7 +87,6 @@ public class BookingServlet extends HttpServlet {
             
             if (paramName.equals("id"))
                 _booking.setHomestayID(paramValue[0].substring(0, paramValue[0].length() - 1));
-//            _booking.setUserID(_booking.getUserID());
             if (paramName.equals("checkin"))
                 _booking.setCheckin(java.sql.Date.valueOf(paramValue[0]));
             if (paramName.equals("nb_people"))
