@@ -36,7 +36,7 @@ public class LoginController {
 
             return "redirect:/index.html";
         } else {
-            modelmap.put("message", "Login failed!");
+            modelmap.put("message", "failed");
             return "redirect:/index.html";
         }
     }

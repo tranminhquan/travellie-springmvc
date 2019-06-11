@@ -36,6 +36,21 @@
         <link rel="stylesheet" href="Resources/Content/css/flaticon.css">
         <link rel="stylesheet" href="Resources/Content/css/icomoon.css">
         <link rel="stylesheet" href="Resources/Content/css/style.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+            $.ajax({
+                type: "POST",
+                url: "/index.html?message=failed",
+                
+                success: function(response){
+                    $("#notiModal").modal();
+                }
+            });
+        </script>
+        
+        
+            
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -549,6 +564,26 @@
                 </div>
             </div>
         </footer>
+                                
+ <!-- noti Modal -->
+            <div class="modal fade" id="notiModal" tabindex="-1" role="dialog" aria-labelledby="notiModalLabel"
+                 >
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signinModalLabel">Notification</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <p>Login failed! Check your usename or password</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END noti Modal-->
 
         <!-- Signin Modal -->
             <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
@@ -675,7 +710,7 @@
             </svg>
         </div>
 
-        <script src="Resources/Scripts/js/jquery.min.js"></script>
+        
         <script src="Resources/Scripts/js/jquery-migrate-3.0.1.min.js"></script>
         <script src="Resources/Scripts/js/popper.min.js"></script>
         <script src="Resources/Scripts/js/bootstrap.min.js"></script>
