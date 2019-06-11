@@ -73,12 +73,12 @@
                             <input type="submit" class="search-submit btn btn-primary" value="Search">
                         </spring:form>
                     
-                    <ul class="navbar-nav ml-auto nav-flex-icons">
+<!--                    <ul class="navbar-nav ml-auto nav-flex-icons">
                         <li class="nav-item avatar dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-<!--                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
-                                     alt="avatar image">-->
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0" style="height: 50px;"
+                                     alt="avatar image">
                                 <img src="${sessionScope.userinfo.image}" class="rounded-circle z-depth-0" style="height: 50px;"
                                      alt="avatar image">
                             </a>
@@ -94,7 +94,7 @@
                                 </c:if>
                             </div>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         </nav>
@@ -769,11 +769,11 @@
                 </div>                
             </c:if>
             <c:if test="${sessionScope.userinfo==null}">
-                <div class="zoom">
+<!--                <div class="zoom">
                     <a class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#signinModal">
                         <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
                     </span>
-                </div>                
+                </div>                -->
             </c:if>
             <!-- Modal -->
             <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
@@ -903,7 +903,7 @@
             </div>
         </footer>
 
-                <!-- Signin Modal -->
+<!--                 Signin Modal 
             <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -937,9 +937,9 @@
                     </div>
                 </div>
             </div>
-        <!--END Signin Modal-->
+        END Signin Modal
         
-            <!-- Signup Modal -->
+             Signup Modal 
             <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -967,12 +967,12 @@
                                                type="password" path="password"/>
                                     </div>
                                 </div>
-<!--                                <div class="form-group">
+                                <div class="form-group">
                                     <div class="wthree_input">
                                         <%--<spring:input class="form-control" id="ConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required=""--%>
                                                type="password" path="password"/>
                                     </div>
-                                </div>-->
+                                </div>
                                 <div class="form-group">
                                     <div class="wthree_input">                                      
                                         <i aria-hidden="true" class="fas fa-id-card" style="font-size:18px;"></i>
@@ -995,9 +995,9 @@
                     </div>
                 </div>
             </div>
-        <!--END Signup Modal-->
+        END Signup Modal
         
-        <!--Signout Modal-->
+        Signout Modal
         <div class="modal fade" id="signoutModal" tabindex="-1" role="dialog" aria-labelledby="signoutModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1017,7 +1017,7 @@
                     </div>
                 </div>
             </div>
-        <!--END Signout Modal-->
+        END Signout Modal-->
         
         <!-- loader -->
         <div id="ftco-loader" class="show fullscreen">
