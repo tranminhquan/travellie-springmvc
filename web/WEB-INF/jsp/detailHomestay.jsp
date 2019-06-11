@@ -48,6 +48,19 @@
             });
         </script>-->
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--        <script>
+            $.ajax({
+                type: "POST",
+                url: "?message=success",
+                
+                success: function(response){
+                    $("#bookingsuccessModal").modal();
+                }
+            });
+        </script>-->
+
+     
     </head>
     <body>
 
@@ -759,8 +772,7 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Button trigger modal -->
+                    
             <c:if test="${sessionScope.userinfo!=null}">
                 <div class="zoom">
                     <span class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#bookingModal">
@@ -769,12 +781,14 @@
                 </div>                
             </c:if>
             <c:if test="${sessionScope.userinfo==null}">
-<!--                <div class="zoom">
+                <div class="zoom">
                     <a class="zoom-fab zoom-btn-large" id="zoomBtn" data-toggle="modal" data-target="#signinModal">
                         <i class="fas fa-calendar-check" style="font-size: 20px; vertical-align: middle;"></i>
                     </span>
-                </div>                -->
+                </div>                
             </c:if>
+
+          
             <!-- Modal -->
             <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
                  aria-hidden="true">
@@ -830,6 +844,7 @@
                     </div>
                 </div>
             </div>
+                                               
         </section> <!-- .section -->
 
         <footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -904,40 +919,44 @@
         </footer>
 
 <!--                 Signin Modal 
-            <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
+-->            <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="signinModalLabel">Sign in</h5>
+                            <h5 class="modal-title" id="signinModalLabel">Sign in notification</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         
                         <div class="modal-body">
-                            <spring:form method="post" commandName="user" action="../signin.html">
-                                <div class="form-group">
-                                    <div class="wthree_input">
-                                        <i aria-hidden="true" class="fa fa-user" style="font-size:18px;"></i>
-                                        <spring:input class="form-control" id="Email" name="email" placeholder="Email" required="true"
-                                               type="email" path="email"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="wthree_input">
-                                        <i aria-hidden="true" class="material-icons" style="font-size:22px;">vpn_key</i>
-                                        <spring:input class="form-control" id="Password" name="password" placeholder="Password" required="true"
-                                               type="password" path="password"/>
-                                    </div>
-                                </div>
-                                    <input type="submit" value="Sign in" class="btn btn-primary">
-                            </spring:form>
+                            <a href="/travellie-springmvc/index.html?message=require_login">Sign in</a>
                         </div>
                     </div>
                 </div>
             </div>
-        END Signin Modal
+        <!--END Signin Modal
+        
+        <!--                 booking success Modal 
+-->            <div class="modal fade" id="bookingsuccessModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signinModalLabel">Notification</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <p>Booking success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--END booking success Modal
         
              Signup Modal 
             <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"

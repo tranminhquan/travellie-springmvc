@@ -47,6 +47,14 @@
                     $("#notiModal").modal();
                 }
             });
+            
+            $.ajax({
+                type: "POST",
+                url: "/index.html?message=require_login",
+                success: function(response){
+                    $("#signinModal").modal();
+                }
+            });
         </script>
         
         

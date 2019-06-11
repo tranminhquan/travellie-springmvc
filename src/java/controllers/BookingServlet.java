@@ -122,6 +122,7 @@ public class BookingServlet extends HttpServlet {
         } else {
             _bookingService.InsertBookingTour(_booking);    
             response.sendRedirect("homestays/" + _booking.getHomestayID() + ".html");
+//            response.sendRedirect("/Booking.html?message=success");
         }
     }
 
